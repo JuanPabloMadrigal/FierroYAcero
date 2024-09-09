@@ -339,6 +339,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9945fdf6-8748-4edf-b911-04e9dd9b0505
     m_ActionName: Gameplay/Hover[/Keyboard/v]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1358106316}
+        m_TargetAssemblyTypeName: PlacingWithModelTest, Assembly-CSharp
+        m_MethodName: OnClickKey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 641a81b0-6e98-4d46-ad76-5a64011d5be0
+    m_ActionName: Gameplay/Place Building[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -835,8 +851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7352c6716bc8814cb5ac5bc42a46925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Edificio_Horno1: {fileID: 0}
-  Edificio_AlmacenMP: {fileID: 0}
+  Edificio_Horno1: {fileID: 919132149155446097, guid: e0dd6e61863d2df45947110aa1c365f4, type: 3}
+  Edificio_AlmacenMP: {fileID: 919132149155446097, guid: 4af4ff06704e76a4ea92485d1c311087, type: 3}
   Edificio_Horno1_Hover: {fileID: 6113510412518312758, guid: 4ab1186b8d734a5438fdb8e96654fda8, type: 3}
 --- !u!4 &1358106317
 Transform:
