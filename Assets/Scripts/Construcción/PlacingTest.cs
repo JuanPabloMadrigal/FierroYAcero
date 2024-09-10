@@ -25,7 +25,7 @@ public class PlacingTest : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, groundLayer))
         {
-            Vector3 targetPosition = hit.point + Vector3.up * heightAboveGround;
+            Vector3 targetPosition = new Vector3((float)(int)hit.point.x, hit.point.y, (float)(int)hit.point.z) + Vector3.up * heightAboveGround;
             transform.position = targetPosition;
         }
 
