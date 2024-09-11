@@ -10,6 +10,7 @@ public class PlacingWithModelTest : MonoBehaviour
     public GameObject Edificio_Horno1;
     public GameObject Edificio_AlmacenMP;
     public GameObject Edificio_Horno1_Hover;
+    public bool canBuild;
 
     private GameObject[] listaEdificios;
     private GameObject buildingPreview;
@@ -28,6 +29,7 @@ public class PlacingWithModelTest : MonoBehaviour
         posXHorno1 = 0f;
         posXAlmacenMP = 0f;
         listaEdificios = new GameObject[0];
+        canBuild = true;
     }
 
     public void OnXKey(InputAction.CallbackContext ctx)
@@ -36,7 +38,7 @@ public class PlacingWithModelTest : MonoBehaviour
         Debug.Log(xKeyPressed);
         if (xKeyPressed)
         {
-            Debug.Log("X Detectado LOGIC");
+            Debug.Log("X Detectado");
             GameObject nuevo_Horno1 = Instantiate(Edificio_Horno1, new Vector3(posXHorno1, 0f, 4f), Quaternion.identity);
             listaEdificios.Append(nuevo_Horno1);
             posXHorno1 += 2f;
@@ -48,7 +50,7 @@ public class PlacingWithModelTest : MonoBehaviour
         zKeyPressed = ctx.started;
         if (zKeyPressed)
         {
-            Debug.Log("Z Detectado LOGIC");
+            Debug.Log("Z Detectado");
             GameObject nuevo_AlmacenMP = Instantiate(Edificio_AlmacenMP, new Vector3(posXAlmacenMP, 0f, 8f), Quaternion.identity);
             listaEdificios.Append(nuevo_AlmacenMP);
             posXAlmacenMP += 2f;
@@ -70,9 +72,9 @@ public class PlacingWithModelTest : MonoBehaviour
         buildingPreview = GameObject.FindGameObjectsWithTag("BuildingPreview").FirstOrDefault();
 
         clickKeyPressed = ctx.started;
-        if (clickKeyPressed & buildingPreview != null)
+        if (clickKeyPressed & buildingPreview != null && canBuild)
         {
-            Debug.Log("click Detectado");
+            Debug.Log("Click Izq. Detectado");
             GameObject nuevo_AlmacenMP = Instantiate(Edificio_Horno1, buildingPreview.transform.position, buildingPreview.transform.rotation);
             Destroy(buildingPreview);
         }
