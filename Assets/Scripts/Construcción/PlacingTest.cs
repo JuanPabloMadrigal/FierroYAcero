@@ -10,6 +10,7 @@ public class PlacingTest : MonoBehaviour
     public LayerMask groundLayer; // Set this in the inspector to define what layers are considered "ground"
     public GameObject canBuildBuilding;
     public GameObject cannotBuildBuilding;
+    public GameObject building;
     
     private GameObject logic;
     private PlacingWithModelTest buildBuildingScript;

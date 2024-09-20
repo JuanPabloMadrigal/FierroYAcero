@@ -3,7 +3,1472 @@ guid: 97eedb32a2d2f1a4a8c1549f0b28a04c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar121_Scaffold31_ScaffoldTower7_GroupOfScaffolds2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar1_Scaffold1_ScaffoldTower1_GroupOfScaffolds1Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_CylinderTop2Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_PipeBottom2Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_PipeEscape2_PipeEscapeTube2Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_PipeEscape2_PipeHole2Mat
+    second: {fileID: 2100000, guid: 6294b233dbadd2743b4c68c21220b00c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_PipeEscape2_PipeInsideHoleBlack2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_PipeMid2Mat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_PipeOut2_PipeEscape2Mat
+    second: {fileID: 2100000, guid: 6294b233dbadd2743b4c68c21220b00c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_PipeTop2Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_CylinderTop3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_PipeBottom3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_PipeEscape3_PipeEscapeTube3Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_PipeEscape3_PipeHole3Mat
+    second: {fileID: 2100000, guid: 6294b233dbadd2743b4c68c21220b00c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_PipeEscape3_PipeInsideHoleBlack3Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_PipeMid3Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_PipeOut3_PipeEscape3Mat
+    second: {fileID: 2100000, guid: 6294b233dbadd2743b4c68c21220b00c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_PipeTop3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_CylinderTop4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_PipeBottom4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_PipeEscape4_PipeEscapeTube4Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_PipeEscape4_PipeHole4Mat
+    second: {fileID: 2100000, guid: 6294b233dbadd2743b4c68c21220b00c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_PipeEscape4_PipeInsideHoleBlack4Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_PipeMid4Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_PipeOut4_PipeEscape4Mat
+    second: {fileID: 2100000, guid: 6294b233dbadd2743b4c68c21220b00c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_PipeTop4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_CylinderTop1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeBottom1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscape1_PipeEscapeTube1Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscape1_PipeHole1Mat
+    second: {fileID: 2100000, guid: 6294b233dbadd2743b4c68c21220b00c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscape1_PipeInsideHoleBlack1Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeMid1Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeOut1_PipeEscape1Mat
+    second: {fileID: 2100000, guid: 6294b233dbadd2743b4c68c21220b00c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeTop1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FloorMat
+    second: {fileID: 2100000, guid: 938e0624484e3b4438c93007859e972d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Bar101_Scaffold26_ScaffoldTower6Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Bar21_Scaffold6_ScaffoldTower2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Bar41_Scaffold11_ScaffoldTower3Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Bar61_Scaffold16_ScaffoldTower4Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Bar81_Scaffold21_ScaffoldTower5Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold11_ScaffoldTower3_Bar42Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold11_ScaffoldTower3_Bar43Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold11_ScaffoldTower3_Bar44Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold16_ScaffoldTower4_Bar62Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold16_ScaffoldTower4_Bar63Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold16_ScaffoldTower4_Bar64Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold21_ScaffoldTower5_Bar82Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold21_ScaffoldTower5_Bar83Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold21_ScaffoldTower5_Bar84Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold26_ScaffoldTower6_Bar102Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold26_ScaffoldTower6_Bar103Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold26_ScaffoldTower6_Bar104Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold6_ScaffoldTower2_Bar22Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold6_ScaffoldTower2_Bar23Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_Scaffold6_ScaffoldTower2_Bar24Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Bar25_Scaffold7Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Bar29_Scaffold8Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Bar33_Scaffold9Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Bar37_Scaffold10Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold10_Bar38Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold10_Bar39Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold10_Bar40Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold7_Bar26Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold7_Bar27Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold7_Bar28Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold8_Bar30Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold8_Bar31Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold8_Bar32Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold9_Bar34Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold9_Bar35Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower2_Scaffold9_Bar36Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Bar45_Scaffold12Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Bar49_Scaffold13Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Bar53_Scaffold14Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Bar57_Scaffold15Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold12_Ba47Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold12_Bar46Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold12_Bar48Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold13_Bar50Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold13_Bar51Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold13_Bar52Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold14_Bar54Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold14_Bar55Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold14_Bar56Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold15_Bar58Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold15_Bar59Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower3_Scaffold15_Bar60Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Bar65_Scaffold17Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Bar69_Scaffold18Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Bar73_Scaffold19Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Bar77_Scaffold20Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold17_Bar66Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold17_Bar67Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold17_Bar68Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold18_Bar70Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold18_Bar71Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold18_Bar72Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold19_Bar74Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold19_Bar75Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold19_Bar76Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold20_Bar78Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold20_Bar79Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower4_Scaffold20_Bar80Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Bar85_Scaffold22Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Bar89_Scaffold23Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Bar93_Scaffold24Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Bar97_Scaffold25Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold22_Bar86Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold22_Bar87Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold22_Bar88Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold23_Bar90Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold23_Bar91Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold23_Bar92Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold24_Bar94Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold24_Bar95Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold24_Bar96Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold25_Bar100Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold25_Bar98Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower5_Scaffold25_Bar99Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Bar105_Scaffold27Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Bar109_Scaffold28Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Bar113_Scaffold29Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Bar117_Scaffold30Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold27_Bar106Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold27_Bar107Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold27_Bar108Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold28_Bar110Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold28_Bar111Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold28_Bar112Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold29_Bar114Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold29_Bar115Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold29_Bar116Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold30_Bar118Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold30_Bar119Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds1_ScaffoldTower6_Scaffold30_Bar120Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Bar141_Scaffold36_ScaffoldTower8Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Bar161_Scaffold41_ScaffoldTower9Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Bar181_Scaffold46_ScaffoldTower10Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Bar201_Scaffold51_ScaffoldTower11Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Bar221_Scaffold56_ScaffoldTower12Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold36_ScaffoldTower8_Bar142Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold36_ScaffoldTower8_Bar143Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold36_ScaffoldTower8_Bar144Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold41_ScaffoldTower9_Bar162Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold41_ScaffoldTower9_Bar163Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold41_ScaffoldTower9_Bar164Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold46_ScaffoldTower10_Bar182Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold46_ScaffoldTower10_Bar183Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold46_ScaffoldTower10_Bar184Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold51_ScaffoldTower11_Bar202Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold51_ScaffoldTower11_Bar203Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold51_ScaffoldTower11_Bar204Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold56_ScaffoldTower12_Bar222Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold56_ScaffoldTower12_Bar223Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_Scaffold56_ScaffoldTower12_Bar224Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Bar185_Scaffold47Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Bar189_Scaffold48Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Bar193_Scaffold49Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Bar197_Scaffold50Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold47_Bar186Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold47_Bar187Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold47_Bar188Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold48_Bar190Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold48_Bar191Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold48_Bar192Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold49_Bar194Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold49_Bar195Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold49_Bar196Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold50_Bar198Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold50_Bar199Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower10_Scaffold50_Bar200Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Bar205_Scaffold52Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Bar209_Scaffold53Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Bar213_Scaffold54Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Bar217_Scaffold55Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold52_Bar206Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold52_Bar207Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold52_Bar208Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold53_Bar210Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold53_Bar211Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold53_Bar212Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold54_Bar214Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold54_Bar215Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold54_Bar216Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold55_Bar218Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold55_Bar219Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower11_Scaffold55_Bar220Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Bar225_Scaffold57Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Bar229_Scaffold58Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Bar233_Scaffold59Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Bar237_Scaffold60Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold57_Bar226Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold57_Bar227Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold57_Bar228Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold58_Bar230Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold58_Bar231Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold58_Bar232Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold59_Bar234Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold59_Bar235Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold59_Bar236Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold60_Bar238Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold60_Bar239Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower12_Scaffold60_Bar240Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Bar145_Scaffold37Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Bar149_Scaffold38Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Bar153_Scaffold39Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Bar157_Scaffold40Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold37_Bar146Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold37_Bar147Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold37_Bar148Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold38_Bar150Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold38_Bar151Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold38_Bar152Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold39_Bar154Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold39_Bar155Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold39_Bar156Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold40_Bar158Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold40_Bar159Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower8_Scaffold40_Bar160Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Bar165_Scaffold42Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Bar169_Scaffold43Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Bar173_Scaffold44Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Bar177_Scaffold45Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold42_Bar166Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold42_Bar167Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold42_Bar168Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold43_Bar170Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold43_Bar171Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold43_Bar172Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold44_Bar174Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold44_Bar175Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold44_Bar176Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold45_Bar178Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold45_Bar179Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroupOfScaffolds2_ScaffoldTower9_Scaffold45_Bar180Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuildingEntrance_MainBuildingMat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_BuildingExterior_MainBuildingMat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_MainBuildingMat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_MainBuilding_BuildingInteriorMat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape1_CokeFuelPipe_PipeInsideHoleBlack2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape2_CokeFuelPipe2_PipeInsideHoleBlack2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape3_CokeFuelPipe3_PipeInsideHoleBlack2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape4_CokeFuelPipe4_PipeInsideHoleBlack2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscapeTube1_PipeEscape1_CokeFuelPipeMat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscapeTube1_PipeEscape2_CokeFuelPipe2Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscapeTube1_PipeEscape3_CokeFuelPipe3Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscapeTube1_PipeEscape4_CokeFuelPipe4Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeTop1_CokeFuelPipeMat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeTop2_CokeFuelPipe2Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeTop3_CokeFuelPipe3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeTop4_CokeFuelPipe4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plank1_PlanksMat
+    second: {fileID: 2100000, guid: 428b101959e90784e966bea5d9a822a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planks_Plank2Mat
+    second: {fileID: 2100000, guid: 428b101959e90784e966bea5d9a822a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planks_Plank3Mat
+    second: {fileID: 2100000, guid: 428b101959e90784e966bea5d9a822a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planks_Plank4Mat
+    second: {fileID: 2100000, guid: 428b101959e90784e966bea5d9a822a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scaffold1_ScaffoldTower1_GroupOfScaffolds1_Bar2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scaffold1_ScaffoldTower1_GroupOfScaffolds1_Bar3Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scaffold1_ScaffoldTower1_GroupOfScaffolds1_Bar4Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scaffold31_ScaffoldTower7_GroupOfScaffolds2_Bar122Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scaffold31_ScaffoldTower7_GroupOfScaffolds2_Bar123Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scaffold31_ScaffoldTower7_GroupOfScaffolds2_Bar124Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Bar13_Scaffold4Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Bar17_Scaffold5Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Bar5_Scaffold2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Bar9_Scaffold3Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold2_Bar6Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold2_Bar7Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold2_Bar8Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold3_Ba11Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold3_Bar10Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold3_Bar12Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold4_Bar14Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold4_Bar15Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold4_Bar16Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold5_Bar18Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold5_Bar19Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower1_GroupOfScaffolds1_Scaffold5_Bar20Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Bar125_Scaffold32Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Bar129_Scaffold33Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Bar133_Scaffold34Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Bar137_Scaffold35Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold32_Bar126Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold32_Bar127Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold32_Bar128Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold33_Bar130Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold33_Bar131Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold33_Bar132Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold34_Bar134Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold34_Bar135Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold34_Bar136Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold35_Bar138Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold35_Bar139Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScaffoldTower7_GroupOfScaffolds2_Scaffold35_Bar140Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
