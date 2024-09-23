@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,6 +25,8 @@ public class PlacingWithModelTest : MonoBehaviour
     private bool zKeyPressed;
     private bool vKeyPressed;
     private bool cKeyPressed;
+    private bool qKeyPressed;
+    private bool eKeyPressed;
     private bool clickKeyPressed;
 
 
@@ -72,6 +75,7 @@ public class PlacingWithModelTest : MonoBehaviour
         {
             Debug.Log("V Detectado");
             GameObject nuevo_Preview = Instantiate(Edificio_Horno1_Hover, new Vector3(posXHorno1, 0f, 8f), Quaternion.identity);
+            buildingPreview = nuevo_Preview;
         }
     }
 
@@ -82,21 +86,53 @@ public class PlacingWithModelTest : MonoBehaviour
         {
             Debug.Log("C Detectado");
             GameObject nuevo_Preview = Instantiate(Edificio_MP_Hover, new Vector3(posXAlmacenMP, 0f, 8f), Quaternion.identity);
+            buildingPreview = nuevo_Preview;
         }
     }
 
     public void OnClickKey(InputAction.CallbackContext ctx)
     {
-        buildingPreview = GameObject.FindGameObjectsWithTag("BuildingPreview").FirstOrDefault();
-        PlacingTest buildingPlacement = buildingPreview.GetComponent<PlacingTest>();
-        buildingToBuild = buildingPlacement.building;
-
-        clickKeyPressed = ctx.started;
-        if (clickKeyPressed & buildingPreview != null && canBuild)
+        if (buildingPreview != null)
         {
-            Debug.Log("Click Izq. Detectado");
-            GameObject nuevo_Edificio = Instantiate(buildingToBuild, buildingPreview.transform.position, buildingPreview.transform.rotation);
-            Destroy(buildingPreview);
+            PlacingTest buildingPlacement = buildingPreview.GetComponent<PlacingTest>();
+            buildingToBuild = buildingPlacement.building;
+
+            clickKeyPressed = ctx.started;
+            if (clickKeyPressed && canBuild)
+            {
+                Debug.Log("Click Izq. Detectado");
+                GameObject nuevo_Edificio = Instantiate(buildingToBuild, buildingPreview.transform.position, buildingPreview.transform.rotation);
+                Destroy(buildingPreview);
+            }
         }
     }
+
+    public void OnQkey(InputAction.CallbackContext ctx)
+    {
+        if (buildingPreview != null)
+        {
+           qKeyPressed = ctx.started;
+
+           if (qKeyPressed)
+           {
+               buildingPreview.transform.rotation = Quaternion.Euler(buildingPreview.transform.rotation.eulerAngles.x, buildingPreview.transform.rotation.eulerAngles.y - 90f, buildingPreview.transform.rotation.eulerAngles.z);
+           }
+        }
+    }
+
+    public void OnEkey(InputAction.CallbackContext ctx)
+    {
+        if (buildingPreview != null)
+        {
+            eKeyPressed = ctx.started;
+
+            if (eKeyPressed)
+            {
+                buildingPreview.transform.rotation = Quaternion.Euler(buildingPreview.transform.rotation.eulerAngles.x, buildingPreview.transform.rotation.eulerAngles.y + 90f, buildingPreview.transform.rotation.eulerAngles.z);
+            }
+        }
+    }
+
+
+
 }
