@@ -58,6 +58,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Rotate Building Left",
+                    "type": "Button",
+                    "id": "bcc3eca9-4abc-481c-adba-45781a331a52",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Rotate Building Right",
+                    "type": "Button",
+                    "id": "34d77171-67ee-4817-9c3e-b30da5dd7508",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -124,6 +142,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Hover Almacen MP",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e8345cc7-a9a3-427e-a344-e2ee6c3bfd37",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate Building Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa7a8535-d11b-4ff0-a133-8ff2407a505a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate Building Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

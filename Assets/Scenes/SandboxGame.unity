@@ -371,6 +371,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c95a7240-1cde-4a64-ad26-1063f7a61b06
     m_ActionName: Gameplay/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1358106316}
+        m_TargetAssemblyTypeName: PlacingWithModelTest, Assembly-CSharp
+        m_MethodName: OnQkey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bcc3eca9-4abc-481c-adba-45781a331a52
+    m_ActionName: Gameplay/Rotate Building Left[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1358106316}
+        m_TargetAssemblyTypeName: PlacingWithModelTest, Assembly-CSharp
+        m_MethodName: OnEkey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 34d77171-67ee-4817-9c3e-b30da5dd7508
+    m_ActionName: Gameplay/Rotate Building Right[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -854,7 +886,7 @@ MonoBehaviour:
   mouseSensitivity_X: 0.35
   mouseSensitivity_Y: 0.35
   mouseSensitivity_Zoom: 15
-  distFromFocusPlayer: 10
+  distFromFocusPlayer: 20
   minZoom: 5
   maxZoom: 30
   XLimits: 49
@@ -2118,7 +2150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3359694517789138095, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 3359694517789138095, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2126,7 +2158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3359694517789138095, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 3359694517789138095, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
       propertyPath: m_LocalRotation.w
