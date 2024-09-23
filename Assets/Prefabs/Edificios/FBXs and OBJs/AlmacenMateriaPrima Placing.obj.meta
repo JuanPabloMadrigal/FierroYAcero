@@ -1,0 +1,619 @@
+fileFormatVersion: 2
+guid: 9ab2d4439dae06d4aaffaa1048f6d5a7
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar2_2_Barda1_FenceRightMat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar2_6_Barda5_FenceLeftMat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda1_FenceRight_Bar1_2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda1_FenceRight_Bar3_2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda1_FenceRight_Bar4_2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda1_FenceRight_Planta_de_Coque3_pasted__pasted__pasted__Bar1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda1_FenceRight_Planta_de_Coque3_pasted__pasted__pasted__Bar3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda1_FenceRight_Planta_de_Coque3_pasted__pasted__pasted__Bar4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda5_FenceLeft_Bar1_6Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda5_FenceLeft_Bar3_6Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda5_FenceLeft_Bar4_6Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda5_FenceLeft_Planta_de_Coque11_pasted__pasted__pasted__Bar1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda5_FenceLeft_Planta_de_Coque11_pasted__pasted__pasted__Bar3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barda5_FenceLeft_Planta_de_Coque11_pasted__pasted__pasted__Bar4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorLine2_2_MainBuildingMat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Bar2_7_Barda6Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Bar2_8_Barda7Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Bar2_9_Barda8Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Bar4_10_Barda9Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda6_Bar1_7Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda6_Bar3_7Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda6_Bar4_7Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda6_Planta_de_Coque10_pasted__pasted__pasted__Bar1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda6_Planta_de_Coque10_pasted__pasted__pasted__Bar3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda6_Planta_de_Coque10_pasted__pasted__pasted__Bar4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda7_Bar1_8Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda7_Bar3_8Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda7_Bar4_8Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda7_Planta_de_Coque9_pasted__pasted__pasted__Bar1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda7_Planta_de_Coque9_pasted__pasted__pasted__Bar3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda7_Planta_de_Coque9_pasted__pasted__pasted__Bar4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda8_Bar1_9Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda8_Bar3_9Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda8_Bar4_9Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda8_Planta_de_Coque8_pasted__pasted__pasted__Bar1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda8_Planta_de_Coque8_pasted__pasted__pasted__Bar3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda8_Planta_de_Coque8_pasted__pasted__pasted__Bar4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda9_Bar1_10Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda9_Bar2_10Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda9_Bar3_10Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda9_Planta_de_Coque7_pasted__pasted__pasted__Bar1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda9_Planta_de_Coque7_pasted__pasted__pasted__Bar2Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Barda9_Planta_de_Coque7_pasted__pasted__pasted__Bar3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Planta_de_Coque10_pasted__pasted__pasted__Bar2_Barda6Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Planta_de_Coque7_pasted__pasted__pasted__Bar4_Barda9Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Planta_de_Coque8_pasted__pasted__pasted__Bar2_Barda8Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceLeft_Planta_de_Coque9_pasted__pasted__pasted__Bar2_Barda7Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Bar1_5_Barda4Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Bar3_1_BardaMat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Bar3_3_Barda2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Bar4_4_Barda3Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda2_Bar1_3Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda2_Bar2_3Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda2_Bar4_3Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda2_Planta_de_Coque4_pasted__pasted__pasted__Bar1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda2_Planta_de_Coque4_pasted__pasted__pasted__Bar2Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda2_Planta_de_Coque4_pasted__pasted__pasted__Bar4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda3_Bar1_4Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda3_Bar2_4Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda3_Bar3_4Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda3_Planta_de_Coque5_pasted__pasted__pasted__Bar1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda3_Planta_de_Coque5_pasted__pasted__pasted__Bar2Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda3_Planta_de_Coque5_pasted__pasted__pasted__Bar3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda4_Bar2_5Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda4_Bar3_5Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda4_Bar4_5Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda4_Planta_de_Coque6_pasted__pasted__pasted__Bar2Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda4_Planta_de_Coque6_pasted__pasted__pasted__Bar3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda4_Planta_de_Coque6_pasted__pasted__pasted__Bar4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda_Bar1_1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda_Bar2_1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda_Bar4_1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda_Planta_de_Coque_pasted__pasted__pasted__Bar1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda_Planta_de_Coque_pasted__pasted__pasted__Bar2Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Barda_Planta_de_Coque_pasted__pasted__pasted__Bar4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Planta_de_Coque4_pasted__pasted__pasted__Bar3_Barda2Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Planta_de_Coque5_pasted__pasted__pasted__Bar4_Barda3Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Planta_de_Coque6_pasted__pasted__pasted__Bar1_Barda4Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceRight_Planta_de_Coque_pasted__pasted__pasted__Bar3_BardaMat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FloorMat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding1_DoorLine1_1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding1_DoorLine2_1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding1_DoorLine_1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding1_FrontAndBack2_MainBuilding1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding1_MainBuilding1_Sides2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding1_MainBuildingEntrance1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding2_MainBuilding_FrontAndBack1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_DoorLine1_2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_DoorLine2_2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_DoorLine_2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_MainBuildingEntrance2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_Window2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape1_PipeInsideHoleBlack2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape2_PipeEscape1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape2_PipeInsideHoleBlack3Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape3_PipeEscape2Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape3_PipeInsideHoleBlack4Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape4_PipeEscape3Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape_PipeEscape1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeInsideHoleBlack1_PipeEscapeMat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sides1_MainBuilding2_MainBuildingMat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window1_MainBuilding1Mat
+    second: {fileID: 2100000, guid: 53a37370983563646b56eff1b1dc4c0c, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

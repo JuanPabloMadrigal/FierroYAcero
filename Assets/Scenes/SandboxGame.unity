@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -355,6 +355,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 641a81b0-6e98-4d46-ad76-5a64011d5be0
     m_ActionName: Gameplay/Place Building[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1358106316}
+        m_TargetAssemblyTypeName: PlacingWithModelTest, Assembly-CSharp
+        m_MethodName: OnCKey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c95a7240-1cde-4a64-ad26-1063f7a61b06
+    m_ActionName: Gameplay/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -391,7 +407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!328 &645606242
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -401,7 +417,7 @@ VideoPlayer:
   m_GameObject: {fileID: 645606241}
   m_Enabled: 1
   m_VideoClip: {fileID: 32900000, guid: 4d16d4be705d640a8afea10504928a93, type: 3}
-  m_TargetCameraAlpha: 0.578
+  m_TargetCameraAlpha: 0.249
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 963194227}
   m_TargetTexture: {fileID: 0}
@@ -1291,8 +1307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Edificio_Horno1: {fileID: 2732516131013543445, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
-  Edificio_AlmacenMP: {fileID: 919132149155446097, guid: 4af4ff06704e76a4ea92485d1c311087, type: 3}
+  Edificio_AlmacenMP: {fileID: 8854253344340106285, guid: ae9b34eec330a954890c1311a45ca5e3, type: 3}
   Edificio_Horno1_Hover: {fileID: 6113510412518312758, guid: 4ab1186b8d734a5438fdb8e96654fda8, type: 3}
+  Edificio_MP_Hover: {fileID: 6113510412518312758, guid: ec40660376c10d949a70798ddd60fb8d, type: 3}
   canBuild: 0
 --- !u!4 &1358106317
 Transform:
@@ -2101,7 +2118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3359694517789138095, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3359694517789138095, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2109,7 +2126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3359694517789138095, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3359694517789138095, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
       propertyPath: m_LocalRotation.w

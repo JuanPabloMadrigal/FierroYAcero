@@ -33,9 +33,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Hover",
+                    "name": "Hover Horno 1",
                     "type": "Button",
                     "id": "9945fdf6-8748-4edf-b911-04e9dd9b0505",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Hover Almacen MP",
+                    "type": "Button",
+                    "id": "c95a7240-1cde-4a64-ad26-1063f7a61b06",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -92,7 +101,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hover",
+                    "action": "Hover Horno 1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -104,6 +113,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Place Building",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7545fc00-687c-4909-8015-13eb7472a8f9",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hover Almacen MP",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
