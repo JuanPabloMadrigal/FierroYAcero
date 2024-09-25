@@ -11,17 +11,14 @@ public class PlacingTest : MonoBehaviour
     public GameObject canBuildBuilding;
     public GameObject cannotBuildBuilding;
     public GameObject building;
-    
-    private GameObject logic;
-    private PlacingWithModelTest buildBuildingScript;
+    public bool canBuild;
 
     // Start is called before the first frame update
     void Start()
     {
+        canBuild = true;
         canBuildBuilding.SetActive(true);
         cannotBuildBuilding.SetActive(false);
-        logic = GameObject.Find("Logic");
-        buildBuildingScript = logic.GetComponent<PlacingWithModelTest>();
     }
 
     // Update is called once per frame
@@ -57,14 +54,14 @@ public class PlacingTest : MonoBehaviour
     {
         canBuildBuilding.SetActive(false);
         cannotBuildBuilding.SetActive(true);
-        buildBuildingScript.canBuild = false;
+        canBuild = false;
     }
 
     private void AllowBuild()
     {
         canBuildBuilding.SetActive(true);
         cannotBuildBuilding.SetActive(false);
-        buildBuildingScript.canBuild = true;
+        canBuild = true;
     }
 
 
