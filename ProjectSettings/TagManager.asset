@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - BuildingPreview
+  - BuildingButton
   layers:
   - Default
   - TransparentFX

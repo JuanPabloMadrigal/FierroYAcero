@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -373,8 +373,8 @@ MonoBehaviour:
     m_ActionName: Gameplay/New action
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358106316}
-        m_TargetAssemblyTypeName: PlacingWithModelTest, Assembly-CSharp
+      - m_Target: {fileID: 891310217}
+        m_TargetAssemblyTypeName: PlaceBuilding, Assembly-CSharp
         m_MethodName: OnQkey
         m_Mode: 0
         m_Arguments:
@@ -389,8 +389,8 @@ MonoBehaviour:
     m_ActionName: Gameplay/Rotate Building Left[/Keyboard/q]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358106316}
-        m_TargetAssemblyTypeName: PlacingWithModelTest, Assembly-CSharp
+      - m_Target: {fileID: 891310217}
+        m_TargetAssemblyTypeName: PlaceBuilding, Assembly-CSharp
         m_MethodName: OnEkey
         m_Mode: 0
         m_Arguments:
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 709009095}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: BuildingButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -768,9 +768,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1594659088}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -137, y: -77}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709009095
@@ -953,9 +953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0028bf28f8b45c0488c898d060540aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPreviewPrefab: {fileID: 0}
-  buildingToBuild: {fileID: 0}
-  isPreviewActive: 0
 --- !u!4 &891310218
 Transform:
   m_ObjectHideFlags: 0
@@ -1116,7 +1113,7 @@ GameObject:
   - component: {fileID: 1008126016}
   m_Layer: 5
   m_Name: Button (1)
-  m_TagString: Untagged
+  m_TagString: BuildingButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1135,9 +1132,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1594659088}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182, y: -191}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1008126016
@@ -1746,6 +1743,18 @@ MonoBehaviour:
   Edificio_Horno1_Hover: {fileID: 6113510412518312758, guid: 4ab1186b8d734a5438fdb8e96654fda8, type: 3}
   Edificio_MP_Hover: {fileID: 6113510412518312758, guid: ec40660376c10d949a70798ddd60fb8d, type: 3}
   canBuild: 0
+  listaEdificios: []
+  buildingPreview: {fileID: 0}
+  buildingToBuild: {fileID: 0}
+  posXHorno1: 0
+  posXAlmacenMP: 0
+  xKeyPressed: 0
+  zKeyPressed: 0
+  vKeyPressed: 0
+  cKeyPressed: 0
+  qKeyPressed: 0
+  eKeyPressed: 0
+  clickKeyPressed: 0
 --- !u!4 &1358106317
 Transform:
   m_ObjectHideFlags: 0
@@ -1773,16 +1782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c875466e8ab261d4eb0c0b45153b4e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Edificio_Horno1: {fileID: 2732516131013543445, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
-  Edificio_AlmacenMP: {fileID: 8854253344340106285, guid: ae9b34eec330a954890c1311a45ca5e3, type: 3}
-  Edificio_Horno1_Hover: {fileID: 6113510412518312758, guid: 4ab1186b8d734a5438fdb8e96654fda8, type: 3}
-  Edificio_MP_Hover: {fileID: 6113510412518312758, guid: ec40660376c10d949a70798ddd60fb8d, type: 3}
-  canBuild: 0
-  listaEdificios: []
-  buildingPreview: {fileID: 0}
-  buildingToBuild: {fileID: 0}
-  posXHorno1: 0
-  posXAlmacenMP: 0
 --- !u!1001 &1388788742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2126,6 +2125,7 @@ GameObject:
   - component: {fileID: 1594659088}
   - component: {fileID: 1594659090}
   - component: {fileID: 1594659089}
+  - component: {fileID: 1594659091}
   m_Layer: 5
   m_Name: Panel (1)
   m_TagString: Untagged
@@ -2192,6 +2192,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594659087}
   m_CullTransparentMesh: 1
+--- !u!114 &1594659091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594659087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1611540525
 GameObject:
   m_ObjectHideFlags: 0

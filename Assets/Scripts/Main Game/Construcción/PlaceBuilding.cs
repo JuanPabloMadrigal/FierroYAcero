@@ -4,14 +4,23 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlaceBuilding : MonoBehaviour
 {
-    public GameObject buildingPreviewPrefab;
-    public GameObject buildingToBuild;
+    private GameObject buildingPreviewPrefab;
+    private GameObject buildingToBuild;
 
     private GameObject newPreview;
-    public bool isPreviewActive = false;
+    private bool isPreviewActive = false;
+
+    private GameObject[] buildingButtons;
+
+    public void Start()
+    {
+        buildingButtons = GameObject.FindGameObjectsWithTag("BuildingButton");
+    }
+
 
     public void BeginBuildingPreview(int buildingOption)
     {
@@ -22,12 +31,23 @@ public class PlaceBuilding : MonoBehaviour
                 buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Horno 1");
                 newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f, 0f, 8f), Quaternion.identity);
                 isPreviewActive = true;
+
+                foreach(GameObject button in buildingButtons)
+                {
+                    button.GetComponent<Button>().interactable = false;
+                }
+
                 break;
             case 1:
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/AlmacenMateriaPrimaHoverPrefab");
                 buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Almacén de Materia Prima");
                 newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f, 0f, 8f), Quaternion.identity);
                 isPreviewActive = true;
+
+                foreach (GameObject button in buildingButtons)
+                {
+                    button.GetComponent<Button>().interactable = false;
+                }
                 break;
         }
         
@@ -46,7 +66,37 @@ public class PlaceBuilding : MonoBehaviour
                 Debug.Log("Click Izq. Detectado");
                 GameObject placedBuilding = Instantiate(buildingToBuild, newPreview.transform.position, newPreview.transform.rotation);
                 isPreviewActive = false;
+                foreach (GameObject button in buildingButtons)
+                {
+                    button.GetComponent<Button>().interactable = true;
+                }
                 Destroy(newPreview);
+            }
+        }
+    }
+
+    public void OnQkey(InputAction.CallbackContext ctx)
+    {
+        if (isPreviewActive)
+        {
+            bool qKeyPressed = ctx.started;
+
+            if (qKeyPressed)
+            {
+                newPreview.transform.rotation = Quaternion.Euler(newPreview.transform.rotation.eulerAngles.x, newPreview.transform.rotation.eulerAngles.y - 90f, newPreview.transform.rotation.eulerAngles.z);
+            }
+        }
+    }
+
+    public void OnEkey(InputAction.CallbackContext ctx)
+    {
+        if (isPreviewActive)
+        {
+            bool eKeyPressed = ctx.started;
+
+            if (eKeyPressed)
+            {
+                newPreview.transform.rotation = Quaternion.Euler(newPreview.transform.rotation.eulerAngles.x, newPreview.transform.rotation.eulerAngles.y + 90f, newPreview.transform.rotation.eulerAngles.z);
             }
         }
     }
