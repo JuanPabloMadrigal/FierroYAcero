@@ -15,51 +15,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Building Horno 1",
-                    "type": "Button",
-                    "id": "5c2ae575-833c-4920-a53f-a490302dfae3",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Building Almacen MP",
-                    "type": "Button",
-                    "id": "5eed5da6-4263-4b73-ad01-aeb5c1d3aa5b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Hover Horno 1",
-                    "type": "Button",
-                    "id": "9945fdf6-8748-4edf-b911-04e9dd9b0505",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Hover Almacen MP",
-                    "type": "Button",
-                    "id": "c95a7240-1cde-4a64-ad26-1063f7a61b06",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Place Building",
-                    "type": "Button",
-                    "id": "641a81b0-6e98-4d46-ad76-5a64011d5be0",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Rotate Building Left",
                     "type": "Button",
                     "id": "bcc3eca9-4abc-481c-adba-45781a331a52",
@@ -85,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "d26a6660-84e1-4421-a901-398af039508a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -96,61 +60,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Dragging Camera",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fedab732-c210-4078-b0e7-5500c4fbb0b7",
-                    "path": "<Keyboard>/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Building Horno 1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ac7c952c-07c0-4b7b-82fb-9c76a1ff48f8",
-                    "path": "<Keyboard>/z",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Building Almacen MP",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "16265bdc-d6ec-4024-a2e7-89276c5caa79",
-                    "path": "<Keyboard>/v",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Hover Horno 1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c22f4ead-80eb-40fc-9657-819e06d486ae",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Place Building",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7545fc00-687c-4909-8015-13eb7472a8f9",
-                    "path": "<Keyboard>/c",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Hover Almacen MP",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -184,6 +93,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Build",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cafff2a4-5938-4e1f-b031-fbfde5dcd6e2",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
