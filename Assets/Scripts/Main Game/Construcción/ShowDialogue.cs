@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.VFX;
+using UnityEngine.Video;
 
 
 public class ShowDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
@@ -11,7 +13,13 @@ public class ShowDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public GameObject info;
     public GameObject Bton;
 
-    private void Awake()
+    public GameObject VideoFilter;
+
+    private GameObject TempVF;
+
+    public GameObject MainCamera;
+
+    private void Start()
     {
         Bton.SetActive(false);
         info.SetActive(false);
@@ -45,6 +53,8 @@ public class ShowDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         Bton.SetActive(true);
         character.SetActive(true);
         dialogue.SetActive(true);
+        TempVF = Instantiate(VideoFilter, new Vector3( 19, 19, 19), Quaternion.identity);
+        TempVF.GetComponent<VideoPlayer>().targetCamera = MainCamera.GetComponent<Camera>();
     }
 
     public void OnClick()
@@ -52,6 +62,8 @@ public class ShowDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         Bton.SetActive(false);
         dialogue.SetActive(false);
         character.SetActive(false);
+        Destroy(TempVF);
+
     }
         // Update is called once per frame
 
