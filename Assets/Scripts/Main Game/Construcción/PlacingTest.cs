@@ -13,12 +13,20 @@ public class PlacingTest : MonoBehaviour
     public GameObject building;
     public bool canBuild;
 
+    private float original_x;
+    private float original_y;
+    private float original_z;
+
     // Start is called before the first frame update
     void Start()
     {
-        canBuild = true;
         canBuildBuilding.SetActive(true);
         cannotBuildBuilding.SetActive(false);
+        canBuild = false;
+
+        original_x = transform.position.x;
+        original_y = transform.position.y;
+        original_z = transform.position.z;
     }
 
     // Update is called once per frame
@@ -29,7 +37,7 @@ public class PlacingTest : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, groundLayer))
         {
-            Vector3 targetPosition = new Vector3((float)(int)hit.point.x, 0, (float)(int)hit.point.z) + Vector3.up * heightAboveGround;
+            Vector3 targetPosition = new Vector3((float)(int)hit.point.x + original_x, 0 + original_y, (float)(int)hit.point.z + original_z) + Vector3.up * heightAboveGround;
             transform.position = targetPosition;
         }
 
@@ -54,14 +62,12 @@ public class PlacingTest : MonoBehaviour
     {
         canBuildBuilding.SetActive(false);
         cannotBuildBuilding.SetActive(true);
-        canBuild = false;
     }
 
     private void AllowBuild()
     {
         canBuildBuilding.SetActive(true);
         cannotBuildBuilding.SetActive(false);
-        canBuild = true;
     }
 
 
