@@ -10,6 +10,7 @@ public class PlaceBuilding : MonoBehaviour
 {
     private GameObject buildingPreviewPrefab;
     private GameObject buildingToBuild;
+
     private GameObject newPreview;
     private bool isPreviewActive = false;
 
@@ -28,7 +29,7 @@ public class PlaceBuilding : MonoBehaviour
             case 0:
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/Horno1HoverPrefab");
                 buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Horno 1");
-                newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f + buildingPreviewPrefab.transform.position.x, 0f + buildingPreviewPrefab.transform.position.y, 0f + buildingPreviewPrefab.transform.position.z), Quaternion.identity);
+                newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f, 0f, 8f), Quaternion.identity);
                 isPreviewActive = true;
 
                 foreach(GameObject button in buildingButtons)
@@ -40,7 +41,7 @@ public class PlaceBuilding : MonoBehaviour
             case 1:
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/AlmacenMateriaPrimaHoverPrefab");
                 buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Almacén de Materia Prima");
-                newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f + buildingPreviewPrefab.transform.position.x, 0f + buildingPreviewPrefab.transform.position.y, 0f + buildingPreviewPrefab.transform.position.z), Quaternion.identity);
+                newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f, 0f, 8f), Quaternion.identity);
                 isPreviewActive = true;
 
                 foreach (GameObject button in buildingButtons)
@@ -63,7 +64,6 @@ public class PlaceBuilding : MonoBehaviour
             if (clickKeyPressed && canBuild)
             {
                 Debug.Log("Click Izq. Detectado");
-                Debug.Log(newPreview.transform.position);
                 GameObject placedBuilding = Instantiate(buildingToBuild, newPreview.transform.position, newPreview.transform.rotation);
                 isPreviewActive = false;
                 foreach (GameObject button in buildingButtons)
