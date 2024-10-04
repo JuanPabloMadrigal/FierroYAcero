@@ -6928,7 +6928,7 @@ Transform:
   m_GameObject: {fileID: 6113510412518312758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0.025, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6957,6 +6957,7 @@ MonoBehaviour:
   canBuildBuilding: {fileID: 6598307806358842175}
   cannotBuildBuilding: {fileID: 1946779055600745758}
   building: {fileID: 8854253344340106285, guid: ae9b34eec330a954890c1311a45ca5e3, type: 3}
+  canBuild: 0
 --- !u!54 &3598384609070270608
 Rigidbody:
   m_ObjectHideFlags: 0
