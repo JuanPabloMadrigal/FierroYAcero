@@ -62,12 +62,14 @@ public class PlacingTest : MonoBehaviour
     {
         canBuildBuilding.SetActive(false);
         cannotBuildBuilding.SetActive(true);
+        canBuild = false;
     }
 
     private void AllowBuild()
     {
         canBuildBuilding.SetActive(true);
         cannotBuildBuilding.SetActive(false);
+        canBuild = true;
     }
 
 
