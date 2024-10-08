@@ -14,6 +14,7 @@ public class PlaceBuilding : MonoBehaviour
     private bool isPreviewActive = false;
 
     private GameObject[] buildingButtons;
+    public List<GameObject> buildings;
 
     public void Start()
     {
@@ -31,6 +32,7 @@ public class PlaceBuilding : MonoBehaviour
                 newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f + buildingPreviewPrefab.transform.position.x, 0f + buildingPreviewPrefab.transform.position.y, 0f + buildingPreviewPrefab.transform.position.z), Quaternion.identity);
                 isPreviewActive = true;
 
+
                 foreach(GameObject button in buildingButtons)
                 {
                     button.GetComponent<Button>().interactable = false;
@@ -42,6 +44,7 @@ public class PlaceBuilding : MonoBehaviour
                 buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Almacén de Materia Prima");
                 newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f + buildingPreviewPrefab.transform.position.x, 0f + buildingPreviewPrefab.transform.position.y, 0f + buildingPreviewPrefab.transform.position.z), Quaternion.identity);
                 isPreviewActive = true;
+
 
                 foreach (GameObject button in buildingButtons)
                 {
@@ -65,6 +68,7 @@ public class PlaceBuilding : MonoBehaviour
                 Debug.Log("Click Izq. Detectado");
                 Debug.Log(newPreview.transform.position);
                 GameObject placedBuilding = Instantiate(buildingToBuild, newPreview.transform.position, newPreview.transform.rotation);
+                buildings.Add(placedBuilding);
                 isPreviewActive = false;
                 foreach (GameObject button in buildingButtons)
                 {
