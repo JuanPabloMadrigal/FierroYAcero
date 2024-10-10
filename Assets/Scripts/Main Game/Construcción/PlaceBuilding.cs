@@ -14,25 +14,24 @@ public class PlaceBuilding : MonoBehaviour
     private bool isPreviewActive = false;
 
     private GameObject[] buildingButtons;
-    public List<GameObject> buildings;
+    static public List<GameObject> buildingsInMap;
 
     public void Start()
     {
         buildingButtons = GameObject.FindGameObjectsWithTag("BuildingButton");
+        buildingsInMap = new List<GameObject>();
     }
-
 
     public void BeginBuildingPreview(int buildingOption)
     {
         switch (buildingOption)
         {
             case 0:
+                isPreviewActive = true;
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/Horno1HoverPrefab");
                 buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Horno 1");
                 newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f + buildingPreviewPrefab.transform.position.x, 0f + buildingPreviewPrefab.transform.position.y, 0f + buildingPreviewPrefab.transform.position.z), Quaternion.identity);
-                isPreviewActive = true;
-
-
+                
                 foreach(GameObject button in buildingButtons)
                 {
                     button.GetComponent<Button>().interactable = false;
@@ -40,12 +39,11 @@ public class PlaceBuilding : MonoBehaviour
 
                 break;
             case 1:
+                isPreviewActive = true;
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/AlmacenMateriaPrimaHoverPrefab");
                 buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Almacén de Materia Prima");
                 newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f + buildingPreviewPrefab.transform.position.x, 0f + buildingPreviewPrefab.transform.position.y, 0f + buildingPreviewPrefab.transform.position.z), Quaternion.identity);
-                isPreviewActive = true;
-
-
+                
                 foreach (GameObject button in buildingButtons)
                 {
                     button.GetComponent<Button>().interactable = false;
@@ -60,15 +58,12 @@ public class PlaceBuilding : MonoBehaviour
         Debug.Log(isPreviewActive);
         if (isPreviewActive)
         {
-            Debug.Log("previewactive");
             bool canBuild = newPreview.GetComponent<PlacingTest>().canBuild;
             bool clickKeyPressed = ctx.started;
             if (clickKeyPressed && canBuild)
             {
-                Debug.Log("Click Izq. Detectado");
-                Debug.Log(newPreview.transform.position);
                 GameObject placedBuilding = Instantiate(buildingToBuild, newPreview.transform.position, newPreview.transform.rotation);
-                buildings.Add(placedBuilding);
+                buildingsInMap.Add(placedBuilding);
                 isPreviewActive = false;
                 foreach (GameObject button in buildingButtons)
                 {

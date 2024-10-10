@@ -22,7 +22,7 @@ public class PlacingTest : MonoBehaviour
     {
         canBuildBuilding.SetActive(true);
         cannotBuildBuilding.SetActive(false);
-        canBuild = false;
+        canBuild = true;
 
         original_x = transform.position.x;
         original_y = transform.position.y;
