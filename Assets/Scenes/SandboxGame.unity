@@ -8578,6 +8578,7 @@ GameObject:
   - component: {fileID: 1439697422}
   - component: {fileID: 1439697421}
   - component: {fileID: 1439697425}
+  - component: {fileID: 1439697426}
   m_Layer: 5
   m_Name: Toolbar - Canvas
   m_TagString: Untagged
@@ -8680,6 +8681,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0028bf28f8b45c0488c898d060540aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1439697426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439697420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01ad69b0378043458067b1a9feb3d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1446003799
@@ -9831,7 +9844,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnDeficit: 0
+  turnProfit: 0
   moneyUI: {fileID: 298098537}
+  money: 1000
 --- !u!4 &1578257707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 877761696902670789, guid: 5e5f9cd2bdb42d845885524458f50a7f, type: 3}
