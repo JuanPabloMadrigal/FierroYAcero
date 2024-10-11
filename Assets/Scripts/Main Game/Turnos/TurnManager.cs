@@ -13,7 +13,7 @@ public class TurnManager : MonoBehaviour
     private int turnDeficit = 0;
 
     public TMP_Text moneyUI;
-    public static int money = 2000;
+    public static int money = 0;
 
 
 

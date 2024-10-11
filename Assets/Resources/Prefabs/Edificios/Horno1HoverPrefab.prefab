@@ -3563,6 +3563,7 @@ GameObject:
   - component: {fileID: 6889484853167657356}
   - component: {fileID: 8893608684865869158}
   - component: {fileID: 3598384609070270608}
+  - component: {fileID: 3439465378206546134}
   m_Layer: 2
   m_Name: Horno1HoverPrefab
   m_TagString: BuildingPreview
@@ -3636,6 +3637,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3439465378206546134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113510412518312758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e51d471b3daef4299ac1dfdef7b149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costPerTurn: 10
+  costToBuild: 50
 --- !u!1 &6212493847829479503
 GameObject:
   m_ObjectHideFlags: 0

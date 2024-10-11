@@ -13,12 +13,10 @@ public class PlaceBuilding : MonoBehaviour
     private GameObject newPreview;
     private bool isPreviewActive = false;
 
-    private GameObject[] buildingButtons;
     static public List<GameObject> buildingsInMap;
 
     public void Start()
     {
-        buildingButtons = GameObject.FindGameObjectsWithTag("BuildingButton");
         buildingsInMap = new List<GameObject>();
     }
 
@@ -27,26 +25,40 @@ public class PlaceBuilding : MonoBehaviour
         switch (buildingOption)
         {
             case 0:
-                isPreviewActive = true;
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/Horno1HoverPrefab");
-                buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Horno 1");
-                newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f + buildingPreviewPrefab.transform.position.x, 0f + buildingPreviewPrefab.transform.position.y, 0f + buildingPreviewPrefab.transform.position.z), Quaternion.identity);
-                
-                foreach(GameObject button in buildingButtons)
+                if (TurnManager.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
                 {
-                    button.GetComponent<Button>().interactable = false;
-                }
+                    isPreviewActive = true;
+                    buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Horno 1");
+                    newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f + buildingPreviewPrefab.transform.position.x, 0f + buildingPreviewPrefab.transform.position.y, 0f + buildingPreviewPrefab.transform.position.z), Quaternion.identity);
 
+                    foreach (GameObject button in ButtonManager.toolbarButtons)
+                    {
+                        button.GetComponent<Button>().interactable = false;
+                    }
+                }
+                else
+                {
+                    Debug.Log("Cant afford");
+                }
                 break;
             case 1:
-                isPreviewActive = true;
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/AlmacenMateriaPrimaHoverPrefab");
-                buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Almacén de Materia Prima");
-                newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f + buildingPreviewPrefab.transform.position.x, 0f + buildingPreviewPrefab.transform.position.y, 0f + buildingPreviewPrefab.transform.position.z), Quaternion.identity);
-                
-                foreach (GameObject button in buildingButtons)
+                if (TurnManager.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
                 {
-                    button.GetComponent<Button>().interactable = false;
+                    isPreviewActive = true;
+
+                    buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Almacén de Materia Prima");
+                    newPreview = Instantiate(buildingPreviewPrefab, new Vector3(0f + buildingPreviewPrefab.transform.position.x, 0f + buildingPreviewPrefab.transform.position.y, 0f + buildingPreviewPrefab.transform.position.z), Quaternion.identity);
+
+                    foreach (GameObject button in ButtonManager.toolbarButtons)
+                    {
+                        button.GetComponent<Button>().interactable = false;
+                    }
+                }
+                else
+                {
+                    Debug.Log("Cant afford");
                 }
                 break;
         }
@@ -65,7 +77,7 @@ public class PlaceBuilding : MonoBehaviour
                 GameObject placedBuilding = Instantiate(buildingToBuild, newPreview.transform.position, newPreview.transform.rotation);
                 buildingsInMap.Add(placedBuilding);
                 isPreviewActive = false;
-                foreach (GameObject button in buildingButtons)
+                foreach (GameObject button in ButtonManager.toolbarButtons)
                 {
                     button.GetComponent<Button>().interactable = true;
                 }
