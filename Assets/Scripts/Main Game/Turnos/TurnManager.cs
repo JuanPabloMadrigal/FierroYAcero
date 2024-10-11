@@ -4,18 +4,29 @@ using System.Collections.Generic;
 using System.Data.SqlTypes;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class TurnManager : MonoBehaviour
 {
+    public static TurnManager Instance;
+
     private int turnCount;
 
     [SerializeField] 
     private int turnDeficit = 0;
 
+    [SerializeField]
+    private int turnProfit = 0;
+
     public TMP_Text moneyUI;
-    public static int money = 0;
 
+    [SerializeField]
+    public int money = 1000;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called before the first frame update
     private void Start()
@@ -23,7 +34,7 @@ public class TurnManager : MonoBehaviour
         moneyUI.text = money.ToString();
     }
 
-    private void UpdateMoney()
+    public void UpdateMoney()
     {
         moneyUI.text = money.ToString();
     }
@@ -34,6 +45,7 @@ public class TurnManager : MonoBehaviour
         foreach (GameObject building in PlaceBuilding.buildingsInMap) 
         {
             turnDeficit += building.GetComponent<BuildingProperties>().costPerTurn;
+            turnProfit += building.GetComponent<BuildingProperties>().profitPerTurn;
         }
         
     }
@@ -42,6 +54,7 @@ public class TurnManager : MonoBehaviour
     {
         CalculateBuildingDeficit();
         Debug.Log(turnDeficit);
+        money += turnProfit;
         money -= turnDeficit;
         UpdateMoney();
     }

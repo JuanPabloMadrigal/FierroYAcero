@@ -6,5 +6,6 @@ public class BuildingProperties : MonoBehaviour
 {
     public int costPerTurn;
     public int costToBuild;
+    public int profitPerTurn;
 
 }

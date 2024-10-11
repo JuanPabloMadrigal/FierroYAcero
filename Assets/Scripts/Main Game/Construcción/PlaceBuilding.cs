@@ -26,7 +26,7 @@ public class PlaceBuilding : MonoBehaviour
         {
             case 0:
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/Horno1HoverPrefab");
-                if (TurnManager.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
+                if (TurnManager.Instance.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
                 {
                     isPreviewActive = true;
                     buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Horno 1");
@@ -44,7 +44,7 @@ public class PlaceBuilding : MonoBehaviour
                 break;
             case 1:
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/AlmacenMateriaPrimaHoverPrefab");
-                if (TurnManager.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
+                if (TurnManager.Instance.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
                 {
                     isPreviewActive = true;
 
@@ -81,7 +81,11 @@ public class PlaceBuilding : MonoBehaviour
                 {
                     button.GetComponent<Button>().interactable = true;
                 }
+                Debug.Log("Destruir");
                 Destroy(newPreview);
+                TurnManager.Instance.money -= placedBuilding.GetComponent<BuildingProperties>().costToBuild;
+                TurnManager.Instance.UpdateMoney();
+                
             }
         }
     }

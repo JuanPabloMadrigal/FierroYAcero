@@ -3651,6 +3651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   costPerTurn: 10
   costToBuild: 50
+  profitPerTurn: 30
 --- !u!1 &6212493847829479503
 GameObject:
   m_ObjectHideFlags: 0
