@@ -7,6 +7,8 @@ TagManager:
   - BuildingPreview
   - BuildingButton
   - WalkingPoints
+  - EduardoMenuSpriteArea
+  - CarminaMenuSpriteArea
   layers:
   - Default
   - TransparentFX

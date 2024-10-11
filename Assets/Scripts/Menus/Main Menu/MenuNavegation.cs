@@ -5,21 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuNavegation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public GameObject CharacterMenu;
+    public GameObject MainMenu;
+
+    public void GoToChooseCharacter()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene("SandboxGame");
+        CharacterMenu.SetActive(true);
+        MainMenu.SetActive(false);
     }
 
     public void QuitGame()
