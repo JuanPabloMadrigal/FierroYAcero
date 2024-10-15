@@ -26,7 +26,7 @@ public class SeleccionPersonajeDatos : MonoBehaviour
             robotConfirmacion.SetActive(false);
             robotElegido.SetActive(true);
             yield return new WaitForSeconds(1.5f);
-            SceneManager.LoadScene("SandboxGame");
+            SceneManager.LoadScene("StoryGame");
         }
         else
         {
