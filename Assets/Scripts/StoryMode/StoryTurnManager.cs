@@ -8,55 +8,42 @@ using Unity.VisualScripting;
 
 public class StoryTurnManager : MonoBehaviour
 {
-    public static StoryTurnManager Instance;
+
+    private GameModel gameProperties;
 
     private int turnCount;
 
-    [SerializeField] 
+    [SerializeField]
     private int turnDeficit = 0;
 
     [SerializeField]
     private int turnProfit = 0;
 
-    public TMP_Text moneyUI;
-
-    [SerializeField]
-    public int money = 1000;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
+    /*[SerializeField]
+    public int money = 1000;*/
 
     // Start is called before the first frame update
     private void Start()
     {
-
-        moneyUI.text = money.ToString();
-    }
-
-    public void UpdateMoney()
-    {
-        moneyUI.text = money.ToString();
+        gameProperties = GameObject.FindGameObjectWithTag("GameProp").GetComponent<GameModel>();
     }
 
     private void CalculateBuildingDeficit()
     {
-        
-        foreach (GameObject building in PlaceBuilding.buildingsInMap) 
+
+        foreach (GameObject building in gameProperties.buildingsInMap)
         {
             turnDeficit += building.GetComponent<BuildingProperties>().costPerTurn;
             turnProfit += building.GetComponent<BuildingProperties>().profitPerTurn;
         }
-        
+
     }
 
     public void FinishTurn()
     {
         CalculateBuildingDeficit();
         Debug.Log(turnDeficit);
-        money += turnProfit;
-        money -= turnDeficit;
-        UpdateMoney();
+        gameProperties.AddMoney(turnProfit);
+        gameProperties.SubtractMoney(turnDeficit);
     }
 }

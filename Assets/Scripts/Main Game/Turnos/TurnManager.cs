@@ -8,7 +8,8 @@ using Unity.VisualScripting;
 
 public class TurnManager : MonoBehaviour
 {
-    public static TurnManager Instance;
+
+    private GameModel gameProperties;
 
     private int turnCount;
 
@@ -17,32 +18,15 @@ public class TurnManager : MonoBehaviour
 
     [SerializeField]
     private int turnProfit = 0;
-
-    public TMP_Text moneyUI;
-
-    [SerializeField]
-    public int money = 1000;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-
-    // Start is called before the first frame update
     private void Start()
     {
-        moneyUI.text = money.ToString();
-    }
-
-    public void UpdateMoney()
-    {
-        moneyUI.text = money.ToString();
+        gameProperties = GameObject.FindGameObjectWithTag("GameProp").GetComponent<GameModel>();
     }
 
     private void CalculateBuildingDeficit()
     {
         
-        foreach (GameObject building in PlaceBuilding.buildingsInMap) 
+        foreach (GameObject building in gameProperties.buildingsInMap) 
         {
             turnDeficit += building.GetComponent<BuildingProperties>().costPerTurn;
             turnProfit += building.GetComponent<BuildingProperties>().profitPerTurn;
@@ -54,8 +38,7 @@ public class TurnManager : MonoBehaviour
     {
         CalculateBuildingDeficit();
         Debug.Log(turnDeficit);
-        money += turnProfit;
-        money -= turnDeficit;
-        UpdateMoney();
+        gameProperties.AddMoney(turnProfit);
+        gameProperties.SubtractMoney(turnDeficit);
     }
 }

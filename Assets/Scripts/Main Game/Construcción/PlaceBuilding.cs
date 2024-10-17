@@ -12,12 +12,12 @@ public class PlaceBuilding : MonoBehaviour
     private GameObject buildingToBuild;
     private GameObject newPreview;
     private bool isPreviewActive = false;
-
-    static public List<GameObject> buildingsInMap;
+    private GameModel gameProperties;
 
     public void Start()
     {
-        buildingsInMap = new List<GameObject>();
+        gameProperties = GameObject.FindGameObjectWithTag("GameProp").GetComponent<GameModel>();
+        Debug.Log(gameProperties.money);
     }
 
     public void BeginBuildingPreview(int buildingOption)
@@ -26,7 +26,7 @@ public class PlaceBuilding : MonoBehaviour
         {
             case 0:
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/Horno1HoverPrefab");
-                if (TurnManager.Instance.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
+                if (gameProperties.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
                 {
                     isPreviewActive = true;
                     buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Horno 1");
@@ -44,7 +44,7 @@ public class PlaceBuilding : MonoBehaviour
                 break;
             case 1:
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/AlmacenMateriaPrimaHoverPrefab");
-                if (TurnManager.Instance.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
+                if (gameProperties.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
                 {
                     isPreviewActive = true;
 
@@ -75,7 +75,7 @@ public class PlaceBuilding : MonoBehaviour
             if (clickKeyPressed && canBuild)
             {
                 GameObject placedBuilding = Instantiate(buildingToBuild, newPreview.transform.position, newPreview.transform.rotation);
-                buildingsInMap.Add(placedBuilding);
+                gameProperties.buildingsInMap.Add(placedBuilding);
                 isPreviewActive = false;
                 foreach (GameObject button in ButtonManager.toolbarButtons)
                 {
@@ -83,8 +83,7 @@ public class PlaceBuilding : MonoBehaviour
                 }
                 Debug.Log("Destruir");
                 Destroy(newPreview);
-                TurnManager.Instance.money -= placedBuilding.GetComponent<BuildingProperties>().costToBuild;
-                TurnManager.Instance.UpdateMoney();
+                gameProperties.SubtractMoney(placedBuilding.GetComponent<BuildingProperties>().costToBuild);
                 
             }
         }
