@@ -3,7 +3,32 @@ guid: 3a0d82549f03c91488a5a689432b4dae
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Almac_n_de_MP1_Planta_de_Coque_Horno1_lambert3SG
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Almac_n_de_MP_Planta_de_Coque_Horno1_lambert3SG
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Almac_n_de_MP_Planta_de_Coque_Horno1_lambert5SG
+    second: {fileID: 2100000, guid: 938e0624484e3b4438c93007859e972d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Almac_n_de_MP_Planta_de_Coque_Horno1_lambert7SG
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Almac_n_de_MP_Planta_de_Coque_Horno1_lambert8SG
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
