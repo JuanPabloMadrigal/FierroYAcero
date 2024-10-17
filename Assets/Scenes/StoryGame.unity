@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1299,6 +1299,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 877761696902670789, guid: 5e5f9cd2bdb42d845885524458f50a7f, type: 3}
   m_PrefabInstance: {fileID: 63926211}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &64701619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 64701621}
+  - component: {fileID: 64701620}
+  m_Layer: 0
+  m_Name: TechManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &64701620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64701619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f710faea947c6e4aa5584fa1668be46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technologies:
+  - name: "Taller de Aceraci\xF3n"
+    description: "Taller de Aceraci\xF3n"
+    cost: 10
+    isUnlocked: 0
+    prerequisites: []
+  - name: Alto Horno 1
+    description: Alto Horno 1
+    cost: 20
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de Aceraci\xF3n"
+  currentResearchPoints: 0
+--- !u!4 &64701621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64701619}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.78, y: 0.582, z: 30.05}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &72372109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9387,7 +9444,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1569078470}
         m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
         m_MethodName: FinishTurn
         m_Mode: 1
@@ -28106,7 +28163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1569078469
 Transform:
   m_ObjectHideFlags: 0
@@ -38997,4 +39054,5 @@ SceneRoots:
   - {fileID: 711927526}
   - {fileID: 2020888645}
   - {fileID: 1440597505}
+  - {fileID: 64701621}
   - {fileID: 4583522900017406030}
