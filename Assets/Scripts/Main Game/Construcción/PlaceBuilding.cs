@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static UnityEditor.PlayerSettings;
 
 public class PlaceBuilding : MonoBehaviour
 {
@@ -12,13 +13,6 @@ public class PlaceBuilding : MonoBehaviour
     private GameObject buildingToBuild;
     private GameObject newPreview;
     private bool isPreviewActive = false;
-    private GameModel gameProperties;
-
-    public void Start()
-    {
-        gameProperties = GameObject.FindGameObjectWithTag("GameProp").GetComponent<GameModel>();
-        Debug.Log(gameProperties.money);
-    }
 
     public void BeginBuildingPreview(int buildingOption)
     {
@@ -26,7 +20,7 @@ public class PlaceBuilding : MonoBehaviour
         {
             case 0:
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/Horno1HoverPrefab");
-                if (gameProperties.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
+                if (FileHandler.Instance.gameData.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
                 {
                     isPreviewActive = true;
                     buildingToBuild = Resources.Load<GameObject>("Prefabs/Edificios/Horno 1");
@@ -44,7 +38,7 @@ public class PlaceBuilding : MonoBehaviour
                 break;
             case 1:
                 buildingPreviewPrefab = Resources.Load<GameObject>("Prefabs/Edificios/AlmacenMateriaPrimaHoverPrefab");
-                if (gameProperties.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
+                if (FileHandler.Instance.gameData.money >= buildingPreviewPrefab.GetComponent<BuildingProperties>().costToBuild)
                 {
                     isPreviewActive = true;
 
@@ -71,11 +65,19 @@ public class PlaceBuilding : MonoBehaviour
         if (isPreviewActive)
         {
             bool canBuild = newPreview.GetComponent<PlacingTest>().canBuild;
-            bool clickKeyPressed = ctx.started;
+            int costPerTurn = newPreview.GetComponent<PlacingTest>().costPerTurn;
+            int costToBuild = newPreview.GetComponent<PlacingTest>().costToBuild;
+            float addingValue = newPreview.GetComponent<PlacingTest>().addingValue;
+            float valueModifier = newPreview.GetComponent<PlacingTest>().valueModifier;
+            int workersNum = newPreview.GetComponent<PlacingTest>().workersNum;
+            bool unlocked = newPreview.GetComponent<PlacingTest>().unlocked;
+            string type = newPreview.GetComponent<PlacingTest>().type;
+
+    bool clickKeyPressed = ctx.started;
             if (clickKeyPressed && canBuild)
             {
                 GameObject placedBuilding = Instantiate(buildingToBuild, newPreview.transform.position, newPreview.transform.rotation);
-                gameProperties.buildingsInMap.Add(placedBuilding);
+                FileHandler.Instance.gameData.buildingsList.Add(new BuildingProperties(costPerTurn, costToBuild, addingValue, valueModifier, workersNum, unlocked, type, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y));
                 isPreviewActive = false;
                 foreach (GameObject button in ButtonManager.toolbarButtons)
                 {
@@ -83,7 +85,7 @@ public class PlaceBuilding : MonoBehaviour
                 }
                 Debug.Log("Destruir");
                 Destroy(newPreview);
-                gameProperties.SubtractMoney(placedBuilding.GetComponent<BuildingProperties>().costToBuild);
+                FileHandler.Instance.gameData.SubtractMoney(placedBuilding.GetComponent<BuildingProperties>().costToBuild);
                 
             }
         }

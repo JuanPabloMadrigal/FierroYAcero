@@ -9215,7 +9215,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4578657372092979888}
-  - component: {fileID: -7175451042959021706}
   m_Layer: 0
   m_Name: MolinoComercial
   m_TagString: Untagged
@@ -9239,21 +9238,6 @@ Transform:
   - {fileID: 3987476438497570009}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-7175451042959021706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8141406576159170306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85e51d471b3daef4299ac1dfdef7b149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  costPerTurn: 100
-  costToBuild: 100
-  profitPerTurn: 100
 --- !u!1 &8199045043195119544
 GameObject:
   m_ObjectHideFlags: 0

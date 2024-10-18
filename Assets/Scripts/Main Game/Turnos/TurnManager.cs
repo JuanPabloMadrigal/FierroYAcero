@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
 using UnityEngine;
@@ -8,37 +10,30 @@ using Unity.VisualScripting;
 
 public class TurnManager : MonoBehaviour
 {
-
-    private GameModel gameProperties;
-
     private int turnCount;
 
-    [SerializeField] 
-    private int turnDeficit = 0;
+    [SerializeField]
+    private float turnDeficit = 0;
 
     [SerializeField]
-    private int turnProfit = 0;
-    private void Start()
-    {
-        gameProperties = GameObject.FindGameObjectWithTag("GameProp").GetComponent<GameModel>();
-    }
+    private float turnProfit = 0;
 
     private void CalculateBuildingDeficit()
     {
-        
-        foreach (GameObject building in gameProperties.buildingsInMap) 
+
+        foreach (BuildingProperties building in FileHandler.Instance.gameData.buildingsList)
         {
-            turnDeficit += building.GetComponent<BuildingProperties>().costPerTurn;
-            turnProfit += building.GetComponent<BuildingProperties>().profitPerTurn;
+            turnDeficit += building.costPerTurn;
+            turnProfit = turnProfit + (building.addingValue * building.valueModifier);
         }
-        
+
     }
 
     public void FinishTurn()
     {
         CalculateBuildingDeficit();
         Debug.Log(turnDeficit);
-        gameProperties.AddMoney(turnProfit);
-        gameProperties.SubtractMoney(turnDeficit);
+        FileHandler.Instance.gameData.AddMoney((int)turnProfit);
+        FileHandler.Instance.gameData.SubtractMoney((int)turnDeficit);
     }
 }

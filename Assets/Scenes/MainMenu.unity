@@ -1705,7 +1705,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 410, y: 160}
-  m_SizeDelta: {x: 320, y: 100}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1591203465
 MonoBehaviour:
@@ -2346,7 +2346,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 320, y: 0}
+  m_SizeDelta: {x: 500, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2046496334
 MonoBehaviour:
@@ -2368,7 +2368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RETO
+  m_text: HISTORIA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5d69af67e89e634da741f97bd9c9594, type: 2}
   m_sharedMaterial: {fileID: -7536970104624891026, guid: a5d69af67e89e634da741f97bd9c9594, type: 2}

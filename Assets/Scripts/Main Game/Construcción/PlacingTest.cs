@@ -13,6 +13,14 @@ public class PlacingTest : MonoBehaviour
     public GameObject building;
     public bool canBuild;
 
+    public int costPerTurn;
+    public int costToBuild;
+    public float addingValue;
+    public float valueModifier;
+    public int workersNum;
+    public bool unlocked;
+    public string type;
+
     private float original_x;
     private float original_y;
     private float original_z;

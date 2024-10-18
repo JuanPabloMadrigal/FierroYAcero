@@ -2,12 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameModel : MonoBehaviour
+[System.Serializable]
+public class GameModel
 {
     public string character;
     public int money;
     public int workerSatisfaction;
-    public List<GameObject> buildingsInMap;
+    public List<BuildingProperties> buildingsList;
+
+    public GameModel(string ch, int mon, int workSat, List<BuildingProperties> bl) { 
+        character = ch;
+        money = mon;
+        workerSatisfaction = workSat;
+        buildingsList = bl;
+    }
 
     public void AddMoney(int amount)
     {
@@ -20,4 +28,5 @@ public class GameModel : MonoBehaviour
         money -= amount;
         UIManager.Instance.UpdateMoneyUI(money);
     }
+
 }
