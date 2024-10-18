@@ -1,39 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NPC_Moving : MonoBehaviour
 {
-    public Transform[] waypoints;
-    private int currentWayPointIndex;
-    public float speed = 10.0f;
+    public Transform[] destinations;
+    [SerializeField]private int currentIndex;
 
-    private float waitTime = 1.0f;
-    private float waitCounter = 0.0f;
-    private bool waiting = false;
-    private Vector3 wpTransf;
+    private float waitTime = 10.0f;
+    [SerializeField]private float waitCounter = 0.0f;
+    [SerializeField]private bool waiting;
+    private Vector3 desTransf;
+    [SerializeField]private NavMeshAgent navmeshAgent;
+
+    void Start()
+    {
+        navmeshAgent = this.GetComponent<NavMeshAgent>();
+    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(waiting)
         {
             waitCounter += Time.deltaTime;
-            if(waitCounter<waitTime)
-                return;
+            if(waitCounter > waitTime)
+            {
                 waiting = false;
-        }
-        Transform wp = waypoints[currentWayPointIndex];
-        wpTransf = new Vector3(wp.position.x, transform.position.y, wp.position.z);
-        if(Vector3.Distance(transform.position, wpTransf)< 0.01f)
-        {
-            transform.position = wpTransf;
-            currentWayPointIndex = (currentWayPointIndex + 1) % waypoints.Length;
-            waiting = true;
+                waitCounter = 0.0f;
+                return;
+            }
         }
         else{
-            transform.position = Vector3.MoveTowards(transform.position, wpTransf, speed * Time.deltaTime);
-            transform.LookAt(wpTransf);
+            Transform des = destinations[currentIndex];
+            Vector3 desTransf = new Vector3(des.position.x, transform.position.y, des.position.z);
+            if(Vector3.Distance(transform.position, desTransf)< 0.1f)
+            {
+                transform.position = desTransf;
+                currentIndex = (currentIndex + 1) % destinations.Length;
+                waiting = true;
+            }
+            else{
+                SetDestination(desTransf);
+            }
         }
+    }
+
+    private void SetDestination(Vector3 destiny)
+    { 
+        navmeshAgent.SetDestination(destiny);
     }
 }
