@@ -9,6 +9,9 @@ public class GameModel
     public int money;
     public int workerSatisfaction;
     public List<BuildingProperties> buildingsList;
+    public IronStorehouse ironStorehouse;
+    public CokePlant cokePlant;
+    public SteelYard steelYard;
 
     public GameModel(string ch, int mon, int workSat, List<BuildingProperties> bl) { 
         character = ch;

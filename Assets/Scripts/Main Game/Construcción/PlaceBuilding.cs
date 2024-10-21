@@ -67,17 +67,36 @@ public class PlaceBuilding : MonoBehaviour
             bool canBuild = newPreview.GetComponent<PlacingTest>().canBuild;
             int costPerTurn = newPreview.GetComponent<PlacingTest>().costPerTurn;
             int costToBuild = newPreview.GetComponent<PlacingTest>().costToBuild;
+            bool unlocked = newPreview.GetComponent<PlacingTest>().unlocked;
+            string type = newPreview.GetComponent<PlacingTest>().type;
             float addingValue = newPreview.GetComponent<PlacingTest>().addingValue;
             float valueModifier = newPreview.GetComponent<PlacingTest>().valueModifier;
             int workersNum = newPreview.GetComponent<PlacingTest>().workersNum;
-            bool unlocked = newPreview.GetComponent<PlacingTest>().unlocked;
-            string type = newPreview.GetComponent<PlacingTest>().type;
+
+
 
     bool clickKeyPressed = ctx.started;
             if (clickKeyPressed && canBuild)
             {
                 GameObject placedBuilding = Instantiate(buildingToBuild, newPreview.transform.position, newPreview.transform.rotation);
-                FileHandler.Instance.gameData.buildingsList.Add(new BuildingProperties(costPerTurn, costToBuild, addingValue, valueModifier, workersNum, unlocked, type, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y));
+
+                if (type == "Taller de Aceracion" || type == "Horno 1" || type == "Horno 2" || type == "Horno 3" || type == "Molino")
+                {
+                    FileHandler.Instance.gameData.buildingsList.Add(new BuildingProperties(costPerTurn, costToBuild, addingValue, valueModifier, workersNum, unlocked, type, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y));
+                }
+                else if (type == "Almacen MP")
+                {
+                    FileHandler.Instance.gameData.ironStorehouse = new IronStorehouse(costPerTurn, costToBuild, unlocked, type, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y);
+                }
+                else if (type == "Planta de Coque")
+                {
+                    FileHandler.Instance.gameData.cokePlant = new CokePlant(costPerTurn, costToBuild, unlocked, type, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y);
+                }
+                else if (type == "Patio de Acero")
+                {
+                    FileHandler.Instance.gameData.steelYard = new SteelYard(costPerTurn, costToBuild, unlocked, type, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y);
+                }
+                
                 isPreviewActive = false;
                 foreach (GameObject button in ButtonManager.toolbarButtons)
                 {
