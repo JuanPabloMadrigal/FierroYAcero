@@ -27728,13 +27728,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLocal: 1
   fileValidation: 0
+  fileValidationDialogues: 0
   JSONFile: gameStory.txt
-  filePath: /Scripts/StoryMode
+  DialogueJSONFile: storyDialogues.txt
+  filePath: /Scripts/StoryMode/
   gameData:
     character: 
     money: 0
     workerSatisfaction: 0
     buildingsList: []
+  gameDialogues:
+    Eventos: []
 --- !u!1001 &1469233458
 PrefabInstance:
   m_ObjectHideFlags: 0
