@@ -20,12 +20,18 @@ public class FileHandlerStory : MonoBehaviour
     /// </summary>
     [SerializeField] private bool isLocal = true;
     [SerializeField] private bool fileValidation;
-    [SerializeField] private string JSONFile = "game.txt";
-    [SerializeField] private string filePath = "/Scripts/";
+    [SerializeField] private bool fileValidationDialogues;
+    [SerializeField] private string JSONFile = "storyGame.txt";
+    [SerializeField] private string DialogueJSONFile = "storyDialogues.txt";
+    [SerializeField] private string filePath = "/Scripts/StoryMode/";
 
     // VARIABLE QUE GUARDA EL MODELO DE JUEGO DE LA PARTIDA
 
     public GameModel gameData;
+
+    // VARIABLE QUE CARGA LOS DIÁLOGOS DEL JUEGO
+
+    public GameDialogues gameDialogues;
 
     private void Awake()
     {
@@ -44,27 +50,32 @@ public class FileHandlerStory : MonoBehaviour
                         new BuildingProperties(0, 0, 20f, 1f, 0, false, "", 0, 0, 0, -90),
                         new BuildingProperties(0, 0, 30f, 1f, 0, false, "", 0, 0, 0, 0)
                     });
+        gameDialogues = new GameDialogues();
         ReadFile();
-        Debug.Log(gameData.buildingsList[0].valueModifier);
         UIManager.Instance.UpdateMoneyUI(gameData.money); ;
     }
 
+
+    // Lectura de archivos de progreso de juego y diálogos
     public void ReadFile()
     {
         string fullPath = string.Empty;
+        string dialoguePath = string.Empty;
         if (!isLocal)
         {
             fullPath = Application.persistentDataPath + "/" + JSONFile;
+            dialoguePath = Application.persistentDataPath + "/" + DialogueJSONFile;
         }
         else
         {
-            fullPath = filePath + JSONFile; 
+            fullPath = filePath + JSONFile;
+            dialoguePath = filePath + DialogueJSONFile;
         }
 
         fileValidation = File.Exists(Application.dataPath + fullPath);
         if (!fileValidation)
         {
-            Debug.Log("file not found");
+            Debug.Log("Game file not found");
         }
         else
         {
@@ -78,10 +89,28 @@ public class FileHandlerStory : MonoBehaviour
             Debug.Log(decode);
         }
 
+        fileValidationDialogues = File.Exists(Application.dataPath + dialoguePath);
+        if (!fileValidationDialogues)
+        {
+            Debug.Log("Dialogues file not found");
+        }
+        else
+        {
+            string streamDialogueContent = "";
+            StreamReader fileReaderDialogue = new StreamReader(Application.dataPath + dialoguePath, Encoding.Default);
+            streamDialogueContent = fileReaderDialogue.ReadToEnd();
+            fileReaderDialogue.Close();
+            string decodeDialogue = CryptoHandler.DecryptStringAlt(streamDialogueContent, "JKAID99OA1");
+            gameDialogues = JsonUtility.FromJson<GameDialogues>(decodeDialogue);
+            Debug.Log(decodeDialogue);
+            Debug.Log(gameDialogues.Eventos[0].Dialogos[0].DialogoTexto);
+        }
+
         RefreshEditorProjectWindow();
 
     }
 
+    // Guardado de nuevos datos del progreso del juego en el archivo original
     public void WriteFile()
     {
         string fullPath = string.Empty;
@@ -97,16 +126,49 @@ public class FileHandlerStory : MonoBehaviour
         fileValidation = File.Exists(Application.dataPath + fullPath);
         string json = CryptoHandler.EncryptStringAlt(JsonUtility.ToJson(gameData), "JKAID99OA1");
         if (!fileValidation)
-        {            
+        {
             Debug.Log(JSONFile);
             File.WriteAllBytes(Application.dataPath + fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
         else
         {
-            File.Delete(Application.dataPath + fullPath);            
-            File.WriteAllBytes(Application.dataPath + fullPath, System.Text.Encoding.UTF8.GetBytes(json)); 
+            File.Delete(Application.dataPath + fullPath);
+            File.WriteAllBytes(Application.dataPath + fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
         Debug.Log(json);
+        RefreshEditorProjectWindow();
+
+    }
+
+
+    // Función local para encriptar datos necesarios para el desarrollo del juego
+    public void EncryptExternalFile(string content, string file)
+    {
+        string extPath = string.Empty;
+        if (!isLocal)
+        {
+            extPath = Application.persistentDataPath + "/" + file;
+        }
+        else
+        {
+            extPath = filePath + file;
+        }
+
+        fileValidation = File.Exists(Application.dataPath + file);
+        string json = CryptoHandler.EncryptStringAlt(content, "JKAID99OA1");
+        Debug.Log(json);
+
+        if (!fileValidation)
+        {
+            Debug.Log(file);
+            File.WriteAllBytes(Application.dataPath + file, System.Text.Encoding.UTF8.GetBytes(json));
+        }
+        else
+        {
+            File.Delete(Application.dataPath + extPath);
+            File.WriteAllBytes(Application.dataPath + extPath, System.Text.Encoding.UTF8.GetBytes(json));
+        }
+
         RefreshEditorProjectWindow();
 
     }
