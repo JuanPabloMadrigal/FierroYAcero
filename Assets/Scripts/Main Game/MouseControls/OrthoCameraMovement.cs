@@ -134,29 +134,11 @@ public class OrthoCameraMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(smoothedRotation);
     }
 
-    public void SetCameraAngle(Vector3 newAngle)
-    {
-        targetRotation = newAngle;
-        cameraAngle = newAngle;
-    }
-
     public void FocusOn(Vector3 worldPosition)
     {
         // Update target position instead of directly moving camera
         targetPosition = new Vector3(worldPosition.x, heightOffset, worldPosition.z);
     }
 
-    // Optional: Method to instantly snap camera without smoothing
-    public void SnapToPosition(Vector3 worldPosition)
-    {
-        targetPosition = new Vector3(worldPosition.x, heightOffset, worldPosition.z);
-        transform.position = targetPosition;
-        currentVelocity = Vector3.zero;
-    }
-
-    // Optional: Method to set zoom level with smoothing
-    public void SetZoomLevel(float zoom)
-    {
-        targetZoom = Mathf.Clamp(zoom, minZoom, maxZoom);
-    }
+    
 }
