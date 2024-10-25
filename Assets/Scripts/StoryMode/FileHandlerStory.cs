@@ -44,6 +44,8 @@ public class FileHandlerStory : MonoBehaviour
                     "",
                     0,
                     0,
+                    0,
+                    20,
                     new List<BuildingProperties>
                     {
                         new BuildingProperties(0, 0, 10f, 1f, 0, false, "", 0, 0, 0, -90),
@@ -52,7 +54,8 @@ public class FileHandlerStory : MonoBehaviour
                     });
         gameDialogues = new GameDialogues();
         ReadFile();
-        UIManager.Instance.UpdateMoneyUI(gameData.money); ;
+        UIManager.Instance.UpdateMoneyUI(gameData.money);
+        UIManager.Instance.UpdateCoqueUI(gameData.coque);
     }
 
 

@@ -38,6 +38,8 @@ public class FileHandler : MonoBehaviour
                     "",
                     0,
                     0,
+                    0,
+                    20,
                     new List<BuildingProperties>
                     {
                         new BuildingProperties(0, 0, 10f, 1f, 0, false, "", 0, 0, 0, -90),

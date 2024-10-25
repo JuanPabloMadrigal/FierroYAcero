@@ -8,15 +8,28 @@ public class OrthoCameraMovement : MonoBehaviour
     [SerializeField] private float minZoom = 2f;
     [SerializeField] private float maxZoom = 20f;
     [SerializeField] private float panSpeed = 10f;
-    
+
+    [Header("Smoothing Settings")]
+    [SerializeField] private float movementSmoothTime = 0.2f;
+    [SerializeField] private float zoomSmoothTime = 0.15f;
+    [SerializeField] private float rotationSmoothTime = 0.15f;
+
     [Header("Camera Orientation")]
-    [SerializeField] private Vector3 cameraAngle = new Vector3(45f, 45f, 0f); // Default isometric-like angle
-    [SerializeField] private float heightOffset = 10f; // Initial camera height
-    
+    [SerializeField] private Vector3 cameraAngle = new Vector3(45f, 45f, 0f);
+    [SerializeField] private float heightOffset = 10f;
+
     private Camera mainCamera;
     private Vector2 lastMousePosition;
     private bool isDragging = false;
     private Plane groundPlane;
+
+    // Smoothing variables
+    private Vector3 currentVelocity;
+    private Vector3 targetPosition;
+    private float zoomVelocity;
+    private float targetZoom;
+    private Vector3 rotationVelocity;
+    private Vector3 targetRotation;
 
     private void Awake()
     {
@@ -27,11 +40,13 @@ public class OrthoCameraMovement : MonoBehaviour
             mainCamera.orthographic = true;
         }
 
-        // Initialize camera position and rotation
+        // Initialize positions and rotations
         transform.rotation = Quaternion.Euler(cameraAngle);
         transform.position = new Vector3(0, heightOffset, 0);
-        
-        // Initialize the ground plane for ray casting
+        targetPosition = transform.position;
+        targetZoom = mainCamera.orthographicSize;
+        targetRotation = cameraAngle;
+
         groundPlane = new Plane(Vector3.up, Vector3.zero);
     }
 
@@ -39,19 +54,18 @@ public class OrthoCameraMovement : MonoBehaviour
     {
         HandleZoom();
         HandlePanning();
+        UpdateCameraTransform();
     }
 
     private void HandleZoom()
     {
         float scrollValue = Mouse.current.scroll.ReadValue().y;
-        
+
         if (scrollValue != 0)
         {
-            float newSize = mainCamera.orthographicSize - (scrollValue * zoomSpeed * Time.deltaTime);
-            mainCamera.orthographicSize = Mathf.Clamp(newSize, minZoom, maxZoom);
-            
-            // Optionally adjust height offset based on zoom level
-            // heightOffset = baseHeight * (mainCamera.orthographicSize / minZoom);
+            // Update target zoom instead of directly modifying camera
+            float newZoom = targetZoom - (scrollValue * zoomSpeed * Time.deltaTime);
+            targetZoom = Mathf.Clamp(newZoom, minZoom, maxZoom);
         }
     }
 
@@ -72,38 +86,77 @@ public class OrthoCameraMovement : MonoBehaviour
             Vector2 currentMousePosition = Mouse.current.position.ReadValue();
             Vector2 mouseDelta = currentMousePosition - lastMousePosition;
 
-            // Convert screen point to ray for current and last position
             Ray rayFromCurrent = mainCamera.ScreenPointToRay(currentMousePosition);
             Ray rayFromLast = mainCamera.ScreenPointToRay(lastMousePosition);
 
-            // Calculate intersection points with the ground plane
             if (groundPlane.Raycast(rayFromCurrent, out float currentDistance) &&
                 groundPlane.Raycast(rayFromLast, out float lastDistance))
             {
                 Vector3 currentWorldPoint = rayFromCurrent.GetPoint(currentDistance);
                 Vector3 lastWorldPoint = rayFromLast.GetPoint(lastDistance);
-                
-                // Calculate the world space movement
+
                 Vector3 worldSpaceMovement = lastWorldPoint - currentWorldPoint;
-                
-                // Apply movement
-                transform.position += worldSpaceMovement * panSpeed * Time.deltaTime;
+
+                // Update target position instead of directly moving camera
+                targetPosition += worldSpaceMovement * panSpeed * Time.deltaTime;
             }
 
             lastMousePosition = currentMousePosition;
         }
     }
 
-    // Optional: Method to set camera angle dynamically
-    public void SetCameraAngle(Vector3 newAngle)
+    private void UpdateCameraTransform()
     {
-        cameraAngle = newAngle;
-        transform.rotation = Quaternion.Euler(cameraAngle);
+        // Smooth position movement
+        transform.position = Vector3.SmoothDamp(
+            transform.position,
+            targetPosition,
+            ref currentVelocity,
+            movementSmoothTime
+        );
+
+        // Smooth zoom
+        mainCamera.orthographicSize = Mathf.SmoothDamp(
+            mainCamera.orthographicSize,
+            targetZoom,
+            ref zoomVelocity,
+            zoomSmoothTime
+        );
+
+        // Smooth rotation
+        Vector3 currentRotation = transform.rotation.eulerAngles;
+        Vector3 smoothedRotation = Vector3.SmoothDamp(
+            currentRotation,
+            targetRotation,
+            ref rotationVelocity,
+            rotationSmoothTime
+        );
+        transform.rotation = Quaternion.Euler(smoothedRotation);
     }
 
-    // Optional: Method to focus camera on a specific world position
+    public void SetCameraAngle(Vector3 newAngle)
+    {
+        targetRotation = newAngle;
+        cameraAngle = newAngle;
+    }
+
     public void FocusOn(Vector3 worldPosition)
     {
-        transform.position = new Vector3(worldPosition.x, heightOffset, worldPosition.z);
+        // Update target position instead of directly moving camera
+        targetPosition = new Vector3(worldPosition.x, heightOffset, worldPosition.z);
+    }
+
+    // Optional: Method to instantly snap camera without smoothing
+    public void SnapToPosition(Vector3 worldPosition)
+    {
+        targetPosition = new Vector3(worldPosition.x, heightOffset, worldPosition.z);
+        transform.position = targetPosition;
+        currentVelocity = Vector3.zero;
+    }
+
+    // Optional: Method to set zoom level with smoothing
+    public void SetZoomLevel(float zoom)
+    {
+        targetZoom = Mathf.Clamp(zoom, minZoom, maxZoom);
     }
 }

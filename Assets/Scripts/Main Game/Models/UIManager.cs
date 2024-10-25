@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 
     public TMP_Text moneyUI;
     public TMP_Text happinessUI;
+    public TMP_Text coqueUI;
 
     private void Awake()
     {
@@ -18,6 +19,11 @@ public class UIManager : MonoBehaviour
     public void UpdateMoneyUI(int money)
     {
         moneyUI.text = money.ToString();
+    }
+
+    public void UpdateCoqueUI(int coque)
+    {
+        coqueUI.text = coque.ToString();
     }
 
     public void UpdateHappinessUI(int happiness)
