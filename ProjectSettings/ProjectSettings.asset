@@ -674,8 +674,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Fierro y Acero
-  metroPackageVersion: 
+  metroPackageName: FierroyAcero
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -683,7 +683,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Fierro y Acero
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Fierro y Acero
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
