@@ -5,13 +5,14 @@ using System.Net.Http;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class FileHandler : MonoBehaviour
+public class FileHandlerStory : MonoBehaviour
 {
     /// <summary>
     /// Manejo de clase como singleton
     /// </summary>
-    public static FileHandler Instance;
+    public static FileHandlerStory Instance;
 
 
     /// <summary>
@@ -21,11 +22,22 @@ public class FileHandler : MonoBehaviour
     [SerializeField] private bool isLocal = true;
     [SerializeField] private bool fileValidation;
     [SerializeField] private bool fileValidationDialogues;
+    [SerializeField] private string EncJSONFile = "storyGame.txt";
     [SerializeField] private string JSONFile = "storyGame.txt";
-    [SerializeField] private string DialogueJSONFile = "storyDialogues.txt";
-    [SerializeField] private string filePath = "/Scripts/StoryMode/";
+    [SerializeField] private string DialogueJSONFile = "JSON Templates/storyDialoguesOriginal.txt";
+    [SerializeField] private string DialogueEncJSONFile = "storyDialogues.txt";
+    [SerializeField] private string filePath = "/Scripts/Story Mode/JSONs/";
     private string encKey; // Llave
     private string initVector; // IV
+
+    // Depuración texto
+
+    public Text textPartEnc;
+    public Text textPartNorm;
+    public Text textDialEnc;
+    public Text textDialNorm;
+
+    //
 
     // VARIABLE QUE GUARDA EL MODELO DE JUEGO DE LA PARTIDA
 
@@ -60,17 +72,20 @@ public class FileHandler : MonoBehaviour
         gameDialogues = new GameDialogues();
 
         // Obtención de datos para encriptación
+
         encKey = PlayerPrefs.GetString("EncKey");
         initVector = PlayerPrefs.GetString("InitVector");
 
         if (string.IsNullOrEmpty(encKey))
         {
-            string newEncKey = CreateEncComponent(Random.Range(8, 13));
+            string newEncKey = CreateEncComponent(Random.Range(8,13));
+            encKey = newEncKey;
             PlayerPrefs.SetString("EncKey", newEncKey);
         }
         if (string.IsNullOrEmpty(initVector))
         {
             string newIV = CreateEncComponent(16);
+            initVector = newIV;
             PlayerPrefs.SetString("InitVector", newIV);
         }
 
@@ -91,16 +106,16 @@ public class FileHandler : MonoBehaviour
 
         if (!isLocal)
         {
-            fullPath = Application.persistentDataPath + "/" + JSONFile;
-            dialoguePath = Application.persistentDataPath + "/" + DialogueJSONFile;
+            fullPath = Application.persistentDataPath + "/" + EncJSONFile;
+            dialoguePath = Application.persistentDataPath + "/" + DialogueEncJSONFile;
         }
         else
         {
-            fullPath = filePath + JSONFile;
-            dialoguePath = filePath + DialogueJSONFile;
+            fullPath = Application.dataPath + filePath + EncJSONFile;
+            dialoguePath = Application.dataPath + filePath + DialogueEncJSONFile;
         }
 
-        fileValidation = File.Exists(Application.dataPath + fullPath);
+        fileValidation = File.Exists(fullPath);
         if (!fileValidation)
         {
             Debug.Log("Game file not found");
@@ -109,30 +124,31 @@ public class FileHandler : MonoBehaviour
         {
 
             string streamContent = "";
-            StreamReader fileReader = new StreamReader(Application.dataPath + fullPath, Encoding.Default);
+            StreamReader fileReader = new StreamReader(fullPath, Encoding.Default);
             streamContent = fileReader.ReadToEnd();
             fileReader.Close();
             string decode = CryptoHandler.DecryptStringAlt(streamContent, encKey, initVector);
-            gameData = JsonUtility.FromJson<GameModel>(decode);
+            gameData =  JsonUtility.FromJson<GameModel>(decode);
             Debug.Log(decode);
+            textPartNorm.text = "JSON Partida Normal: " + decode;
         }
 
-        fileValidationDialogues = File.Exists(Application.dataPath + dialoguePath);
+        fileValidationDialogues = File.Exists(dialoguePath);
         if (!fileValidationDialogues)
         {
-            Debug.Log("Dialogues file not found");
+            Debug.Log("Dialogues file not found, encripted version weill be created.");
+            EncryptExternalFile(DialogueJSONFile, DialogueEncJSONFile);
         }
-        else
-        {
-            string streamDialogueContent = "";
-            StreamReader fileReaderDialogue = new StreamReader(Application.dataPath + dialoguePath, Encoding.Default);
-            streamDialogueContent = fileReaderDialogue.ReadToEnd();
-            fileReaderDialogue.Close();
-            string decodeDialogue = CryptoHandler.DecryptStringAlt(streamDialogueContent, encKey, initVector);
-            gameDialogues = JsonUtility.FromJson<GameDialogues>(decodeDialogue);
-            Debug.Log(decodeDialogue);
-            Debug.Log(gameDialogues.Eventos[0].Dialogos[0].DialogoTexto);
-        }
+            
+        string streamDialogueContent = "";
+        StreamReader fileReaderDialogue = new StreamReader(dialoguePath, Encoding.Default);
+        streamDialogueContent = fileReaderDialogue.ReadToEnd();
+        fileReaderDialogue.Close();
+        string decodeDialogue = CryptoHandler.DecryptStringAlt(streamDialogueContent, encKey, initVector);
+        gameDialogues = JsonUtility.FromJson<GameDialogues>(decodeDialogue);
+        Debug.Log(decodeDialogue);
+        Debug.Log(gameDialogues.Eventos[0].Dialogos[0].DialogoTexto);
+        textDialNorm.text = "JSON Diálogo Normal 1 : " + gameDialogues.Eventos[0].Dialogos[0].DialogoTexto;
 
         RefreshEditorProjectWindow();
 
@@ -142,60 +158,86 @@ public class FileHandler : MonoBehaviour
     public void WriteFile()
     {
         string fullPath = string.Empty;
+
         if (!isLocal)
         {
-            fullPath = Application.persistentDataPath + "/" + JSONFile;
+            fullPath = Application.persistentDataPath + "/" + EncJSONFile;
         }
         else
         {
-            fullPath = filePath + JSONFile;
+            fullPath = Application.dataPath + filePath + EncJSONFile;
         }
 
-        fileValidation = File.Exists(Application.dataPath + fullPath);
+        textPartEnc.text = "JSON Partida Enc: Llega 1";
+
+        fileValidation = File.Exists(fullPath);
         string json = CryptoHandler.EncryptStringAlt(JsonUtility.ToJson(gameData), encKey, initVector);
+
+        textPartEnc.text = "JSON Partida Enc: Llega 2";
+
         if (!fileValidation)
         {
-            Debug.Log(JSONFile);
-            File.WriteAllBytes(Application.dataPath + fullPath, System.Text.Encoding.UTF8.GetBytes(json));
+            textPartEnc.text = "JSON Partida Enc: Llega 3";
+            Debug.Log(EncJSONFile);
+            File.WriteAllBytes(fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
         else
         {
-            File.Delete(Application.dataPath + fullPath);
-            File.WriteAllBytes(Application.dataPath + fullPath, System.Text.Encoding.UTF8.GetBytes(json));
+            textPartEnc.text = "JSON Partida Enc: Llega 4";
+            File.Delete(fullPath);
+            File.WriteAllBytes(fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
         Debug.Log(json);
+        textPartEnc.text = "JSON Partida Enc: " + json;
+
         RefreshEditorProjectWindow();
 
     }
 
 
     // Función local para encriptar datos necesarios para el desarrollo del juego
-    public void EncryptExternalFile(string content, string file)
+    public void EncryptExternalFile(string basePath, string file)
     {
         string extPath = string.Empty;
+        string originPath = string.Empty;
+
         if (!isLocal)
         {
             extPath = Application.persistentDataPath + "/" + file;
+            originPath = Application.streamingAssetsPath + "/" + basePath;
         }
         else
         {
-            extPath = filePath + file;
+            extPath = Application.dataPath + filePath + file;
+            originPath = Application.streamingAssetsPath + "/" + basePath;
         }
 
-        fileValidation = File.Exists(Application.dataPath + file);
-        string json = CryptoHandler.EncryptStringAlt(content, encKey, initVector);
-        Debug.Log(json);
 
+        ////// ERROR DE CARGAR DIALOGOS //////
+
+        fileValidation = File.Exists(originPath);
         if (!fileValidation)
         {
-            Debug.Log(file);
-            File.WriteAllBytes(Application.dataPath + file, System.Text.Encoding.UTF8.GetBytes(json));
+            Debug.LogError("Archivo de origen no encontrado: " + originPath);
+            return;
         }
-        else
+
+        ////// ERROR DE CARGAR DIALOGOS //////
+
+        string streamContent = "";
+        StreamReader fileReader = new StreamReader(originPath, Encoding.Default);
+        streamContent = fileReader.ReadToEnd();
+        fileReader.Close();
+        string json = CryptoHandler.EncryptStringAlt(streamContent, encKey, initVector);
+        Debug.Log("Dialogos encriptados: " + json);
+        textDialEnc.text = "JSON Diálogo Enc: " + json;
+
+        fileValidation = File.Exists(extPath);
+        if (fileValidation)
         {
-            File.Delete(Application.dataPath + extPath);
-            File.WriteAllBytes(Application.dataPath + extPath, System.Text.Encoding.UTF8.GetBytes(json));
+            File.Delete(extPath);
         }
+        File.WriteAllBytes(extPath, Encoding.UTF8.GetBytes(json));
 
         RefreshEditorProjectWindow();
 
@@ -204,7 +246,7 @@ public class FileHandler : MonoBehaviour
     // Función para crear una llave de encriptación aleatoria
     private string CreateEncComponent(int length)
     {
-        const string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        const string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
         StringBuilder result = new StringBuilder(length);
         System.Random random = new System.Random();
@@ -217,9 +259,9 @@ public class FileHandler : MonoBehaviour
 
     void RefreshEditorProjectWindow()
     {
-#if UNITY_EDITOR
-        UnityEditor.AssetDatabase.Refresh();
-#endif
+        #if UNITY_EDITOR
+                UnityEditor.AssetDatabase.Refresh();
+        #endif
     }
 
 }

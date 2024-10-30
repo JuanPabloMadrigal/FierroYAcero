@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class AddProfit : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class AddProfit : MonoBehaviour
     public void LoadGame()
     {
         FileHandlerStory.Instance.ReadFile();
+        UIManager.Instance.UpdateMoneyUI(FileHandlerStory.Instance.gameData.money);
+        UIManager.Instance.UpdateCoqueUI(FileHandlerStory.Instance.gameData.coque);
     }
     public void EncryptFile()
     {
