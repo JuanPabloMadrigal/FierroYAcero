@@ -58,9 +58,11 @@ public class FileHandlerStory : MonoBehaviour
         gameData = new GameModel(
                     "", // Personaje
                     0, // Dinero
-                    0, // Coque
-                    0, // Precio Coque
-                    20, // Satisfacción Empleados
+                    0, // Satisfaccion
+                    0, // coque
+                    20, // precio coque
+                    0, // hierro
+                    20, // precio hierro
                     new List<BuildingProperties> // Edificios proceso de acero
                     {
                         new BuildingProperties(0, 0, 10f, 1f, 0, false, "", 0, 0, 0, -90),

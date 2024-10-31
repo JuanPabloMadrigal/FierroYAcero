@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BuyIron : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] public TMP_InputField quantityInputField;
 
-    // Update is called once per frame
-    void Update()
+
+    public void buyIron()
     {
-        
+        FileHandlerStory.Instance.gameData.AddIron(int.Parse(quantityInputField.text));
+        FileHandlerStory.Instance.gameData.SubtractMoney(FileHandlerStory.Instance.gameData.ironPrice);
+        Debug.Log(FileHandlerStory.Instance.gameData.ironPrice);
     }
 }
