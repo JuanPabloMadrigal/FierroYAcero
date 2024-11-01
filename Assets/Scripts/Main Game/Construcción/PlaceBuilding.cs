@@ -85,15 +85,15 @@ public class PlaceBuilding : MonoBehaviour
                 }
                 else if (type == "Almacen MP")
                 {
-                    FileHandler.Instance.gameData.ironStorehouse = new IronStorehouse(costPerTurn, costToBuild, unlocked, type, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y);
+                    FileHandler.Instance.gameData.ironStorehouse = new IronStorehouse(costPerTurn, costToBuild, unlocked, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y);
                 }
                 else if (type == "Planta de Coque")
                 {
-                    FileHandler.Instance.gameData.cokePlant = new CokePlant(costPerTurn, costToBuild, unlocked, type, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y);
+                    FileHandler.Instance.gameData.cokePlant = new CokePlant(costPerTurn, costToBuild, unlocked, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y);
                 }
                 else if (type == "Patio de Acero")
                 {
-                    FileHandler.Instance.gameData.steelYard = new SteelYard(costPerTurn, costToBuild, unlocked, type, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y);
+                    FileHandler.Instance.gameData.steelYard = new SteelYard(costPerTurn, costToBuild, unlocked, placedBuilding.transform.position.x, placedBuilding.transform.position.y, placedBuilding.transform.position.z, placedBuilding.transform.localRotation.y);
                 }
                 
                 isPreviewActive = false;

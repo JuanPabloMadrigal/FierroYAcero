@@ -28280,6 +28280,8 @@ Transform:
   - {fileID: 1569078469}
   - {fileID: 64701621}
   - {fileID: 1467886381}
+  - {fileID: 2139966015}
+  - {fileID: 1959552480}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1454747108
@@ -28788,7 +28790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adffbcc69c5d5ff4ebd82195b7ab8ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocal: 0
+  isLocal: 1
   fileValidation: 0
   fileValidationDialogues: 0
   EncJSONFile: storyGame.txt
@@ -37514,6 +37516,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 877761696902670789, guid: 5e5f9cd2bdb42d845885524458f50a7f, type: 3}
   m_PrefabInstance: {fileID: 1942431816}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1959552479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1959552480}
+  - component: {fileID: 1959552481}
+  m_Layer: 0
+  m_Name: GameMechanics
+  m_TagString: GameMechanics
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1959552480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959552479}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1454619986}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1959552481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959552479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72fe92d86dfca4e4db4c545ec6531892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  almacenMP: {fileID: 8854253344340106285, guid: ae9b34eec330a954890c1311a45ca5e3, type: 3}
+  plantaCoque: {fileID: 919132149155446097, guid: 97eedb32a2d2f1a4a8c1549f0b28a04c, type: 3}
+  horno1: {fileID: 2732516131013543445, guid: 1f65c602e7cee8f40aa7efd23009e3da, type: 3}
+  aceracion: {fileID: 3841819170101513786, guid: 1b3c3041257629d4c91c6ba789f1dbd8, type: 3}
+  molinoCom: {fileID: 8141406576159170306, guid: fc82c16068c4ee14c9af20d5fe4ae24f, type: 3}
+  patioAce: {fileID: 5651215649939506379, guid: 8db8b9b1d2659b74f9cdce901bff37d5, type: 3}
 --- !u!1001 &1963088140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41197,7 +41249,7 @@ GameObject:
   - component: {fileID: 2139966015}
   - component: {fileID: 2139966013}
   m_Layer: 0
-  m_Name: GameProperties
+  m_Name: UIManager
   m_TagString: GameProp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41227,12 +41279,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139966011}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1577926, y: -0.20223022, z: -9.602818}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1454619986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2143416859
 PrefabInstance:
@@ -41657,7 +41709,6 @@ SceneRoots:
   - {fileID: 2122233304}
   - {fileID: 42373}
   - {fileID: 1440597505}
-  - {fileID: 2139966015}
   - {fileID: 2965330845670324148}
   - {fileID: 140968209}
   - {fileID: 300056709}

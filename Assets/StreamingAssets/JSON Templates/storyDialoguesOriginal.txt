@@ -29,7 +29,7 @@
                 {
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "Aquí podrás encontrar los diferentes edificios que tengas a tu disposición."
+                    "DialogoTexto": "Aquí podrás encontrar los diferentes edificios que tengas a tu disposición y que puedas construir, intenta agregando un Taller de Aceración."
                 }
             ]
         },

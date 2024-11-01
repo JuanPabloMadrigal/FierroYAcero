@@ -65,9 +65,10 @@ public class FileHandlerStory : MonoBehaviour
                     20, // precio hierro
                     new List<BuildingProperties> // Edificios proceso de acero
                     {
-                        new BuildingProperties(0, 0, 10f, 1f, 0, false, "", 0, 0, 0, -90),
-                        new BuildingProperties(0, 0, 20f, 1f, 0, false, "", 0, 0, 0, -90),
-                        new BuildingProperties(0, 0, 30f, 1f, 0, false, "", 0, 0, 0, 0)
+                        new BuildingProperties(0, 0, 10f, 1f, 0, true, "Horno 1", -10, 1, 30, -90),
+                        new BuildingProperties(0, 0, 20f, 1f, 0, true, "Aceracion", -35, 1, 13, -90),
+                        new BuildingProperties(0, 0, 30f, 1f, 0, false, "Aceracion", -24, 1, 30, -90),
+                        new BuildingProperties(0, 0, 30f, 1f, 0, true, "Molino Comercial", -28, 1, 25, 0)
                     });
 
         // Carga de diálogos
@@ -93,6 +94,10 @@ public class FileHandlerStory : MonoBehaviour
 
         // Intento de partida guardada
         ReadFile();
+
+        // Se genera el mapa
+
+        GameObject.FindGameObjectWithTag("GameMechanics").GetComponent<SceneInitialization>().BuildingsGeneration(gameData);
 
         // Se actualiza el UI en base a datos del modelo de juego
         UIManager.Instance.UpdateMoneyUI(gameData.money);

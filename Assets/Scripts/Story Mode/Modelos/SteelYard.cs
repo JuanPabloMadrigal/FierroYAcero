@@ -11,13 +11,12 @@ public class SteelYard
     public int ironBars;
     public int rails;
     public bool unlocked;
-    public string type;
     public float x;
     public float y;
     public float z;
     public float rot;
 
-    public SteelYard(int costPerTurn, int costToBuild, bool unlocked, string type, float x, float y, float z, float rot)
+    public SteelYard(int costPerTurn, int costToBuild, bool unlocked, float x, float y, float z, float rot)
     {
         this.costPerTurn = costPerTurn;
         this.costToBuild = costToBuild;
@@ -25,7 +24,6 @@ public class SteelYard
         ironBars = 0;
         rails = 0;
         this.unlocked = unlocked;
-        this.type = type;
         this.x = x;
         this.y = y;
         this.z = z;

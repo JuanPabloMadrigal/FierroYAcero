@@ -9,19 +9,17 @@ public class CokePlant
     public int costToBuild;
     public int cokeCount;
     public bool unlocked;
-    public string type;
     public float x;
     public float y;
     public float z;
     public float rot;
 
-    public CokePlant(int costPerTurn, int costToBuild, bool unlocked, string type, float x, float y, float z, float rot)
+    public CokePlant(int costPerTurn, int costToBuild, bool unlocked, float x, float y, float z, float rot)
     {
         this.costPerTurn = costPerTurn;
         this.costToBuild = costToBuild;
         cokeCount = 0;
         this.unlocked = unlocked;
-        this.type = type;
         this.x = x;
         this.y = y;
         this.z = z;
