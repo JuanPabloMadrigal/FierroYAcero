@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -19,12 +21,15 @@ public class ShowDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public GameObject MainCamera;
 
+    private GameDialogues dialogos;
+
     private void Start()
     {
         Bton.SetActive(false);
         info.SetActive(false);
         dialogue.SetActive(false);
         character.SetActive(false);
+        dialogos = FileHandlerStory.Instance.gameDialogues;
     }
     /**
     private void OnPointerDown(PointerEventData eventData)
@@ -66,5 +71,21 @@ public class ShowDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     }
         // Update is called once per frame
+        public void ImprimirDialogo(List<Dialogo> evento)
+        {
+            int dialogueNumber = 0;
+            // foreach(Dialogo dialogo in evento)
+            // {
+            //     dialogue.GetComponent<TextMeshProUGUI>().text = dialogo.DialogoTexto;
+            // }
+            while(evento[dialogueNumber] != null)
+            {
+                dialogue.GetComponent<TextMeshProUGUI>().text = evento[dialogueNumber].DialogoTexto;
+                if(Input.GetMouseButtonDown(0))
+                {
+                    dialogueNumber++;
+                }
+            }
+        }
 
     }
