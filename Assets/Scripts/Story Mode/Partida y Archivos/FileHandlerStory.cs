@@ -49,7 +49,14 @@ public class FileHandlerStory : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
     private void Start()
@@ -92,11 +99,10 @@ public class FileHandlerStory : MonoBehaviour
             PlayerPrefs.SetString("InitVector", newIV);
         }
 
-        // Intento de partida guardada
+        // Intento de carga de partida guardada
         ReadFile();
 
         // Se genera el mapa
-
         GameObject.FindGameObjectWithTag("GameMechanics").GetComponent<SceneInitialization>().BuildingsGeneration(gameData);
 
         // Se actualiza el UI en base a datos del modelo de juego
