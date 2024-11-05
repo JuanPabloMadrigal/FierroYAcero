@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FabricateProducts : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] public TMP_InputField quantityInputField;
+    public int productToBuy = 0;
 
-    // Update is called once per frame
-    void Update()
+    public void fabricateProduct(string product)
     {
-        
+        switch (product)
+        {
+            case "acero":
+                FileHandlerStory.Instance.gameData.AddSteel(int.Parse(quantityInputField.text));
+                FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice*productToBuy);
+                break;
+            
+        }
     }
 }

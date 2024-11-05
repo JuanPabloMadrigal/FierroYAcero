@@ -12,6 +12,8 @@ public class GameModel
     public int coquePrice;
     public int iron;
     public int ironPrice;
+    public int steel;
+    public int steelIronPrice;
 
     public int workerSatisfaction;
     public List<BuildingProperties> buildingsList;
@@ -19,15 +21,18 @@ public class GameModel
     public CokePlant cokePlant;
     public SteelYard steelYard;
 
-    public GameModel(string ch, int mon, int workSat, int coq, int coqP, int iro, int ironP, List<BuildingProperties> bl) { 
-        character = ch;
-        money = mon;
-        workerSatisfaction = workSat;
-        coque = coq;
-        coquePrice = coqP;
-        iron = iro;
-        ironPrice = ironP;
-        buildingsList = bl;
+    public GameModel(string character, int money, int workerSatisfaction, int coque, int coquePrice, int iron, int ironPrice, int steel, int steelIronPrice, List<BuildingProperties> buildingsList) { 
+        this.character = character;
+        this.money = money;
+        this.workerSatisfaction = workerSatisfaction;
+        this.coque = coque;
+        this.coquePrice = coquePrice;
+        this.iron = iron;
+        this.ironPrice = ironPrice;
+        this.steel = steel;
+        this.steelIronPrice = steelIronPrice;
+
+        this.buildingsList = buildingsList;
     }
 
     public void AddMoney(int amount)
@@ -48,6 +53,11 @@ public class GameModel
         UIManager.Instance.UpdateIronUI(iron);
     }
 
+    public void AddSteel(int amount) 
+    {
+        steel += amount;
+    }
+
     public void SetIronPrice(int price)
     {
         ironPrice = price;
@@ -62,6 +72,12 @@ public class GameModel
     {
         money -= amount;
         UIManager.Instance.UpdateMoneyUI(money);
+    }
+
+    public void SubtractIron(int amount)
+    {
+        iron -= amount;
+        UIManager.Instance.UpdateIronUI(iron);
     }
 
 }
