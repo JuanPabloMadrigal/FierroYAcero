@@ -36916,8 +36916,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4477b019e9b5547e69d4710ba3ae41ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.15
-  frequency: 2.5
+  amplitude1: 0.3
+  amplitude2: 0.02
+  frequency: 2
+  defaultScale: 0.05
   posOrigin: {x: 0, y: 0, z: 0}
   fatherAgent: {fileID: 1265757509}
 --- !u!1001 &1924507542
