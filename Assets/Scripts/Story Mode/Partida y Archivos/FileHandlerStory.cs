@@ -70,6 +70,8 @@ public class FileHandlerStory : MonoBehaviour
                     20, // precio coque
                     0, // hierro
                     20, // precio hierro
+                    0, // alambrado de acero
+                    20, // precio venta alambrado de acero
                     new List<BuildingProperties> // Edificios proceso de acero
                     {
                         new BuildingProperties(0, 0, 10f, 1f, 0, true, "Horno 1", -10, 1, 30, -90),

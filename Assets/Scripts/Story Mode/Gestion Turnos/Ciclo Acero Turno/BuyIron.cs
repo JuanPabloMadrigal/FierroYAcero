@@ -12,7 +12,7 @@ public class BuyIron : MonoBehaviour
     public void buyIron()
     {
         FileHandlerStory.Instance.gameData.AddIron(int.Parse(quantityInputField.text));
-        FileHandlerStory.Instance.gameData.SubtractMoney(FileHandlerStory.Instance.gameData.ironPrice);
+        FileHandlerStory.Instance.gameData.SubtractMoney(FileHandlerStory.Instance.gameData.ironPrice * int.Parse(quantityInputField.text));
         Debug.Log(FileHandlerStory.Instance.gameData.ironPrice);
     }
 
