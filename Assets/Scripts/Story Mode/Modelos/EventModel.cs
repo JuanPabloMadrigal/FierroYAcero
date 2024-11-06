@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventModel : MonoBehaviour
+[SerializeField]
+public class EventModel
 {
     public string name;
     public string description;
