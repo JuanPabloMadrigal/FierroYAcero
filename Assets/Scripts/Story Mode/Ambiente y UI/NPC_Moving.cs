@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class NPC_Moving : MonoBehaviour
     [SerializeField]private bool waiting;
     private Vector3 desTransf;
     [SerializeField]private NavMeshAgent navmeshAgent;
+    [SerializeField]private GameObject childNPC;
+
 
     void Start()
     {
@@ -24,9 +27,11 @@ public class NPC_Moving : MonoBehaviour
     {
         if(waiting)
         {
+            childNPC.SetActive(false);
             waitCounter += Time.deltaTime;
             if(waitCounter > waitTime)
             {
+                childNPC.SetActive(true);
                 waiting = false;
                 waitCounter = 0.0f;
                 return;
@@ -51,4 +56,5 @@ public class NPC_Moving : MonoBehaviour
     { 
         navmeshAgent.SetDestination(destiny);
     }
+
 }
