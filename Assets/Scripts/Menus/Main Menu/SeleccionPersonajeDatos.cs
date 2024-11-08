@@ -12,6 +12,7 @@ public class SeleccionPersonajeDatos : MonoBehaviour
     private string eleccionFinal;
     public GameObject robotConfirmacion;
     public GameObject robotElegido;
+    public AudioSource sonidoDeReloj;
 
     void Start()
     {
@@ -24,7 +25,9 @@ public class SeleccionPersonajeDatos : MonoBehaviour
         if (eleccionFinal != string.Empty)
         {
             robotConfirmacion.SetActive(false);
+            sonidoDeReloj.Play();
             robotElegido.SetActive(true);
+            
             yield return new WaitForSeconds(1.5f);
             SceneManager.LoadScene("StoryGame");
         }
