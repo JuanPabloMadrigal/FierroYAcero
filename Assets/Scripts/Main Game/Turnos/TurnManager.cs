@@ -19,7 +19,7 @@ public class TurnManager : MonoBehaviour
     private void CalculateBuildingDeficit()
     {
 
-        foreach (BuildingProperties building in FileHandler.Instance.gameData.buildingsList)
+        foreach (BuildingProperties building in FileHandlerStory.Instance.gameData.buildingsList)
         {
             turnDeficit += building.costPerTurn;
             turnProfit = turnProfit + (building.addingValue * building.valueModifier);
@@ -31,7 +31,7 @@ public class TurnManager : MonoBehaviour
     {
         CalculateBuildingDeficit();
         Debug.Log(turnDeficit);
-        FileHandler.Instance.gameData.AddMoney((int)turnProfit);
-        FileHandler.Instance.gameData.SubtractMoney((int)turnDeficit);
+        FileHandlerStory.Instance.gameData.AddMoney((int)turnProfit);
+        FileHandlerStory.Instance.gameData.SubtractMoney((int)turnDeficit);
     }
 }
