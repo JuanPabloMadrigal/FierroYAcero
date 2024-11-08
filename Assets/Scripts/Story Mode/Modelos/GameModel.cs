@@ -88,4 +88,10 @@ public class GameModel
         UIManager.Instance.UpdateIronUI(iron);
     }
 
+    public void SubtractCoque(int amount)
+    {
+        coque -= amount;
+        UIManager.Instance.UpdateCoqueUI(coque);
+    }
+
 }

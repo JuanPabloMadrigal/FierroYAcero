@@ -17,7 +17,7 @@ public class FabricateProducts : MonoBehaviour
             case "acero":
                 FileHandlerStory.Instance.gameData.AddSteel(int.Parse(quantityInputFieldAcero.text));
                 FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice*productToBuy);
-                //TODO: Add removeCoque to model and add it here
+                FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));
                 break;
             
         }
