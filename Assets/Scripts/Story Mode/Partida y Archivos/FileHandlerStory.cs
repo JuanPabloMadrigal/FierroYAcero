@@ -34,8 +34,6 @@ public class FileHandlerStory : MonoBehaviour
 
     public Text textPartEnc;
     public Text textPartNorm;
-    public Text textDialEnc;
-    public Text textDialNorm;
 
     //
 
@@ -163,7 +161,6 @@ public class FileHandlerStory : MonoBehaviour
         gameDialogues = JsonUtility.FromJson<GameDialogues>(decodeDialogue);
         Debug.Log(decodeDialogue);
         Debug.Log(gameDialogues.Eventos[0].Dialogos[0].DialogoTexto);
-        textDialNorm.text = "JSON Diálogo Normal 1 : " + gameDialogues.Eventos[0].Dialogos[0].DialogoTexto;
 
         RefreshEditorProjectWindow();
 
@@ -183,22 +180,17 @@ public class FileHandlerStory : MonoBehaviour
             fullPath = Application.dataPath + filePath + EncJSONFile;
         }
 
-        textPartEnc.text = "JSON Partida Enc: Llega 1";
-
         fileValidation = File.Exists(fullPath);
         string json = CryptoHandler.EncryptStringAlt(JsonUtility.ToJson(gameData), encKey, initVector);
 
-        textPartEnc.text = "JSON Partida Enc: Llega 2";
-
         if (!fileValidation)
         {
-            textPartEnc.text = "JSON Partida Enc: Llega 3";
+            textPartEnc.text = "Configuración en 'local''";
             Debug.Log(EncJSONFile);
             File.WriteAllBytes(fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
         else
         {
-            textPartEnc.text = "JSON Partida Enc: Llega 4";
             File.Delete(fullPath);
             File.WriteAllBytes(fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
@@ -244,8 +236,6 @@ public class FileHandlerStory : MonoBehaviour
         streamContent = fileReader.ReadToEnd();
         fileReader.Close();
         string json = CryptoHandler.EncryptStringAlt(streamContent, encKey, initVector);
-        Debug.Log("Dialogos encriptados: " + json);
-        textDialEnc.text = "JSON Diálogo Enc: " + json;
 
         fileValidation = File.Exists(extPath);
         if (fileValidation)

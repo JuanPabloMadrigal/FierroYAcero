@@ -7,7 +7,7 @@ public class AddProfit : MonoBehaviour
 {
     public void AddTest()
     {
-        FileHandlerStory.Instance.gameData.AddMoney(100);
+        FileHandlerStory.Instance.gameData.AddMoney(1000);
         foreach (BuildingProperties buildingData in FileHandlerStory.Instance.gameData.buildingsList)
         {
             buildingData.AddModifier(0.2f);
@@ -25,10 +25,6 @@ public class AddProfit : MonoBehaviour
         FileHandlerStory.Instance.ReadFile();
         UIManager.Instance.UpdateMoneyUI(FileHandlerStory.Instance.gameData.money);
         UIManager.Instance.UpdateCoqueUI(FileHandlerStory.Instance.gameData.coque);
-    }
-    public void EncryptFile()
-    {
-        FileHandlerStory.Instance.EncryptExternalFile("{\"Eventos\":[{\"Dialogos\":[{\"img_der\":\"Vicente_Feliz\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"¡Bienvenido a Fundidora Fierro y Acero! Soy Vicente Ferrara, el anterior director, y estaré guiándote en este emocionante viaje. ¡Comencemos con lo básico!\"},{\"img_der\":\"Vicente_Normal\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"Primero, observa a tu alrededor. Aquí tienes la planta de Fundidora Fierro y Acero, un lugar donde el trabajo duro y la innovación se unen para crear acero de calidad.\"},{\"img_der\":\"Vicente_Feliz\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"Una vez que hayas aprendido a gestionar tus recursos, podrás invertir en mejoras.\"},{\"img_der\":\"Vicente_Normal\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"Ahora observa que en la parte de abajo tienes tu menú de construcción.\"}]},{\"Dialogos\":[{\"img_der\":\"Vicente_Normal\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"Aquí podrás encontrar los diferentes edificios que tengas a tu disposición.\"}]},{\"Dialogos\":[{\"img_der\":\"Vicente_Normal\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"Como puedes observar, el edificio ha aparecido en el mapa.\"},{\"img_der\":\"Vicente_Feliz\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"¡Este será, por ahora, tu edificio más importante!\"},{\"img_der\":\"Vicente_Normal\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"Recuerda, cada edificio tiene su propio propósito.\"},{\"img_der\":\"Vicente_Normal\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"Ahora que conoces el proceso, posiciona en el mapa el Almacén de Materia Prima.\"}]},{\"Dialogos\":[{\"img_der\":\"Vicente_Normal\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"El Almacén de Materia Prima y la Planta de Coque te permitirán adquirir material.\"},{\"img_der\":\"Vicente_Normal\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"Recuerda que ciertos edificios te permitirán transformar materia prima en productos terminados.\"},{\"img_der\":\"Vicente_Feliz\",\"img_izq\":\"Jugador_Normal\",\"DialogoTexto\":\"Con esto, ya estás preparado para administrar la planta Fundidora como su nuevo director.\"}]}]}\r\n", "storyDialogues.txt");
     }
 
 }

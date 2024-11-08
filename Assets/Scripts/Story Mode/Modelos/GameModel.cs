@@ -16,6 +16,8 @@ public class GameModel
     public int steelIronPrice;
 
     public int workerSatisfaction;
+    public int turnsWithoutSalary;
+    public int turnsWithoutEvent;
     public List<BuildingProperties> buildingsList;
     public IronStorehouse ironStorehouse;
     public CokePlant cokePlant;
@@ -31,7 +33,8 @@ public class GameModel
         this.ironPrice = ironPrice;
         this.steel = steel;
         this.steelIronPrice = steelIronPrice;
-
+        turnsWithoutSalary = 0;
+        turnsWithoutEvent = 0;
         this.buildingsList = buildingsList;
     }
 
@@ -66,6 +69,11 @@ public class GameModel
     public void SetCoquePrice(int price)
     {
         coquePrice = price;
+    }
+
+    public void SetSteelIronPrice(int price)
+    {
+        steelIronPrice = price;
     }
 
     public void SubtractMoney(int amount)
