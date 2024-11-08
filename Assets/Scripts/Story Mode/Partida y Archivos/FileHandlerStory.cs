@@ -41,7 +41,7 @@ public class FileHandlerStory : MonoBehaviour
 
     public GameModel gameData;
 
-    // VARIABLE QUE CARGA LOS DIÁLOGOS DEL JUEGO
+    // VARIABLE QUE     CARGA LOS DIÁLOGOS DEL JUEGO
 
     public GameDialogues gameDialogues;
 
@@ -72,10 +72,10 @@ public class FileHandlerStory : MonoBehaviour
                     20, // precio venta alambrado de acero
                     new List<BuildingProperties> // Edificios proceso de acero
                     {
-                        new BuildingProperties(0, 0, 10f, 1f, 0, true, "Horno 1", -10, 1, 30, -90),
-                        new BuildingProperties(0, 0, 20f, 1f, 0, true, "Aceracion", -35, 1, 13, -90),
-                        new BuildingProperties(0, 0, 30f, 1f, 0, false, "Aceracion", -24, 1, 30, -90),
-                        new BuildingProperties(0, 0, 30f, 1f, 0, true, "Molino Comercial", -28, 1, 25, 0)
+                        new BuildingProperties(10, 0, 10f, 1f, 0, true, "Horno 1", -10, 1, 30, -90),
+                        new BuildingProperties(10, 0, 20f, 1f, 0, true, "Aceracion", -35, 1, 13, -90),
+                        new BuildingProperties(10, 0, 30f, 1f, 0, false, "Aceracion", -24, 1, 30, -90),
+                        new BuildingProperties(10, 0, 30f, 1f, 0, true, "Molino Comercial", -28, 1, 25, 0)
                     });
 
         // Carga de diálogos
