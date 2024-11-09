@@ -34,8 +34,6 @@ public class FileHandler : MonoBehaviour
 
     public Text textPartEnc;
     public Text textPartNorm;
-    public Text textDialEnc;
-    public Text textDialNorm;
 
     //
 
@@ -43,7 +41,7 @@ public class FileHandler : MonoBehaviour
 
     public GameModel gameData;
 
-    // VARIABLE QUE CARGA LOS DIÁLOGOS DEL JUEGO
+    // VARIABLE QUE     CARGA LOS DIÁLOGOS DEL JUEGO
 
     public GameDialogues gameDialogues;
 
@@ -74,11 +72,21 @@ public class FileHandler : MonoBehaviour
                     20, // precio venta alambrado de acero
                     new List<BuildingProperties> // Edificios proceso de acero
                     {
-                        new BuildingProperties(0, 0, 10f, 1f, 0, true, "Horno 1", -10, 1, 30, -90),
-                        new BuildingProperties(0, 0, 20f, 1f, 0, true, "Aceracion", -35, 1, 13, -90),
-                        new BuildingProperties(0, 0, 30f, 1f, 0, false, "Aceracion", -24, 1, 30, -90),
-                        new BuildingProperties(0, 0, 30f, 1f, 0, true, "Molino Comercial", -28, 1, 25, 0)
-                    });
+                        new BuildingProperties(100, 0, 10f, 0f, 0, true, "Horno 1", -19, -0.1f, -7, -90),
+                        new BuildingProperties(100, 0, 20f, 0f, 0, true, "Aceracion", -17, -0.05f, -15, 0),
+                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
+                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
+                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
+                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
+                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, -90),
+                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, -90),
+                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, -90),
+                        new BuildingProperties(100, 0, 30f, 0f, 0, true, "Molino Comercial", -28, -0.075f, 25, -90)
+                    },
+                    new IronStorehouse(100, 0, true, -16, 0.025f, 0, 180),
+                    new CokePlant(100, 0, true, -22f, -0.025f, 0, 0),
+                    new SteelYard(100, 0, true, 19, -0.075f, 18, -90)
+                    );
 
         // Carga de diálogos
         gameDialogues = new GameDialogues();
@@ -163,7 +171,6 @@ public class FileHandler : MonoBehaviour
         gameDialogues = JsonUtility.FromJson<GameDialogues>(decodeDialogue);
         Debug.Log(decodeDialogue);
         Debug.Log(gameDialogues.Eventos[0].Dialogos[0].DialogoTexto);
-        textDialNorm.text = "JSON Diálogo Normal 1 : " + gameDialogues.Eventos[0].Dialogos[0].DialogoTexto;
 
         RefreshEditorProjectWindow();
 
@@ -183,22 +190,17 @@ public class FileHandler : MonoBehaviour
             fullPath = Application.dataPath + filePath + EncJSONFile;
         }
 
-        textPartEnc.text = "JSON Partida Enc: Llega 1";
-
         fileValidation = File.Exists(fullPath);
         string json = CryptoHandler.EncryptStringAlt(JsonUtility.ToJson(gameData), encKey, initVector);
 
-        textPartEnc.text = "JSON Partida Enc: Llega 2";
-
         if (!fileValidation)
         {
-            textPartEnc.text = "JSON Partida Enc: Llega 3";
+            textPartEnc.text = "Configuración en 'local''";
             Debug.Log(EncJSONFile);
             File.WriteAllBytes(fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
         else
         {
-            textPartEnc.text = "JSON Partida Enc: Llega 4";
             File.Delete(fullPath);
             File.WriteAllBytes(fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
@@ -244,8 +246,6 @@ public class FileHandler : MonoBehaviour
         streamContent = fileReader.ReadToEnd();
         fileReader.Close();
         string json = CryptoHandler.EncryptStringAlt(streamContent, encKey, initVector);
-        Debug.Log("Dialogos encriptados: " + json);
-        textDialEnc.text = "JSON Diálogo Enc: " + json;
 
         fileValidation = File.Exists(extPath);
         if (fileValidation)

@@ -23,7 +23,7 @@ public class GameModel
     public CokePlant cokePlant;
     public SteelYard steelYard;
 
-    public GameModel(string character, int money, int workerSatisfaction, int coque, int coquePrice, int iron, int ironPrice, int steel, int steelIronPrice, List<BuildingProperties> buildingsList) { 
+    public GameModel(string character, int money, int workerSatisfaction, int coque, int coquePrice, int iron, int ironPrice, int steel, int steelIronPrice, List<BuildingProperties> buildingsList, IronStorehouse  ironStorehouse, CokePlant cokePlant, SteelYard steelYard) { 
         this.character = character;
         this.money = money;
         this.workerSatisfaction = workerSatisfaction;
@@ -36,6 +36,9 @@ public class GameModel
         turnsWithoutSalary = 0;
         turnsWithoutEvent = 0;
         this.buildingsList = buildingsList;
+        this.ironStorehouse = ironStorehouse;
+        this.cokePlant = cokePlant;
+        this.steelYard = steelYard;
     }
 
     public void AddMoney(int amount)

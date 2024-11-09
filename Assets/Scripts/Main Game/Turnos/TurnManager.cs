@@ -18,6 +18,8 @@ public class TurnManager : MonoBehaviour
 
     private void CalculateBuildingDeficit()
     {
+        turnDeficit = 0;
+        turnProfit = 0;
 
         foreach (BuildingProperties building in FileHandlerStory.Instance.gameData.buildingsList)
         {

@@ -80,7 +80,7 @@ public class EventRandomizer : MonoBehaviour
 
         // Neutral Events
         EventModel evt45 = new EventModel();
-        evt45.name = "AUMENTO EN LA DEMNADA DE ACERO EN EL PAÍS";
+        evt45.name = "AUMENTO EN LA DEMANADA DE ACERO EN EL PAÍS";
         evt45.description = "¡Atención! Hay una gran demanda de acero debido a un proyecto de infraestructura en la ciudad. Durante un tiempo limitado, el precio de venta de productos de acero baratos subirá a 200k. No obstante, no es probable que estas condiciones se mantengan por mucho tiempo, por lo que se debería aprovechar la ocurrencia para vender este producto a montones.";
         evt45.triggerType = "steel iron price";
         evt45.resultModifier = 200;

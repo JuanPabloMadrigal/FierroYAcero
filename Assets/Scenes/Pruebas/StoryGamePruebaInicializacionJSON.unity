@@ -24286,10 +24286,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planta de Coque
       objectReference: {fileID: 0}
-    - target: {fileID: 2325795847476429071, guid: 008ac15f7d8f42249b6e703d6384d0b3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3102192535214824373, guid: 008ac15f7d8f42249b6e703d6384d0b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22
@@ -67081,8 +67077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72fe92d86dfca4e4db4c545ec6531892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  almacenMP: {fileID: 7782808680565542928, guid: 279b420ec3ef10348be6e746bd2d55b0, type: 3}
-  plantaCoque: {fileID: 2325795847476429071, guid: 008ac15f7d8f42249b6e703d6384d0b3, type: 3}
+  almacenMP: {fileID: 8854253344340106285, guid: ae9b34eec330a954890c1311a45ca5e3, type: 3}
+  plantaCoque: {fileID: 919132149155446097, guid: 97eedb32a2d2f1a4a8c1549f0b28a04c, type: 3}
   horno1: {fileID: 750445353685868609, guid: a6335fcd3cb16a74ba4f4b69c4e72fbd, type: 3}
   aceracion: {fileID: 3841819170101513786, guid: 1b3c3041257629d4c91c6ba789f1dbd8, type: 3}
   molinoCom: {fileID: 8141406576159170306, guid: fc82c16068c4ee14c9af20d5fe4ae24f, type: 3}
@@ -73825,10 +73821,6 @@ PrefabInstance:
     - target: {fileID: 7782808680565542928, guid: 279b420ec3ef10348be6e746bd2d55b0, type: 3}
       propertyPath: m_Name
       value: "Almac\xE9n de Materia Prima"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7782808680565542928, guid: 279b420ec3ef10348be6e746bd2d55b0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SceneInitialization : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class SceneInitialization : MonoBehaviour
     [SerializeField] private GameObject aceracion;
     [SerializeField] private GameObject molinoCom;
     [SerializeField] private GameObject patioAce;
+    [SerializeField] private SidebarControl sidebarControl;
 
 
     public void BuildingsGeneration(GameModel gameData)
@@ -24,8 +26,6 @@ public class SceneInitialization : MonoBehaviour
         {
             if (edificio.unlocked)
             {
-
-                Debug.Log("Entra");
 
                 GameObject newBuilding;
                 
@@ -52,14 +52,19 @@ public class SceneInitialization : MonoBehaviour
                 }
 
                 GameObject newGO = Instantiate(newBuilding, new Vector3(edificio.x, edificio.y, edificio.z), Quaternion.Euler(0, edificio.rot, 0));
+                if (edificio.type == "Horno 1")
+                {
+                    newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("horno1"); } );
+                }
             }
         }
 
         // Generación de almacén de materia prima
 
-        if (gameData.ironStorehouse != null)
+        if (!ReferenceEquals(gameData.ironStorehouse, null))
         {
-            GameObject newGO = Instantiate(patioAce, new Vector3(gameData.ironStorehouse.x, gameData.ironStorehouse.y, gameData.ironStorehouse.z), Quaternion.Euler(0, gameData.ironStorehouse.rot, 0));
+            GameObject newGO = Instantiate(almacenMP, new Vector3(gameData.ironStorehouse.x, gameData.ironStorehouse.y, gameData.ironStorehouse.z), Quaternion.Euler(0, gameData.ironStorehouse.rot, 0));
+            newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("hierro"); });
         }
         else
         {
@@ -68,9 +73,10 @@ public class SceneInitialization : MonoBehaviour
 
         // Generación de plante de coque
 
-        if (gameData.cokePlant != null)
+        if (!ReferenceEquals(gameData.cokePlant, null))
         {
             GameObject newGO = Instantiate(plantaCoque, new Vector3(gameData.cokePlant.x, gameData.cokePlant.y, gameData.cokePlant.z), Quaternion.Euler(0, gameData.cokePlant.rot, 0));
+            newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("plantadecoque"); });
         }
         else
         {
@@ -79,9 +85,9 @@ public class SceneInitialization : MonoBehaviour
 
         // Generación de patio de acero
 
-        if (gameData.steelYard != null)
+        if (!ReferenceEquals(gameData.steelYard, null))
         {
-            GameObject newGO = Instantiate(plantaCoque, new Vector3(gameData.steelYard.x, gameData.steelYard.y, gameData.steelYard.z), Quaternion.Euler(0, gameData.steelYard.rot, 0));
+            GameObject newGO = Instantiate(patioAce, new Vector3(gameData.steelYard.x, gameData.steelYard.y, gameData.steelYard.z), Quaternion.Euler(0, gameData.steelYard.rot, 0));
         }
         else
         {
