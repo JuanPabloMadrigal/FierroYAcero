@@ -59,34 +59,6 @@ public class FileHandlerStory : MonoBehaviour
 
     private void Start()
     {
-        // Definicion de modelo de juego vacío para intentar cargarlo en caso de existir una partida guardada
-        gameData = new GameModel(
-                    "", // Personaje
-                    0, // Dinero
-                    0, // Satisfaccion
-                    0, // coque
-                    20, // precio coque
-                    0, // hierro
-                    20, // precio hierro
-                    0, // alambrado de acero
-                    20, // precio venta alambrado de acero
-                    new List<BuildingProperties> // Edificios proceso de acero
-                    {
-                        new BuildingProperties(100, 0, 10f, 0f, 0, true, "Horno 1", -19, -0.1f, -7, -90),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, true, "Aceracion", -17, -0.05f, -15, 0),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, -90),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, -90),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, -90),
-                        new BuildingProperties(100, 0, 30f, 0f, 0, true, "Molino Comercial", 19, -0.075f, 26, -90)
-                    },
-                    new IronStorehouse(100, 0, true, -16, 0.025f, 0, 180),
-                    new CokePlant(100, 0, true, -22f, -0.025f, 0, 0),
-                    new SteelYard(100, 0, true, 19, -0.075f, 18, -90)
-                    );
 
         // Carga de diálogos
         gameDialogues = new GameDialogues();
@@ -95,19 +67,6 @@ public class FileHandlerStory : MonoBehaviour
 
         encKey = PlayerPrefs.GetString("EncKey");
         initVector = PlayerPrefs.GetString("InitVector");
-
-        if (string.IsNullOrEmpty(encKey))
-        {
-            string newEncKey = CreateEncComponent(Random.Range(8,13));
-            encKey = newEncKey;
-            PlayerPrefs.SetString("EncKey", newEncKey);
-        }
-        if (string.IsNullOrEmpty(initVector))
-        {
-            string newIV = CreateEncComponent(16);
-            initVector = newIV;
-            PlayerPrefs.SetString("InitVector", newIV);
-        }
 
         // Intento de carga de partida guardada
         ReadFile();
@@ -259,7 +218,7 @@ public class FileHandlerStory : MonoBehaviour
     }
 
     // Función para crear una llave de encriptación aleatoria
-    private string CreateEncComponent(int length)
+    /*private string CreateEncComponent(int length)
     {
         const string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
@@ -270,7 +229,7 @@ public class FileHandlerStory : MonoBehaviour
             result.Append(characters[random.Next(characters.Length)]);
         }
         return result.ToString();
-    }
+    }*/
 
     void RefreshEditorProjectWindow()
     {
