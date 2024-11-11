@@ -11,7 +11,9 @@ using UnityEngine.UI;
 
 public class MenuNavegation : MonoBehaviour
 {
-
+    public float fadeSpeed;
+    public GameObject loadScreen;
+    private RawImage loadScreenImage;
     public GameObject CharacterMenu;
     public GameObject MainMenu;
     public Scene SavedGame;
@@ -20,11 +22,13 @@ public class MenuNavegation : MonoBehaviour
     [SerializeField] EventTrigger continueButton;
 
     public bool isLocal;
+    public Animator sceneAnimator;
     
     void Start()
     {
-
+        loadScreenImage = loadScreen.GetComponent<RawImage>();
         ContinueGameExists();
+        sceneAnimator = loadScreen.GetComponent<Animator>();
     }
 
     public void GoToChooseCharacter()
@@ -72,7 +76,17 @@ public class MenuNavegation : MonoBehaviour
 
     public void ContinueGame()
     {
+        loadScreenImage.color = new Color(0, 0, 0, 0);
+        loadScreen.SetActive(true);
+        sceneAnimator.Play("FadeOut");
+        StartCoroutine("FadeOut");
+    }
+
+    public IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(fadeSpeed);
         SceneManager.LoadScene("StoryGame");
+
     }
 
     public void QuitGame()

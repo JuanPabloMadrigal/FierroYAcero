@@ -13,12 +13,29 @@ public class SceneInitialization : MonoBehaviour
     [SerializeField] private GameObject molinoCom;
     [SerializeField] private GameObject patioAce;
     [SerializeField] private SidebarControl sidebarControl;
+    public Animator sceneAnimator;
+    [SerializeField]private GameObject loadScreen;
+    [SerializeField]private RawImage loadScreenImage;
+    
 
+    void Awake()
+    {
+        loadScreenImage = loadScreen.GetComponent<RawImage>();
+        loadScreenImage.color = new Color(0, 0, 0, 1);
+        sceneAnimator.Play("FadeIn");
+        StartCoroutine("FadeIn");
+    }
+
+    public IEnumerator FadeIn()
+    {
+        yield return new WaitForSeconds(1.0f);
+        loadScreen.SetActive(false);
+    }
 
     public void BuildingsGeneration(GameModel gameData)
     {
 
-        // Generación de edificios de proceso de acero
+        // Generaciï¿½n de edificios de proceso de acero
 
         Debug.Log(gameData.buildingsList[0].x);
 
@@ -47,7 +64,7 @@ public class SceneInitialization : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Se intentó cargar una instancia de objeto no existente.");
+                    Debug.Log("Se intentï¿½ cargar una instancia de objeto no existente.");
                     break;
                 }
 
@@ -59,7 +76,7 @@ public class SceneInitialization : MonoBehaviour
             }
         }
 
-        // Generación de almacén de materia prima
+        // Generaciï¿½n de almacï¿½n de materia prima
 
         if (!ReferenceEquals(gameData.ironStorehouse, null))
         {
@@ -68,10 +85,10 @@ public class SceneInitialization : MonoBehaviour
         }
         else
         {
-            Debug.Log("Error al generar el almacén de MP");
+            Debug.Log("Error al generar el almacï¿½n de MP");
         }
 
-        // Generación de plante de coque
+        // Generaciï¿½n de plante de coque
 
         if (!ReferenceEquals(gameData.cokePlant, null))
         {
@@ -83,7 +100,7 @@ public class SceneInitialization : MonoBehaviour
             Debug.Log("Error al generar la planta de coque");
         }
 
-        // Generación de patio de acero
+        // Generaciï¿½n de patio de acero
 
         if (!ReferenceEquals(gameData.steelYard, null))
         {
