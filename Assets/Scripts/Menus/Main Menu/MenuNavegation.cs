@@ -16,6 +16,7 @@ public class MenuNavegation : MonoBehaviour
     private RawImage loadScreenImage;
     public GameObject CharacterMenu;
     public GameObject MainMenu;
+    public GameObject MenuPartida;
     public Scene SavedGame;
     public TextMeshProUGUI ContinueText;
 
@@ -35,7 +36,23 @@ public class MenuNavegation : MonoBehaviour
     {
         CharacterMenu.SetActive(true);
         MainMenu.SetActive(false);
+        MenuPartida.SetActive(false);
     }
+
+    public void GoToChoosePartida()
+    {
+        CharacterMenu.SetActive(false);
+        MainMenu.SetActive(false);
+        MenuPartida.SetActive(true);
+    }
+
+    public void Return()
+    {
+        CharacterMenu.SetActive(false);
+        MainMenu.SetActive(true);
+        MenuPartida.SetActive(false);
+    }
+
 
     public void ContinueGameExists()
     {
