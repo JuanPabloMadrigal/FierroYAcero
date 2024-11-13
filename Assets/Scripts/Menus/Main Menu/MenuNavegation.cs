@@ -11,23 +11,22 @@ using UnityEngine.UI;
 
 public class MenuNavegation : MonoBehaviour
 {
-    public float fadeSpeed;
-    public GameObject loadScreen;
-    private RawImage loadScreenImage;
     public GameObject CharacterMenu;
     public GameObject MainMenu;
-    public GameObject MenuPartida;
-    public Scene SavedGame;
+    public GameObject videoPlayer;
+    public GameObject GameSelectionMenu;
     public TextMeshProUGUI ContinueText;
 
     [SerializeField] EventTrigger continueButton;
 
-    public bool isLocal;
+    public float fadeSpeed;
+    public GameObject loadScreen;
+    private RawImage loadScreenImage;
     public Animator sceneAnimator;
-    
+
+
     void Start()
     {
-        loadScreenImage = loadScreen.GetComponent<RawImage>();
         ContinueGameExists();
         sceneAnimator = loadScreen.GetComponent<Animator>();
     }
@@ -36,38 +35,59 @@ public class MenuNavegation : MonoBehaviour
     {
         CharacterMenu.SetActive(true);
         MainMenu.SetActive(false);
-        MenuPartida.SetActive(false);
+        GameSelectionMenu.SetActive(false);
     }
 
-    public void GoToChoosePartida()
+    public void GoToChooseGame(string flowType)
     {
         CharacterMenu.SetActive(false);
         MainMenu.SetActive(false);
-        MenuPartida.SetActive(true);
+        GameSelectionMenu.SetActive(true);
+        GameSelectionMenu.GetComponent<ChooseGame>().LoadContextView(flowType);
     }
 
-    public void Return()
+    public void GoToMainMenu()
     {
         CharacterMenu.SetActive(false);
         MainMenu.SetActive(true);
-        MenuPartida.SetActive(false);
+        GameSelectionMenu.SetActive(false);
+    }
+
+    public void GoToGame()
+    {
+        loadScreenImage = loadScreen.GetComponent<RawImage>();
+        loadScreenImage.color = new Color(0, 0, 0, 0);
+        loadScreen.SetActive(true);
+        videoPlayer.SetActive(false);
+        sceneAnimator.Play("FadeOut");
+        StartCoroutine("FadeOut");
     }
 
 
     public void ContinueGameExists()
     {
 
-        bool fileValidation;
+        string fullPath1 = string.Empty;
+        string fullPath2 = string.Empty;
+        string fullPath3 = string.Empty;
 
-        if (!isLocal)
+        if (!PathManager.Instance.isLocal)
         {
-            fileValidation = File.Exists(Application.persistentDataPath + "/storyGame.txt");
+            fullPath1 = Application.persistentDataPath + "/storyGame1.txt";
+            fullPath2 = Application.persistentDataPath + "/storyGame2.txt";
+            fullPath3 = Application.persistentDataPath + "/storyGame3.txt";
         }
         else
         {
-            fileValidation = File.Exists(Application.dataPath + "/Scripts/Story Mode/JSONs/storyGame.txt");
+            fullPath1 = Application.dataPath + "/Scripts/Story Mode/JSONs/storyGame1.txt";
+            fullPath2 = Application.dataPath + "/Scripts/Story Mode/JSONs/storyGame2.txt";
+            fullPath3 = Application.dataPath + "/Scripts/Story Mode/JSONs/storyGame3.txt";
         }
-        
+
+        bool fileValidation;
+        fileValidation = (File.Exists(fullPath1) || File.Exists(fullPath2) || File.Exists(fullPath3)) ? true : false;
+        //Debug.Log($"File validation for continue: {fileValidation}");
+
         if (fileValidation){
             ContinueText.color = new Color(0, 0, 0, 0.7f);
             continueButton.enabled = true;
@@ -90,20 +110,10 @@ public class MenuNavegation : MonoBehaviour
         text.color = new Color(0, 0, 0, 0.7f);
     }
 
-
-    public void ContinueGame()
-    {
-        loadScreenImage.color = new Color(0, 0, 0, 0);
-        loadScreen.SetActive(true);
-        sceneAnimator.Play("FadeOut");
-        StartCoroutine("FadeOut");
-    }
-
     public IEnumerator FadeOut()
     {
         yield return new WaitForSeconds(fadeSpeed);
         SceneManager.LoadScene("StoryGame");
-
     }
 
     public void QuitGame()

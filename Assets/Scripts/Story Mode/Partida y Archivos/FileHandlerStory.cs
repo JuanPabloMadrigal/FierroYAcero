@@ -22,7 +22,6 @@ public class FileHandlerStory : MonoBehaviour
     [SerializeField] private bool isLocal = true;
     [SerializeField] private bool fileValidation;
     [SerializeField] private bool fileValidationDialogues;
-    [SerializeField] private string EncJSONFile = "storyGame.txt";
     [SerializeField] private string JSONFile = "storyGame.txt";
     [SerializeField] private string DialogueJSONFile = "JSON Templates/storyDialoguesOriginal.txt";
     [SerializeField] private string DialogueEncJSONFile = "storyDialogues.txt";
@@ -88,12 +87,12 @@ public class FileHandlerStory : MonoBehaviour
 
         if (!isLocal)
         {
-            fullPath = Application.persistentDataPath + "/" + EncJSONFile;
+            fullPath = Application.persistentDataPath + "/" + PathManager.Instance.saveFileToUse;
             dialoguePath = Application.persistentDataPath + "/" + DialogueEncJSONFile;
         }
         else
         {
-            fullPath = Application.dataPath + filePath + EncJSONFile;
+            fullPath = Application.dataPath + filePath + PathManager.Instance.saveFileToUse;
             dialoguePath = Application.dataPath + filePath + DialogueEncJSONFile;
         }
 
@@ -129,7 +128,7 @@ public class FileHandlerStory : MonoBehaviour
         string decodeDialogue = CryptoHandler.DecryptStringAlt(streamDialogueContent, encKey, initVector);
         gameDialogues = JsonUtility.FromJson<GameDialogues>(decodeDialogue);
         Debug.Log(decodeDialogue);
-        Debug.Log(gameDialogues.Eventos[0].Dialogos[0].DialogoTexto);
+        Debug.Log(gameDialogues.Eventos[0].Dialogos[0].dialogoTexto);
 
         RefreshEditorProjectWindow();
 
@@ -142,11 +141,11 @@ public class FileHandlerStory : MonoBehaviour
 
         if (!isLocal)
         {
-            fullPath = Application.persistentDataPath + "/" + EncJSONFile;
+            fullPath = Application.persistentDataPath + "/" + PathManager.Instance.saveFileToUse;
         }
         else
         {
-            fullPath = Application.dataPath + filePath + EncJSONFile;
+            fullPath = Application.dataPath + filePath + PathManager.Instance.saveFileToUse;
         }
 
         fileValidation = File.Exists(fullPath);
@@ -155,7 +154,7 @@ public class FileHandlerStory : MonoBehaviour
         if (!fileValidation)
         {
             textPartEnc.text = "Configuración en 'local''";
-            Debug.Log(EncJSONFile);
+            Debug.Log(PathManager.Instance.saveFileToUse);
             File.WriteAllBytes(fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
         else

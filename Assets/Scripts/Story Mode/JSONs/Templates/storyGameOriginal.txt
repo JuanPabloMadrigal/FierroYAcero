@@ -1,7 +1,8 @@
 {
   "Personaje": "",
   "Dinero": 0,
-  "Satisfaccion": 0,
+  "Evento": 0,
+  "Empleados": 0,
   "Coque": 0,
   "PrecioCoque": 20,
   "Hierro": 0,

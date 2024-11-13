@@ -63,7 +63,6 @@ public class FileHandler : MonoBehaviour
         gameData = new GameModel(
                     "", // Personaje
                     0, // Dinero
-                    0, // Satisfaccion
                     0, // coque
                     20, // precio coque
                     0, // hierro
@@ -170,7 +169,7 @@ public class FileHandler : MonoBehaviour
         string decodeDialogue = CryptoHandler.DecryptStringAlt(streamDialogueContent, encKey, initVector);
         gameDialogues = JsonUtility.FromJson<GameDialogues>(decodeDialogue);
         Debug.Log(decodeDialogue);
-        Debug.Log(gameDialogues.Eventos[0].Dialogos[0].DialogoTexto);
+        Debug.Log(gameDialogues.Eventos[0].Dialogos[0].dialogoTexto);
 
         RefreshEditorProjectWindow();
 

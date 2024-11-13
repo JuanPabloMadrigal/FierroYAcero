@@ -5,22 +5,75 @@
                 {
                     "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "¡Bienvenido a Fundidora Fierro y Acero! Soy Vicente Ferrara, el anterior director, y estaré guiándote en este emocionante viaje. ¡Comencemos con lo básico!"
+                    "nombre": "???",
+                    "dialogoTexto": "¡Buenos días {nombreJugador}! Esperaba con ansias que respondieras mi llamada, tengo algo muy importante que comentarte..."
+                },
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Feliz",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "¡Siempre feliz de ayudar jefe!"
                 },
                 {
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "Primero, observa a tu alrededor. Aquí tienes la planta de Fundidora Fierro y Acero, un lugar donde el trabajo duro y la innovación se unen para crear acero de calidad."
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Como tal vez sabras, mi nombre es Vicente Ferrara, uno de los muchos directores propietarios de esta compañía: La Fundidora de Fierro y Acero de Monterrey."
+                
+                },
+                {
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Sin embargo, estoy pensando en darme un descanso... ¡Este trabajo puede ser bastante agotador sabes! Además, siento que ya no tengo la misma capacidad que antes para echarle ojo al lugar."
+                },
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",    
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¡Es por esto que te he elegido a tí como mi sustituto! Estoy convencido de que cuentas con todas las habilidades necesarias para mantener la empresa bajo control."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "Me elogia jefe, pero... ¡No tengo ni idea sobre como dirigir una compañía! ¡Y mucho menos una con gran importancia!"
+                },
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Tu por eso no te preocupes, estaré guiándote a través de todo este emocionante viaje. ¡Te ayudaré con lo básico y el resto saldrá naturalmente!"
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Primero, observa a tu alrededor. Aquí tienes la planta de la Fundidora de Fierro y Acero, un lugar donde el trabajo duro y la innovación se unen para crear acero de calidad."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Podrás moverte a través del mapa usando el clic derecho, y podrás alejarte o acercarte utilizando la rueda del ratón."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Observa también que en la parte superior de la pantalla puedes ver tus recursos: hierro, coque y el dinero que poseemos."
                 },
                 {
                     "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "Una vez que hayas aprendido a gestionar tus recursos, podrás invertir en mejoras."
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Estos recursos serán importantes para producir acero y mantener la planta a flote. Además, una vez que hayas aprendido a gestionar tus recursos, podrás invertir en mejoras."
                 },
                 {
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "Ahora observa que en la parte de abajo tienes tu menú de construcción."
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Observa el edificio que se indica en el mapa. Este es el Taller de Fundición y Maquinaria, es como un laboratorio para desarrollar nuevas tecnologías en la planta. Haz clic en él."
                 }
             ]
         },
@@ -29,7 +82,54 @@
                 {
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "Aquí podrás encontrar los diferentes edificios que tengas a tu disposición y que puedas construir, intenta agregando un Taller de Aceración."
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Aquí podrás construir nuevos edificios, mejorarlos y desbloquear todo tipo de ventajas. Intenta agregando un nuevo Taller de Aceración."
+                }
+            ]
+        },
+        {
+            "Dialogos": [
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Como puedes observar, el edificio ha aparecido en el mapa y está listo para utilizarse. Los Talleres de Aceración te ayudaran a procesar más acero, recuerda que los podrás mejorar en un futuro si lo deseas."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Estos edificios se encargan de limpiar las impuresas del material salido de los hornos altos, llamado arrabio. Este después se convierte en acero puro."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Además, también tenemos los Molinos Comerciales, los cuales moldean el acero resultante para obtener productos finales como el alambrado de acero, la barra de acero, e incluso rieles."
+                },
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Ahora que conoces el proceso de construcción de edificios, desarrollar la infraestructura de la planta será pan comido."
+                },
+                {
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Pensándolo bien, necesitamos un lugar para guardar nuestros suministros de hierro y de coque... Últimamente estamos recibiendo cargas más grandes del material necesario para crear acero."
+                },
+                {
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "¿Cómo? ¿No tenían donde almacenar los recursos más importantes para el funcionamiento de nuestra planta?"
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "No te preocupes {nombreJugador}, solíamos almacenar todo el material en el Horno Alto Uno, aunque empiezo a sospechar que tal vez sea peligroso dejar todo expuesto. Ayudame añadiendo el Almacen de Materia Prima y la Planta de Coque."
                 }
             ]
         },
@@ -38,41 +138,20 @@
                 {
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "Como puedes observar, el edificio ha aparecido en el mapa."
+                    "nombre": "Vicente",
+                    "dialogoTexto": "El Almacén de Materia Prima y la Planta de Coque te permitirán adquirir material."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Recuerda que ciertos edificios te permitirán transformar materia prima en productos terminados."
                 },
                 {
                     "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "¡Este será, por ahora, tu edificio más importante!"
-                },
-                {
-                    "img_der": "Vicente_Normal",
-                    "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "Recuerda, cada edificio tiene su propio propósito."
-                },
-                {
-                    "img_der": "Vicente_Normal",
-                    "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "Ahora que conoces el proceso, posiciona en el mapa el Almacén de Materia Prima."
-                }
-            ]
-        },
-        {
-            "Dialogos": [
-                {
-                    "img_der": "Vicente_Normal",
-                    "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "El Almacén de Materia Prima y la Planta de Coque te permitirán adquirir material."
-                },
-                {
-                    "img_der": "Vicente_Normal",
-                    "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "Recuerda que ciertos edificios te permitirán transformar materia prima en productos terminados."
-                },
-                {
-                    "img_der": "Vicente_Feliz",
-                    "img_izq": "Jugador_Normal",
-                    "DialogoTexto": "Con esto, ya estás preparado para administrar la planta Fundidora como su nuevo director."
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Con esto, ya estás preparado para administrar la planta Fundidora como su nuevo director."
                 }
             ]
         }

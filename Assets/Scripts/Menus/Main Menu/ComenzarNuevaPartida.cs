@@ -13,9 +13,10 @@ public class ComenzarNuevaPartida : MonoBehaviour
     private string eleccionFinal;
     [SerializeField] private GameObject robotConfirmacion;
     [SerializeField] private GameObject robotElegido;
+    [SerializeField] private GameObject videoPlayer;
 
     [SerializeField] private string filePath = "/Scripts/Story Mode/JSONs/";
-    [SerializeField] private string JSONFile = "storyGame.txt";
+    //[SerializeField] private string JSONFile;
     [SerializeField] AudioClip robotSFX;
 
 
@@ -54,7 +55,7 @@ public class ComenzarNuevaPartida : MonoBehaviour
             robotElegido.SetActive(true);
             
             yield return new WaitForSeconds(1.5f);
-            SceneManager.LoadScene("StoryGame");
+            gameObject.GetComponent<MenuNavegation>().GoToGame();
         }
         else
         {
@@ -91,8 +92,7 @@ public class ComenzarNuevaPartida : MonoBehaviour
         // Modelo de juego al iniciar desde cero
         GameModel gameData = new GameModel(
                     eleccionFinal, // Personaje
-                    0, // Dinero
-                    0, // Satisfaccion
+                    50000, // Dinero
                     0, // coque
                     20, // precio coque
                     0, // hierro
@@ -112,19 +112,21 @@ public class ComenzarNuevaPartida : MonoBehaviour
                         new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, -90),
                         new BuildingProperties(100, 0, 30f, 0f, 0, true, "Molino Comercial", 19, -0.075f, 26, -90)
                     },
-                    new IronStorehouse(100, 0, true, -16, 0.025f, 0, 180),
-                    new CokePlant(100, 0, true, -22f, -0.025f, 0, 0),
+                    new IronStorehouse(100, 0, false, -16, 0.025f, 0, 180),
+                    new CokePlant(100, 0, false, -22f, -0.025f, 0, 0),
                     new SteelYard(100, 0, true, 19, -0.075f, 18, -90)
                     );
+
+        string targetSaveFile = PathManager.Instance.saveFileToUse;
         string fullPath = string.Empty;
 
-        if (!gameObject.GetComponent<MenuNavegation>().isLocal)
+        if (!PathManager.Instance.isLocal)
         {
-            fullPath = Application.persistentDataPath + "/" + JSONFile;
+            fullPath = Application.persistentDataPath + "/" + targetSaveFile;
         }
         else
         {
-            fullPath = Application.dataPath + filePath + JSONFile;
+            fullPath = Application.dataPath + filePath + targetSaveFile;
         }
 
         bool fileValidation;
@@ -133,7 +135,7 @@ public class ComenzarNuevaPartida : MonoBehaviour
 
         if (!fileValidation)
         {
-            Debug.Log(JSONFile);
+            Debug.Log(targetSaveFile);
             File.WriteAllBytes(fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
         else

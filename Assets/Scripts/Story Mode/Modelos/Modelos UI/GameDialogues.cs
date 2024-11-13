@@ -33,5 +33,6 @@ public class Dialogo
 {
     public string img_der;
     public string img_izq;
-    public string DialogoTexto;
+    public string nombre;
+    public string dialogoTexto;
 }
