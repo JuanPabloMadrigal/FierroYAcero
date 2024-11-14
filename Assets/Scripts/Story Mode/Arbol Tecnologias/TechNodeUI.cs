@@ -9,6 +9,7 @@ public class TechNodeUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI costText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Button unlockButton;
+    [SerializeField] private Button showDescriptionButton;
     [SerializeField] private Image backgroundImage;
     [SerializeField] private GameObject descriptionPanel;
     
@@ -65,10 +66,9 @@ public class TechNodeUI : MonoBehaviour
             unlockButton.onClick.AddListener(OnUnlockClicked);
         }
 
-        Button nodeButton = unlockButton;
-        if (nodeButton != null)
+        if (showDescriptionButton != null)
         {
-            nodeButton.onClick.AddListener(ToggleDescription);
+            showDescriptionButton.onClick.AddListener(ToggleDescription);
         }
         else
         {
