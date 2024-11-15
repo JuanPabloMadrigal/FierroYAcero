@@ -11,6 +11,8 @@ public class TechTreeUI : MonoBehaviour
     [Header("Layout Settings")]
     [SerializeField] private float nodeSpacing = 150f;
     [SerializeField] private float levelSpacing = 200f;
+    [SerializeField] private int margin1 = 10;
+    [SerializeField] private int margin2 = 10;
 
     private Dictionary<string, TechNodeUI> nodeUIs = new Dictionary<string, TechNodeUI>();
 
@@ -57,13 +59,21 @@ public class TechTreeUI : MonoBehaviour
         {
             GameObject nodeObj = Instantiate(techNodePrefab, contentParent);
             TechNodeUI nodeUI = nodeObj.GetComponent<TechNodeUI>();
-            
+
             // Position the node based on its column and level
             int column = techColumns[tech.name];
             int level = verticalLevels[tech.name];
             float xPos = column * levelSpacing;
             float yPos = -level * nodeSpacing;  // Negative to go downward
-            nodeObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(xPos, yPos);
+
+            // Adjust the RectTransform to anchor to the top-left
+            RectTransform rectTransform = nodeObj.GetComponent<RectTransform>();
+            rectTransform.anchorMin = new Vector2(0, 1);  // Top-left
+            rectTransform.anchorMax = new Vector2(0, 1);  // Top-left
+            rectTransform.pivot = new Vector2(0, 1);      // Pivot at the top-left
+
+            // Set the position, adjusting for node size (optional margin of 10 pixels from the edge)
+            rectTransform.anchoredPosition = new Vector2(xPos + margin1, yPos - margin2);
 
             nodeUI.Initialize(tech, techTree);
             nodeUIs[tech.name] = nodeUI;
