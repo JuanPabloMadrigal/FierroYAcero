@@ -18,7 +18,7 @@ public class SceneInitialization : MonoBehaviour
     [SerializeField]private RawImage loadScreenImage;
     
 
-    void Awake()
+    void Start()
     {
         loadScreenImage = loadScreen.GetComponent<RawImage>();
         loadScreenImage.color = new Color(0, 0, 0, 1);
