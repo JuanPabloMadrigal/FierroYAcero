@@ -54,7 +54,7 @@ public class ComenzarNuevaPartida : MonoBehaviour
             gameObject.GetComponent<AudioSource>().Play();
             robotElegido.SetActive(true);
             
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSecondsRealtime(1.5f);
             gameObject.GetComponent<MenuNavegation>().GoToGame();
         }
         else

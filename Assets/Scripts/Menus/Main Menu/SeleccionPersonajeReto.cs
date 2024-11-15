@@ -37,6 +37,7 @@ public class SeleccionPersonajeReto : MonoBehaviour
     }
     private IEnumerator EscalarEnHover()
     {
+        Debug.Log("Entra al escalar en hover");
         Vector3 escalaInicial = transform.localScale;
         Vector3 escalaFinal = new Vector3(escalaXOriginal,escalaYOriginal, 1) * 1.05f;
         float tiempo = 0f;
@@ -44,7 +45,8 @@ public class SeleccionPersonajeReto : MonoBehaviour
             while (tiempo < 0.1f)
             {
                 float t = tiempo / 0.1f;
-                transform.localScale = Vector3.Lerp(escalaInicial, escalaFinal, t);
+                Debug.Log(t);
+            transform.localScale = Vector3.Lerp(escalaInicial, escalaFinal, t);
                 tiempo += Time.deltaTime;
                 yield return null;
             }

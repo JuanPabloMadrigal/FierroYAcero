@@ -29,6 +29,7 @@ public class MenuNavegation : MonoBehaviour
     {
         ContinueGameExists();
         sceneAnimator = loadScreen.GetComponent<Animator>();
+        Time.timeScale = 1;
     }
 
     public void GoToChooseCharacter()
@@ -59,7 +60,7 @@ public class MenuNavegation : MonoBehaviour
         loadScreenImage.color = new Color(0, 0, 0, 0);
         loadScreen.SetActive(true);
         videoPlayer.SetActive(false);
-        sceneAnimator.Play("FadeOut");
+        sceneAnimator.Play("FadeOut", -1, 0);
         StartCoroutine("FadeOut");
     }
 
@@ -112,8 +113,11 @@ public class MenuNavegation : MonoBehaviour
 
     public IEnumerator FadeOut()
     {
-        yield return new WaitForSeconds(fadeSpeed);
+        Debug.Log("Entra al intento de cambio de escena.");
+        yield return new WaitForSecondsRealtime(fadeSpeed);
+        Debug.Log("Espera el tiempo.");
         SceneManager.LoadScene("StoryGame");
+        Debug.Log("Piensa que ya cambió de escena.");
     }
 
     public void QuitGame()
