@@ -6,6 +6,7 @@ public class TechTreeUI : MonoBehaviour
     [SerializeField] private TechTree techTree;
     [SerializeField] private GameObject techNodePrefab;
     [SerializeField] private Transform contentParent;
+    [SerializeField] private GameObject TechCanvas;
     
     [Header("Layout Settings")]
     [SerializeField] private float nodeSpacing = 150f;
@@ -14,6 +15,11 @@ public class TechTreeUI : MonoBehaviour
     private Dictionary<string, TechNodeUI> nodeUIs = new Dictionary<string, TechNodeUI>();
 
     private void Start()
+    {
+
+    }
+
+    public void ShowTechTree()
     {
         if (techTree == null)
         {
@@ -24,10 +30,13 @@ public class TechTreeUI : MonoBehaviour
         if (!techTree.IsInitialized())
         {
             techTree.InitializeDictionary();
+            InitializeTechTree();
+            TechCanvas.SetActive(true);
         }
-        
+
         techTree.SetResearchPoints(50);  // Test with 50 points
         InitializeTechTree();
+        TechCanvas.SetActive(true);
     }
 
     private void InitializeTechTree()
@@ -59,8 +68,6 @@ public class TechTreeUI : MonoBehaviour
             nodeUI.Initialize(tech, techTree);
             nodeUIs[tech.name] = nodeUI;
         }
-
-        DrawConnections();
     }
 
     private Dictionary<string, int> CalculateTechColumns()
@@ -150,38 +157,5 @@ public class TechTreeUI : MonoBehaviour
         } while (changed);
 
         return levels;
-    }
-
-    private void DrawConnections()
-    {
-        foreach (var tech in techTree.technologies)
-        {
-            if (tech.prerequisites != null)
-            {
-                foreach (var prereq in tech.prerequisites)
-                {
-                    if (nodeUIs.ContainsKey(tech.name) && nodeUIs.ContainsKey(prereq))
-                    {
-                        // Create a line GameObject
-                        GameObject lineObj = new GameObject("Line");
-                        lineObj.transform.SetParent(contentParent);
-                        LineRenderer line = lineObj.AddComponent<LineRenderer>();
-                        
-                        // Set line properties
-                        line.startWidth = 2f;
-                        line.endWidth = 2f;
-                        
-                        // Get positions of connected nodes
-                        Vector3 startPos = nodeUIs[prereq].transform.position;
-                        Vector3 endPos = nodeUIs[tech.name].transform.position;
-                        
-                        // Set line positions
-                        line.positionCount = 2;
-                        line.SetPosition(0, startPos);
-                        line.SetPosition(1, endPos);
-                    }
-                }
-            }
-        }
     }
 }

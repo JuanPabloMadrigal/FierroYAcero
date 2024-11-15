@@ -42,15 +42,6 @@ public class TechTree : MonoBehaviour
         return isInitialized;
     }
 
-    // Remove the dictionary population from Start
-    void Start()
-    {
-        if (!isInitialized)
-        {
-            InitializeDictionary();
-        }
-    }
-
     // Event that is triggered when a technology is unlocked
     public event Action<string> OnTechUnlocked;
 
