@@ -3,10 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public Slider volumeSlider;
+    private AudioSource[] audioSources;
+
+    void Start()
+    {
+        volumeSlider.value = AudioListener.volume;
+        
+        volumeSlider.onValueChanged.AddListener(HandleVolumeChange);
+    }
 
     public void OnEscKey(InputAction.CallbackContext ctx)
     {
@@ -15,7 +25,7 @@ public class PauseMenu : MonoBehaviour
         if (escKeyPressed)
         {
             pauseMenu.SetActive(true);
-            Time.timeScale = 0; //if we add animators to buttons or want an animated menu, set animator controller update mode to unscaled
+            Time.timeScale = 0;
         } 
     }
 
@@ -31,4 +41,8 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    private void HandleVolumeChange(float volume)
+    {
+        AudioListener.volume = volume;
+    }
 }
