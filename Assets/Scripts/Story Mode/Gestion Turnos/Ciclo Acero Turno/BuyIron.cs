@@ -14,6 +14,8 @@ public class BuyIron : MonoBehaviour
         FileHandlerStory.Instance.gameData.AddIron(int.Parse(quantityInputField.text));
         FileHandlerStory.Instance.gameData.SubtractMoney(FileHandlerStory.Instance.gameData.ironPrice * int.Parse(quantityInputField.text));
         Debug.Log(FileHandlerStory.Instance.gameData.ironPrice);
+        EconomyTracker.Instance.AddIronCounter(int.Parse(quantityInputField.text));
+
     }
 
     public void addIron()
