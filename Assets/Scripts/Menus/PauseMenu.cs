@@ -9,6 +9,12 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public Slider volumeSlider;
+    public GameObject Slider;
+    public GameObject videoPlayer;
+    public GameObject resume;
+    public GameObject options;
+    public GameObject Exit;
+    public GameObject leaveOptions;
     private AudioSource[] audioSources;
 
     void Start()
@@ -16,6 +22,7 @@ public class PauseMenu : MonoBehaviour
         volumeSlider.value = AudioListener.volume;
         
         volumeSlider.onValueChanged.AddListener(HandleVolumeChange);
+        Slider.SetActive(false);
     }
 
     public void OnEscKey(InputAction.CallbackContext ctx)
@@ -39,6 +46,21 @@ public class PauseMenu : MonoBehaviour
     {
         FileHandlerStory.Instance.WriteFile();
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OnConfigurationButton()
+    {
+        resume.SetActive(false);
+        Exit.SetActive(false);
+        options.SetActive(false);
+        Slider.SetActive(true);
+    }
+    public void OnLeaveConfigurations()
+    {
+        resume.SetActive(true);
+        Exit.SetActive(true);
+        options.SetActive(true);
+        Slider.SetActive(false);
     }
 
     private void HandleVolumeChange(float volume)
