@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -240,6 +240,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 42369}
+  volumeSlider: {fileID: 0}
+  Slider: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  resume: {fileID: 0}
+  options: {fileID: 0}
+  Exit: {fileID: 0}
+  leaveOptions: {fileID: 0}
+  showDialogue: {fileID: 0}
+  cameraMovement: {fileID: 0}
 --- !u!1001 &736083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2447,38 +2456,196 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   technologies:
-  - name: Horno 1
-    description: Constuir materiales finales
+  - name: "Almac\xE9n de materia prima"
+    description: "Permite comprar hierro y carb\xF3n"
     cost: 0
     isUnlocked: 0
     prerequisites: []
-  - name: coque
-    description: 'Constuir coque '
-    cost: 0
-    isUnlocked: 0
-    prerequisites: []
-  - name: materia prima
-    description: 'Constuir coque '
-    cost: 0
-    isUnlocked: 0
-    prerequisites: []
-  - name: taller de aceracion 1
-    description: n
-    cost: 0
-    isUnlocked: 0
-    prerequisites: []
-  - name: taller de aceracion 2
-    description: 'Constuir taller '
+  - name: Planta de coque
+    description: Edificio donde se fabrica el coque
     cost: 0
     isUnlocked: 0
     prerequisites:
-    - taller de aceracion 1
-  - name: taller de aceracio 3
-    description: 'Constuir taller '
+    - "Almac\xE9n de materia prima"
+  - name: Horno 2
+    description: "Mejora en fabricaci\xF3n de productos finales"
     cost: 0
     isUnlocked: 0
     prerequisites:
-    - taller de aceracion 2
+    - "Almac\xE9n de materia prima"
+    - Planta de coque
+  - name: Horno 3
+    description: "Mejora en fabricaci\xF3n de productos finales"
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Almac\xE9n de materia prima"
+    - Planta de coque
+    - Horno 2
+  - name: "Taller de aceraci\xF3n 1"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites: []
+  - name: "Taller de aceraci\xF3n 2"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+  - name: "Taller de aceraci\xF3n 3"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+  - name: "Taller de aceraci\xF3n 4"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+    - "Taller de aceraci\xF3n 3"
+  - name: "Taller de aceraci\xF3n 5"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+    - "Taller de aceraci\xF3n 3"
+    - "Taller de aceraci\xF3n 4"
+  - name: "Taller de aceraci\xF3n 6"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+    - "Taller de aceraci\xF3n 3"
+    - "Taller de aceraci\xF3n 4"
+    - "Taller de aceraci\xF3n 5"
+  - name: "Taller de aceraci\xF3n 7"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+    - "Taller de aceraci\xF3n 3"
+    - "Taller de aceraci\xF3n 4"
+    - "Taller de aceraci\xF3n 5"
+    - "Taller de aceraci\xF3n 6"
+  - name: "Taller de aceraci\xF3n 8"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+    - "Taller de aceraci\xF3n 3"
+    - "Taller de aceraci\xF3n 4"
+    - "Taller de aceraci\xF3n 5"
+    - "Taller de aceraci\xF3n 6"
+    - "Taller de aceraci\xF3n 7"
+  - name: Trabajadores 1
+    description: Menor costo por salarios
+    cost: 0
+    isUnlocked: 0
+    prerequisites: []
+  - name: Trabajadores 2
+    description: Menor costo por salarios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Trabajadores 1
+  - name: Trabajadores 3
+    description: Menor costo por salarios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Trabajadores 1
+    - Trabajadores 2
+  - name: Trabajadores 4
+    description: Menor costo por salarios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Trabajadores 1
+    - Trabajadores 2
+    - Trabajadores 3
+  - name: "Negociaci\xF3n 1"
+    description: Mayor precio de venta para productos
+    cost: 0
+    isUnlocked: 0
+    prerequisites: []
+  - name: "Negociaci\xF3n 2"
+    description: Mayor precio de venta para productos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Negociaci\xF3n 1"
+  - name: "Negociaci\xF3n 3"
+    description: Mayor precio de venta para productos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Negociaci\xF3n 1"
+    - "Negociaci\xF3n 2"
+  - name: "Negociaci\xF3n 4"
+    description: Mayor precio de venta para productos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Negociaci\xF3n 1"
+    - "Negociaci\xF3n 2"
+    - "Negociaci\xF3n 3"
+  - name: "Negociaci\xF3n 5"
+    description: Mayor precio de venta para productos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Negociaci\xF3n 1"
+    - "Negociaci\xF3n 2"
+    - "Negociaci\xF3n 3"
+    - "Negociaci\xF3n 4"
+  - name: Infraestructura 1
+    description: Menor precio de mantenimiento de edificios
+    cost: 0
+    isUnlocked: 0
+    prerequisites: []
+  - name: Infraestructura 2
+    description: Menor precio de mantenimiento de edificios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Infraestructura 1
+  - name: Infraestructura 3
+    description: Menor precio de mantenimiento de edificios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Infraestructura 1
+    - Infraestructura 2
+  - name: Infraestructura 4
+    description: Menor precio de mantenimiento de edificios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Infraestructura 1
+    - Infraestructura 2
+    - Infraestructura 3
+  - name: Infraestructura 5
+    description: Menor precio de mantenimiento de edificios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Infraestructura 1
+    - Infraestructura 2
+    - Infraestructura 3
+    - Infraestructura 4
   currentResearchPoints: 50
 --- !u!4 &64701621
 Transform:
@@ -32497,6 +32664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraFocusPlayer: {fileID: 1043676398}
+  onPause: 0
   mouseSensitivity_X: 0.4
   mouseSensitivity_Y: 0.4
   mouseSensitivity_Zoom: 20
@@ -32542,6 +32710,7 @@ MonoBehaviour:
   rotationSmoothTime: 0.15
   cameraAngle: {x: 45, y: 45, z: 0}
   heightOffset: 10
+  onPause: 0
 --- !u!1001 &964472716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49843,7 +50012,7 @@ MonoBehaviour:
   techNodePrefab: {fileID: 6588125327127248300, guid: f7e3ccf9223791a44b66d966f3f804d1, type: 3}
   contentParent: {fileID: 678516263}
   TechCanvas: {fileID: 678516262}
-  nodeSpacing: 200
+  nodeSpacing: 110
   levelSpacing: 350
   margin1: 200
   margin2: 150
@@ -51703,13 +51872,19 @@ MonoBehaviour:
     money: 0
     evento: 0
     empleados: 0
+    descuentoEmpleados: 0
     coque: 0
     coquePrice: 0
     iron: 0
+    ironMoneyPrice: 0
     ironPrice: 0
     steel: 0
+    steelBar: 0
+    steelRail: 0
     steelIronPrice: 0
-    workerSatisfaction: 0
+    steelBarPrice: 0
+    steelRailPrice: 0
+    salaryAmount: 0
     turnsWithoutSalary: 0
     turnsWithoutEvent: 0
     buildingsList: []
@@ -54287,8 +54462,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26cbf4158282a12449a273eeed09aef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnCount: 0
   turnDeficit: 0
   turnProfit: 0
+  moneyToSubtract: 0
+  moneyToAdd: 0
+  coqueToAdd: 0
+  ironToAdd: 0
+  coqueToSubtract: 0
+  ironToSubtract: 0
+  steelToAdd: 0
+  steelBarToAdd: 0
+  railToAdd: 0
 --- !u!114 &1569078471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66376,8 +66561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4477b019e9b5547e69d4710ba3ae41ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude1: 0.1
-  amplitude2: 0.02
+  amplitude1: 0.005
+  amplitude2: 0.005
   frequency: 3.7
   defaultScale: 0.05
   posOrigin: {x: 0, y: 0, z: 0}

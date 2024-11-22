@@ -49,7 +49,7 @@ public class TechNodeUI : MonoBehaviour
 
         // Only set text if the components exist
         if (nameText != null) nameText.text = node.name;
-        if (costText != null) costText.text = $"Cost: {node.cost}";
+        if (costText != null) costText.text = $"Costo: {node.cost}";
         if (descriptionText != null) descriptionText.text = node.description;
         
         // Only set description panel if it exists
