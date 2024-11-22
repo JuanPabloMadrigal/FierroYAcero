@@ -24,6 +24,8 @@ public class MenuNavegation : MonoBehaviour
     private RawImage loadScreenImage;
     public Animator sceneAnimator;
 
+    public TMP_Text debug;
+
 
     void Start()
     {
@@ -61,7 +63,7 @@ public class MenuNavegation : MonoBehaviour
         loadScreen.SetActive(true);
         videoPlayer.SetActive(false);
         sceneAnimator.Play("FadeOut", -1, 0);
-        StartCoroutine("FadeOut");
+        StartCoroutine("ChangeToGame");
     }
 
 
@@ -87,6 +89,7 @@ public class MenuNavegation : MonoBehaviour
 
         bool fileValidation;
         fileValidation = (File.Exists(fullPath1) || File.Exists(fullPath2) || File.Exists(fullPath3)) ? true : false;
+        debug.text = PathManager.Instance.isLocal.ToString();
         //Debug.Log($"File validation for continue: {fileValidation}");
 
         if (fileValidation){
@@ -111,12 +114,12 @@ public class MenuNavegation : MonoBehaviour
         text.color = new Color(0, 0, 0, 0.7f);
     }
 
-    public IEnumerator FadeOut()
+    public IEnumerator ChangeToGame()
     {
         Debug.Log("Entra al intento de cambio de escena.");
         yield return new WaitForSecondsRealtime(fadeSpeed);
         Debug.Log("Espera el tiempo.");
-        SceneManager.LoadScene("StoryGame");
+        SceneManager.LoadScene("JP");
         Debug.Log("Piensa que ya cambió de escena.");
     }
 

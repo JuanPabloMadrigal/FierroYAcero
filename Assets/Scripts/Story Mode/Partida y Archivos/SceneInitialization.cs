@@ -37,8 +37,6 @@ public class SceneInitialization : MonoBehaviour
 
         // Generaci�n de edificios de proceso de acero
 
-        Debug.Log(gameData.buildingsList[0].x);
-
         foreach(BuildingProperties edificio in gameData.buildingsList)
         {
             if (edificio.unlocked)

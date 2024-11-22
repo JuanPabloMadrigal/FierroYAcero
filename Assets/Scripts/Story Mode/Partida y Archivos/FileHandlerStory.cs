@@ -6,6 +6,7 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class FileHandlerStory : MonoBehaviour
 {
@@ -54,10 +55,6 @@ public class FileHandlerStory : MonoBehaviour
         {
             Instance = this;
         }
-    }
-
-    private void Start()
-    {
 
         // Carga de diálogos
         gameDialogues = new GameDialogues();
@@ -70,8 +67,14 @@ public class FileHandlerStory : MonoBehaviour
         // Intento de carga de partida guardada
         ReadFile();
 
-        // Se genera el mapa
+    }
+
+    private void Start()
+    {
+
+        // Se genera el mapa y se inicializa el script de la historia
         GameObject.FindGameObjectWithTag("GameMechanics").GetComponent<SceneInitialization>().BuildingsGeneration(gameData);
+        GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StorylineHandler>().StartStorylineHandler();
 
         // Se actualiza el UI en base a datos del modelo de juego
         UIManager.Instance.UpdateMoneyUI(gameData.money);
@@ -85,7 +88,7 @@ public class FileHandlerStory : MonoBehaviour
         string fullPath = string.Empty;
         string dialoguePath = string.Empty;
 
-        if (!isLocal)
+        if (!PathManager.Instance.isLocal)
         {
             fullPath = Application.persistentDataPath + "/" + PathManager.Instance.saveFileToUse;
             dialoguePath = Application.persistentDataPath + "/" + DialogueEncJSONFile;
@@ -139,7 +142,7 @@ public class FileHandlerStory : MonoBehaviour
     {
         string fullPath = string.Empty;
 
-        if (!isLocal)
+        if (!PathManager.Instance.isLocal)
         {
             fullPath = Application.persistentDataPath + "/" + PathManager.Instance.saveFileToUse;
         }
@@ -176,7 +179,7 @@ public class FileHandlerStory : MonoBehaviour
         string extPath = string.Empty;
         string originPath = string.Empty;
 
-        if (!isLocal)
+        if (!PathManager.Instance.isLocal)
         {
             extPath = Application.persistentDataPath + "/" + file;
             originPath = Application.streamingAssetsPath + "/" + basePath;

@@ -10,6 +10,9 @@ using UnityEngine.Video;
 
 public class ShowDialogue : MonoBehaviour, IPointerClickHandler
 {
+
+    public OrthoCameraMovement orthoCameraMovement;
+
     public GameObject img_izq;
     public GameObject img_der;
 
@@ -38,6 +41,8 @@ public class ShowDialogue : MonoBehaviour, IPointerClickHandler
 
     public GameObject MainCamera;
 
+    public bool onPause = false;
+
     /*public void OnPointerEnter(PointerEventData eventData)
     {
 
@@ -58,7 +63,10 @@ public class ShowDialogue : MonoBehaviour, IPointerClickHandler
     public IEnumerator ImprimirDialogo(List<Dialogo> evento)
     {
 
+        dialogueCanvas.transform.LeanMoveLocal(new Vector2(0, 0), 0.7f).setEaseOutQuart();
+
         dialogueCanvas.SetActive(true);
+        orthoCameraMovement.onPause = true;
 
         int dialogueNumber = 0;
 
@@ -118,16 +126,18 @@ public class ShowDialogue : MonoBehaviour, IPointerClickHandler
 
             }
 
-
             yield return new WaitForSeconds(0.1f);
-            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && !onPause);
 
             dialogueNumber++;
 
         }
 
+        dialogueCanvas.transform.LeanMoveLocal(new Vector2(0, -690), 0.7f).setEaseInCubic();
+        yield return new WaitForSeconds(0.8f);
         dialogueCanvas.SetActive(false);
-
+        orthoCameraMovement.onPause = false;
     }
 
  }

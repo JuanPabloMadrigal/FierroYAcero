@@ -62,13 +62,6 @@ public class FileHandler : MonoBehaviour
         // Definicion de modelo de juego vacío para intentar cargarlo en caso de existir una partida guardada
         gameData = new GameModel(
                     "", // Personaje
-                    0, // Dinero
-                    0, // coque
-                    20, // precio coque
-                    0, // hierro
-                    20, // precio hierro
-                    0, // alambrado de acero
-                    20, // precio venta alambrado de acero
                     new List<BuildingProperties> // Edificios proceso de acero
                     {
                         new BuildingProperties(100, 0, 10f, 0f, 0, true, "Horno 1", -19, -0.1f, -7, -90),

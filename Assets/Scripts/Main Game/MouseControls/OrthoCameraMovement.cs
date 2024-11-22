@@ -21,6 +21,7 @@ public class OrthoCameraMovement : MonoBehaviour
     private Camera mainCamera;
     private Vector2 lastMousePosition;
     private bool isDragging = false;
+    public bool onPause = false;
     private Plane groundPlane;
 
     // Smoothing variables
@@ -52,9 +53,12 @@ public class OrthoCameraMovement : MonoBehaviour
 
     private void Update()
     {
-        HandleZoom();
-        HandlePanning();
-        UpdateCameraTransform();
+        if (!onPause)
+        {
+            HandleZoom();
+            HandlePanning();
+            UpdateCameraTransform();
+        }
     }
 
     private void HandleZoom()
