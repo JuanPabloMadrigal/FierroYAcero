@@ -7,48 +7,38 @@ using UnityEngine.AI;
 public class NPC_Moving : MonoBehaviour
 {
     public Transform[] destinations;
-    [SerializeField]private int currentIndex;
-
-    private float waitTime = 10.0f;
-    [SerializeField]private float waitCounter = 0.0f;
-    [SerializeField]private bool waiting;
-    private Vector3 desTransf;
-    [SerializeField]private NavMeshAgent navmeshAgent;
-    [SerializeField]private GameObject childNPC;
-
+    [SerializeField] private int currentIndex;
+    private float arrivalDistance = 6f;
+    
+    [SerializeField] private NavMeshAgent navmeshAgent;
+    [SerializeField] private GameObject childNPC;
+    public System.Action OnReachedDestination;
+    private bool hasReachedDestination = false;
 
     void Start()
     {
         navmeshAgent = this.GetComponent<NavMeshAgent>();
+        navmeshAgent.speed = UnityEngine.Random.Range(3.0f, 4.0f);
+        
+        if (destinations != null && destinations.Length > 0)
+        {
+            SetDestination(destinations[0].position);
+        }
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if(waiting)
+        if (hasReachedDestination) return;
+        
+        if (destinations == null || destinations.Length == 0) return;
+
+        float distanceToTarget = Vector3.Distance(transform.position, destinations[0].position);
+        
+        if (distanceToTarget < arrivalDistance && !hasReachedDestination)
         {
-            childNPC.SetActive(false);
-            waitCounter += Time.deltaTime;
-            if(waitCounter > waitTime)
-            {
-                childNPC.SetActive(true);
-                waiting = false;
-                waitCounter = 0.0f;
-                return;
-            }
-        }
-        else{
-            Transform des = destinations[currentIndex];
-            Vector3 desTransf = new Vector3(des.position.x, transform.position.y, des.position.z);
-            if(Vector3.Distance(transform.position, desTransf)< 0.1f)
-            {
-                transform.position = desTransf;
-                currentIndex = (currentIndex + 1) % destinations.Length;
-                waiting = true;
-            }
-            else{
-                SetDestination(desTransf);
-            }
+            Debug.Log($"NPC reached destination at distance: {distanceToTarget}");
+            hasReachedDestination = true;
+            OnReachedDestination?.Invoke();
         }
     }
 
@@ -56,5 +46,4 @@ public class NPC_Moving : MonoBehaviour
     { 
         navmeshAgent.SetDestination(destiny);
     }
-
 }
