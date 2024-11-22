@@ -37,7 +37,7 @@ public class GameModel
         this.character = character;
         money = 10000;
         evento = -1;
-        empleados = 0;
+        empleados = 3000;
         descuentoEmpleados = 100;
         coque = 0;
         coquePrice = 40;

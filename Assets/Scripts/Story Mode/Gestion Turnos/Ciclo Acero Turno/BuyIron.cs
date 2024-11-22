@@ -49,7 +49,7 @@ public class BuyIron : MonoBehaviour
 
     public void checkCanBuy()
     {
-        if (FileHandlerStory.Instance.gameData.money - (FileHandlerStory.Instance.gameData.ironMoneyPrice * int.Parse(quantityInputField.text)) >= 0 && int.Parse(quantityInputField.text) != 0)
+        if (FileHandlerStory.Instance.gameData.money - (FileHandlerStory.Instance.gameData.ironMoneyPrice * int.Parse(quantityInputField.text)) - TurnManager.Instance.moneyToSubtract >= 0 && int.Parse(quantityInputField.text) != 0)
         {
             canBuy = true;
             Color btnColor = buyBtn.GetComponent<Image>().color;
