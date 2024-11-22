@@ -12,6 +12,9 @@ public class BuyCoque : MonoBehaviour
     {
         FileHandlerStory.Instance.gameData.AddCoque(int.Parse(quantityInputField.text));
         FileHandlerStory.Instance.gameData.SubtractMoney(FileHandlerStory.Instance.gameData.coquePrice * int.Parse(quantityInputField.text));
+        Debug.Log($"Coque vendido a {FileHandlerStory.Instance.gameData.coquePrice}");
+        EconomyTracker.Instance.AddCoqueCounter(int.Parse(quantityInputField.text));
+        //EconomyTracker.Instance.AddCoqueCounter(quantityInputField.text);
         Debug.Log(FileHandlerStory.Instance.gameData.coquePrice);
     }
 

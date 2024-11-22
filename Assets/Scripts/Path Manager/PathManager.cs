@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using TMPro;
 
 public class PathManager : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class PathManager : MonoBehaviour
     public static PathManager Instance;
     public bool isLocal;
     public string saveFileToUse;
-    private int firstRun;
+    //private int firstRun;
+    public TMP_Text debug;
 
     private void Awake()
     {
@@ -27,16 +29,21 @@ public class PathManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
 
+        SetFilesDirectory();
+
     }
 
     private void Start()
     {
 
-        SetFilesDirectory();
+        
 
-        if (!isLocal)
+        
+
+        /*if (!isLocal)
         {
-            firstRun = PlayerPrefs.GetInt("First Run");
+            firstRun = PlayerPrefs.GetInt("First Run", 0);
+            debug.text = firstRun.ToString();
 
             if (firstRun == 0)
             {
@@ -52,7 +59,9 @@ public class PathManager : MonoBehaviour
                 PlayerPrefs.SetInt("First Run", 1);
 
             }
-        }
+        }*/
+
+        debug.text = isLocal.ToString();
 
     }
 

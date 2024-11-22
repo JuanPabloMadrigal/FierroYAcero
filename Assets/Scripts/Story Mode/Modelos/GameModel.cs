@@ -9,14 +9,22 @@ public class GameModel
     public int money;
     public int evento;
     public int empleados;
+
     public int coque;
     public int coquePrice;
     public int iron;
+    public int ironMoneyPrice;
     public int ironPrice;
-    public int steel;
-    public int steelIronPrice;
 
-    public int workerSatisfaction;
+    public int steel;
+    public int steelBar;
+    public int steelRail;
+
+    public int steelIronPrice;
+    public int steelBarPrice;
+    public int steelRailPrice;
+
+    public int salaryAmount;
     public int turnsWithoutSalary;
     public int turnsWithoutEvent;
     public List<BuildingProperties> buildingsList;
@@ -24,17 +32,21 @@ public class GameModel
     public CokePlant cokePlant;
     public SteelYard steelYard;
 
-    public GameModel(string character, int money, int coque, int coquePrice, int iron, int ironPrice, int steel, int steelIronPrice, List<BuildingProperties> buildingsList, IronStorehouse ironStorehouse, CokePlant cokePlant, SteelYard steelYard) {
+    public GameModel(string character, List<BuildingProperties> buildingsList, IronStorehouse ironStorehouse, CokePlant cokePlant, SteelYard steelYard) {
         this.character = character;
-        this.money = money;
-        evento = 0;
+        money = 10000;
+        evento = -1;
         empleados = 0;
-        this.coque = coque;
-        this.coquePrice = coquePrice;
-        this.iron = iron;
-        this.ironPrice = ironPrice;
-        this.steel = steel;
-        this.steelIronPrice = steelIronPrice;
+        coque = 0;
+        coquePrice = 40;
+        iron = 0;
+        ironMoneyPrice = 60;
+        ironPrice = 10;
+        steel = 0;
+        steelBar = 0;
+        steelRail = 0;
+        steelIronPrice = 2200;
+        salaryAmount = 10;
         turnsWithoutSalary = 0;
         turnsWithoutEvent = 0;
         this.buildingsList = buildingsList;
@@ -66,7 +78,17 @@ public class GameModel
         steel += amount;
     }
 
-    public void SetIronPrice(int price)
+    public void AddSteelBar(int amount)
+    {
+        steelBar += amount;
+    }
+
+    public void AddRail(int amount)
+    {
+        steelRail += amount;
+    }
+
+    public void SetIronMoneyPrice(int price)
     {
         ironPrice = price;
     }
@@ -79,6 +101,16 @@ public class GameModel
     public void SetSteelIronPrice(int price)
     {
         steelIronPrice = price;
+    }
+
+    public void SetSteelBarPrice(int price)
+    {
+        steelBarPrice = price;
+    }
+
+    public void SetRailPrice(int price)
+    {
+        steelRailPrice = price;
     }
 
     public void SubtractMoney(int amount)
@@ -97,6 +129,21 @@ public class GameModel
     {
         coque -= amount;
         UIManager.Instance.UpdateCoqueUI(coque);
+    }
+
+    public void SubtractSteel(int amount)
+    {
+        steel -= amount;
+    }
+
+    public void SubtractSteelBar(int amount)
+    {
+        steelBar -= amount;
+    }
+
+    public void SubtractRail(int amount)
+    {
+        steelRail -= amount;
     }
 
 }

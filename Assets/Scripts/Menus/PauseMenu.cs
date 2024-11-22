@@ -24,6 +24,8 @@ public class PauseMenu : MonoBehaviour
         volumeSlider.onValueChanged.AddListener(HandleVolumeChange);
         Slider.SetActive(false);
     }
+    public ShowDialogue showDialogue;
+    public CameraMovement cameraMovement;
 
     public void OnEscKey(InputAction.CallbackContext ctx)
     {
@@ -32,7 +34,8 @@ public class PauseMenu : MonoBehaviour
         if (escKeyPressed)
         {
             pauseMenu.SetActive(true);
-            Time.timeScale = 0;
+            showDialogue.onPause = true;
+            Time.timeScale = 0; //if we add animators to buttons or want an animated menu, set animator controller update mode to unscaled
         } 
     }
 
@@ -40,6 +43,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
+        showDialogue.onPause = false;
     }
 
     public void OnExitButton()

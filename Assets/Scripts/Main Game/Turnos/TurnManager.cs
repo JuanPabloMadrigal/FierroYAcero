@@ -8,13 +8,14 @@ using Unity.VisualScripting;
 
 public class TurnManager : MonoBehaviour
 {
-    private int turnCount;
+
+    public int turnCount;
 
     [SerializeField]
-    private float turnDeficit = 0;
+    public float turnDeficit = 0;
 
     [SerializeField]
-    private float turnProfit = 0;
+    public float turnProfit = 0;
 
     private void CalculateBuildingDeficit()
     {
@@ -36,6 +37,9 @@ public class TurnManager : MonoBehaviour
         Debug.Log(turnDeficit);
         FileHandlerStory.Instance.gameData.AddMoney((int)turnProfit);
         FileHandlerStory.Instance.gameData.SubtractMoney((int)turnDeficit);
+
+        // Incrementar el turno en EconomyTracker
+        EconomyTracker.Instance.IncrementTurn();
     }
 
     private void SpawnNPCsForAllBuildings()

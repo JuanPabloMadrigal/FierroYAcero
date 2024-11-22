@@ -11,6 +11,7 @@ TagManager:
   - CarminaMenuSpriteArea
   - GameProp
   - GameMechanics
+  - StoryManager
   layers:
   - Default
   - TransparentFX

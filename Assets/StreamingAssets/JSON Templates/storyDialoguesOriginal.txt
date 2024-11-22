@@ -31,7 +31,7 @@
                     "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",    
                     "nombre": "Vicente",
-                    "dialogoTexto": "¡Es por esto que te he elegido a tí como mi sustituto! Estoy convencido de que cuentas con todas las habilidades necesarias para mantener la empresa bajo control."
+                    "dialogoTexto": "¡Es por esto que te he elegido a ti como mi sustituto! Estoy convencido de que cuentas con todas las habilidades necesarias para mantener la empresa bajo control."
                 },
                 {
                     "img_der": "Vicente_Normal",
@@ -129,31 +129,210 @@
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Estresado",
                     "nombre": "Vicente",
-                    "dialogoTexto": "No te preocupes {nombreJugador}, solíamos almacenar todo el material en el Horno Alto Uno, aunque empiezo a sospechar que tal vez sea peligroso dejar todo expuesto. Ayudame añadiendo el Almacen de Materia Prima y la Planta de Coque."
+                    "dialogoTexto": "No te preocupes {nombreJugador}, solíamos almacenar todo el material en el Horno Alto Uno, aunque empiezo a sospechar que tal vez sea peligroso dejar todo expuesto. Ayúdame añadiendo el Almacén de Materia Prima y la Planta de Coque."
                 }
             ]
         },
         {
             "Dialogos": [
                 {
-                    "img_der": "Vicente_Normal",
+                    "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "El Almacén de Materia Prima y la Planta de Coque te permitirán adquirir material."
-                },
+                    "dialogoTexto": "El Almacén de Materia Prima y la Planta de Coque te permitirán adquirir material, es cuestión de dar clic sobre ellos e indicar la cantidad de materia que deseas comprar. ¡Intentalo! Compra cinco de hierro y cinco de coque."
+                }
+	    ]
+	},
+	{
+	    "Dialogos": [
                 {
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Recuerda que ciertos edificios te permitirán transformar materia prima en productos terminados."
+                    "dialogoTexto": "Excelente, estás a solo un paso de empezar a procesar acero."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "En el Horno Alto Uno, podrás elegir la cantidad de producto final que quieras, y dependiendo del producto final que quieras producir, se te dará el costo en materia que tendrás que cubrir para completar la acción."
                 },
                 {
                     "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Con esto, ya estás preparado para administrar la planta Fundidora como su nuevo director."
+                    "dialogoTexto": "Prueba procesando un alambrado de acero."
+                }
+            ]
+        },
+	{
+	    "Dialogos": [
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¡Muy bien! Ahora solo tienes que saber una cosa más, una vez conseguido el producto procesado, tendrás la oportunidad de venderlo. El precio de venta de cada producto varia con el tiempo."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Además, ciertas condiciones en el país podrían alterar de gran manera estos precios, toma esto en cuenta antes de vender producto."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Tenemos algunos alambrados ya almacenados que necesitamos vender, haz clic sobre el Patio de Acero y vende por lo menos un alambrado de acero."
+                }
+            ]
+        },
+	{
+	    "Dialogos": [
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Esto es todo lo que tienes que saber sobre como manejar tu día a día en este lugar, al menos por el momento. Ahora bien, para terminar, hablemos sobre las cosas que podrás hacer cada día."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Primero, solo se te dará un presupuesto fijo que podrás utilizar para gastar en un día, dinero que podrás gastar comprando nuevas tecnologías, mineral, etc."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Después, solo podrás realizar una acción por edificio una vez por día, ¡recuerda que los materiales tardan tiempo en ser recibidos, procesados y exportados!"
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Por último, después de cada día ocurrirán dos cosas: primero, se te cobrará por el mantenimiento de cada edificio que posees, así que aprovecha su uso cada día."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Y segundo, en caso de que algo suceda en el país o en la compañía, recibirás un periódico que te informará sobre como estos eventos pueden o no afectar en tu manejo de la planta."
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Esto es todo por ahora. Tengo que retirarme pero no te preocupes, volveré para ver como siguen las cosas y darte apoyo. Mientras tanto, enfócate en completar los objetivos que te he indicado que se muestran abajo a la izquierda." 
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¡Hasta pronto!" 
+                }
+            ]
+        },
+	{
+	    "Dialogos": [
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¡Pero si es {nombreJugador}! Me alegra volver a verte."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Me da gusto ver que has logrado mantener todo bajo control y que el desarrollo de la planta sigue avanzando."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Feliz",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "¡Me alegra poder ayudar jefe!"
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Pues bueno, vengo a darte buenas y malas noticias. Las buenas noticias son que hemos logrado hacer tratos con empresas en el extranjero, entonces espera demandas más altas de producto final en algún futuro."
+                },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Y las malas noticias... Bueno no sé si te has enterado, pero las cosas en el país no pintan bien."
+                },
+		{
+                    "img_der": "Vicente_Enojado",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Desde que el pueblo mexicano derrocó el gobierno de Porfirio Díaz, la batalla por la presidencia ha destacado un caos."
+                },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Madero, quien promovió este evento, fue traicionado por Victoriano Huerta, y este se había proclamado presidente."
+                },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "No obstante, este último ha huido del país hace poco, probablemente debido a que las fuerzas de Estados Unidos lograron plantarse en Veracruz."
+                },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Y bueno, como te imaginaras, esta serie de sucesos parará nuestras oportunidades para la venta de productos a base de acero."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¿Entonces que haremos?"
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "No te preocupes, existe una solución que nos ayudará a seguir funcionando de aquí a que todo se calma."
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "Logramos formar un contrato con Ferrocarriles Nacionales de México, y por el momento, su funcionamiento es clave para la movilización de tropas."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Además, parece ser que necesitan repuestos constantemente debido a algunos sabotajes que están ocurriendo en estaciones poseídos por fuerzas gubernamentales."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Es por esto que a partir de ahora produciremos rieles de ferrocarril para su venta, eso sería suficiente para seguir produciendo ganancias."
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Eso sería todo por el momento, recuerda que estaré aquí para seguirte informando sobre todo lo que ocurre al rededor de la empresa, ¡confío en ti!"
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Feliz",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "¡No lo decepcionaré jefe!"
                 }
             ]
         }
+
     ]
 }
