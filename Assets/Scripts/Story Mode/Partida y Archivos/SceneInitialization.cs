@@ -81,6 +81,11 @@ public class SceneInitialization : MonoBehaviour
                 {
                     newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("horno1"); } );
                 }
+
+                if (edificio.type == "Aceracion")
+                {
+                    newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("horno1"); });
+                }
             }
         }
 

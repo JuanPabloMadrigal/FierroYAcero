@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Comprar hierro
+  m_text: Confirmar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5d69af67e89e634da741f97bd9c9594, type: 2}
   m_sharedMaterial: {fileID: -7536970104624891026, guid: a5d69af67e89e634da741f97bd9c9594, type: 2}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 6476356373905765120}
   - component: {fileID: 3264918566020164843}
   - component: {fileID: 7536650253740020760}
-  - component: {fileID: 8039038877303946322}
+  - component: {fileID: 2433114148602627305}
   m_Layer: 5
   m_Name: PanelTrabajadores
   m_TagString: Untagged
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8039038877303946322
+--- !u!114 &2433114148602627305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,12 +224,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 371306318950322425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d83e53065cd31ca4785139602dcfff14, type: 3}
+  m_Script: {fileID: 11500000, guid: dd5f755c8d2699b40b6073306e03f0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantityInputField: {fileID: 1984628629588859120}
-  buyBtn: {fileID: 4389663384502012180}
-  ironToBuy: 0
+  workersInputField: {fileID: 1984628629588859120}
+  applyButton: {fileID: 4524072633475640072}
 --- !u!1 &603252812089371994
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +504,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8039038877303946322}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BuyIron, Assembly-CSharp
         m_MethodName: subIron
         m_Mode: 1
@@ -690,7 +689,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8039038877303946322}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BuyIron, Assembly-CSharp
         m_MethodName: buyIron
         m_Mode: 1
@@ -956,7 +955,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8039038877303946322}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BuyIron, Assembly-CSharp
         m_MethodName: addIron
         m_Mode: 1
@@ -1033,7 +1032,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Almac\xE9n de materia prima"
+  m_text: Trabajadores Asignados
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5d69af67e89e634da741f97bd9c9594, type: 2}
   m_sharedMaterial: {fileID: -7536970104624891026, guid: a5d69af67e89e634da741f97bd9c9594, type: 2}

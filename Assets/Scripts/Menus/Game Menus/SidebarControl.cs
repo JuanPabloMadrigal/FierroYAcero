@@ -9,17 +9,19 @@ public class SidebarControl : MonoBehaviour
     [SerializeField] private GameObject UIPrefabHorno1;
     [SerializeField] private GameObject UIPrefabAlmacenHierro;
     [SerializeField] private GameObject UIPrefabAceracion;
+    [SerializeField] private GameObject UIPrefaTrabajadores;
 
     private GameObject currentUI;
 
     [SerializeField] private Animator sidebarAnimator;
+    [SerializeField] private Animator secondSidebarAnimator;
     [SerializeField] private string openTrigger = "Open";
     [SerializeField] private string closeTrigger = "Close";
 
     private bool isOpen = false;
 
 
-    private GameObject currentBuildingUI;
+    private GameObject currentWorkerUI;
 
 
     public void OpenSideBar(string building)
@@ -27,6 +29,7 @@ public class SidebarControl : MonoBehaviour
         if (!isOpen) 
         {
             sidebarAnimator.SetTrigger(openTrigger);
+            secondSidebarAnimator.SetTrigger(openTrigger);
             PopulateSideBar(building);
             PopulateWorkerSideBar(building);
             isOpen = true;
@@ -39,6 +42,7 @@ public class SidebarControl : MonoBehaviour
     public void CloseSideBar()
     {
         sidebarAnimator.SetTrigger(closeTrigger);
+        secondSidebarAnimator.SetTrigger(closeTrigger);
         isOpen = false;
         Destroy(currentUI);
     }

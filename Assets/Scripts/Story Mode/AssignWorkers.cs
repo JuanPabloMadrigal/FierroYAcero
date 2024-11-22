@@ -8,7 +8,8 @@ public class AssignWorkers : MonoBehaviour
 {
     [SerializeField] private TMP_InputField workersInputField;
     [SerializeField] private Button applyButton;
-    private BuildingManager targetBuilding;
+    private GameObject targetBuilding;
+    private BuildingProperties building;
 
     private void Start()
     {
@@ -23,18 +24,18 @@ public class AssignWorkers : MonoBehaviour
         }
     }
 
-    public void SetTargetBuilding(BuildingManager building)
+    public void SetTargetBuilding()
     {
-        targetBuilding = building;
         if (targetBuilding != null)
         {
             // Find the current workers number for this building
             foreach (BuildingProperties buildingData in FileHandlerStory.Instance.gameData.buildingsList)
             {
-                if (buildingData.x == building.transform.position.x && 
-                    buildingData.z == building.transform.position.z)
+                if (buildingData.x == targetBuilding.transform.position.x && 
+                    buildingData.z == targetBuilding.transform.position.z)
                 {
                     workersInputField.text = buildingData.workersNum.ToString();
+                    building = buildingData;
                     break;
                 }
             }
@@ -62,15 +63,9 @@ public class AssignWorkers : MonoBehaviour
 
     private void ApplyWorkers()
     {
-        if (targetBuilding != null && int.TryParse(workersInputField.text, out int workers))
+        if (building != null && int.TryParse(workersInputField.text, out int workers))
         {
-            targetBuilding.SetWorkers(workers);
+            building.workersNum = workers;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
