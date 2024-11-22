@@ -28,6 +28,7 @@ public class SidebarControl : MonoBehaviour
         {
             sidebarAnimator.SetTrigger(openTrigger);
             PopulateSideBar(building);
+            PopulateWorkerSideBar(building);
             isOpen = true;
         }
         
@@ -80,5 +81,44 @@ public class SidebarControl : MonoBehaviour
                 break;
         }
     }
-    
+
+    public void PopulateWorkerSideBar(string building)
+    {
+        switch (building)
+        {
+            case "plantadecoque":
+                if (currentUI != null)
+                {
+                    Destroy(currentUI);
+                }
+                currentUI = Instantiate(UIPrefabCoque);
+                currentUI.transform.SetParent(gameObject.transform, false);
+                break;
+            case "horno1":
+                if (currentUI != null)
+                {
+                    Destroy(currentUI);
+                }
+                currentUI = Instantiate(UIPrefabHorno1);
+                currentUI.transform.SetParent(gameObject.transform, false);
+                break;
+            case "hierro":
+                if (currentUI != null)
+                {
+                    Destroy(currentUI);
+                }
+                currentUI = Instantiate(UIPrefabAlmacenHierro);
+                currentUI.transform.SetParent(gameObject.transform, false);
+                break;
+            case "aceracion":
+                if (currentUI != null)
+                {
+                    Destroy(currentUI);
+                }
+                currentUI = Instantiate(UIPrefabAceracion);
+                currentUI.transform.SetParent(gameObject.transform, false);
+                break;
+        }
+    }
+
 }

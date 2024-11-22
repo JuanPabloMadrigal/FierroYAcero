@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Confirmar
+  m_text: Comprar hierro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5d69af67e89e634da741f97bd9c9594, type: 2}
   m_sharedMaterial: {fileID: -7536970104624891026, guid: a5d69af67e89e634da741f97bd9c9594, type: 2}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7536650253740020760}
   - component: {fileID: 8039038877303946322}
   m_Layer: 5
-  m_Name: PanelHierro
+  m_Name: PanelTrabajadores
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1033,7 +1033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Trabajadores asignados
+  m_text: "Almac\xE9n de materia prima"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5d69af67e89e634da741f97bd9c9594, type: 2}
   m_sharedMaterial: {fileID: -7536970104624891026, guid: a5d69af67e89e634da741f97bd9c9594, type: 2}
