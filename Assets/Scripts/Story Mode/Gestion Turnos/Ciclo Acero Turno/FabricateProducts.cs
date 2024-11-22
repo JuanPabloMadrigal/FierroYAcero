@@ -27,7 +27,8 @@ public class FabricateProducts : MonoBehaviour
                 FileHandlerStory.Instance.gameData.AddSteel(int.Parse(quantityInputFieldAcero.text));
                 FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice*productToBuy);
                 FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));
-                //debugUI.text = $"Acero generado: {FileHandlerStory.Instance.gameData.steel}";
+                debugUI.text = $"Acero generado: {FileHandlerStory.Instance.gameData.steel}";
+                EconomyTracker.Instance.AddSteelCounter(int.Parse(quantityInputFieldAcero.text));
                 break;
             case "barra":
                 FileHandlerStory.Instance.gameData.AddSteelBar(int.Parse(quantityInputFieldAcero.text));
@@ -41,7 +42,6 @@ public class FabricateProducts : MonoBehaviour
                 FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));
                 //debugUI.text = $"Acero generado: {FileHandlerStory.Instance.gameData.steel}";
                 break;
-
         }
     }
     
