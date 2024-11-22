@@ -73,17 +73,13 @@
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Observa el edificio que se indica en el mapa. Este es el Taller de Fundición y Maquinaria, es como un laboratorio para desarrollar nuevas tecnologías en la planta. Haz clic en él."
-                }
-            ]
-        },
-        {
-            "Dialogos": [
-                {
+                    "dialogoTexto": "Observa el edificio que se indica en el mapa. Este es el Taller de Fundición y Maquinaria, es como un laboratorio para desarrollar nuevas tecnologías en la planta."
+                },
+		{
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Aquí podrás construir nuevos edificios, mejorarlos y desbloquear todo tipo de ventajas. Intenta agregando un nuevo Taller de Aceración."
+                    "dialogoTexto": "Aquí podrás construir nuevos edificios, mejorarlos y desbloquear todo tipo de ventajas. Intenta haciendo clic en el edificio y agregando un nuevo Taller de Aceración."
                 }
             ]
         },

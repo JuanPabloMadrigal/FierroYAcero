@@ -9,6 +9,8 @@ public class SceneInitialization : MonoBehaviour
     [SerializeField] private GameObject almacenMP;
     [SerializeField] private GameObject plantaCoque;
     [SerializeField] private GameObject horno1;
+    [SerializeField] private GameObject horno2;
+    [SerializeField] private GameObject horno3;
     [SerializeField] private GameObject aceracion;
     [SerializeField] private GameObject molinoCom;
     [SerializeField] private GameObject patioAce;
@@ -47,6 +49,14 @@ public class SceneInitialization : MonoBehaviour
                 if (edificio.type == "Horno 1")
                 {
                     newBuilding = horno1;
+                }
+                else if (edificio.type == "Horno 2")
+                {
+                    newBuilding = horno2;
+                }
+                else if (edificio.type == "Horno 3")
+                {
+                    newBuilding = horno3;
                 }
                 else if (edificio.type == "Aceracion")
                 {

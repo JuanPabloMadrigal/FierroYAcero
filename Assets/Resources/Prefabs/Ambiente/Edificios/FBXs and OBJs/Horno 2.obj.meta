@@ -3,7 +3,322 @@ guid: de75aa7891fe6c94aa5419e0c7dbccaa
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BigPipe_PipeMid1Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BigPipe_PipeTop1Mat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_CylinderTop2Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_PipeBottom2Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_PipeMid2Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe2_PipeTop2Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_CylinderTop3Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_PipeBottom3Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_PipeMid3Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe3_PipeTop3Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_CylinderTop4Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_PipeBottom4Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_PipeMid4Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe4_PipeTop4Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_CylinderTop1Mat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_CylinderTop5Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeBottom1Mat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeBottom5Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscapeTube1Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscapeTube2Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscapeTube3Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscapeTube4Mat
+    second: {fileID: 2100000, guid: 428b101959e90784e966bea5d9a822a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscapeTube5Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscapeTube6Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscapeTube7Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeEscapeTube8Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeMid1Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeMid5Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CokeFuelPipe_PipeTop5Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FloorMat
+    second: {fileID: 2100000, guid: 938e0624484e3b4438c93007859e972d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FuelPipeTop1_FuelPipeMat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FuelPipe_FuelPipeBottom1Mat
+    second: {fileID: 2100000, guid: bca9960d5de8944439bfb306b7cd8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FuelPipe_FuelPipeMid1Mat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding2_FrontAndBack2Mat
+    second: {fileID: 2100000, guid: 428b101959e90784e966bea5d9a822a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuildingEntrance1_MainBuildingMat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_MainBuilding1_FrontAndBack1Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_MainBuilding3_FrontAndBack1Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_MainBuildingEntrance2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_Sides1_MainBuilding1Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBuilding_Sides1_MainBuilding3Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PiipeEscape3_CokeFuelPipe3_PipeInsideHoleBlack2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeBottom1_BigPipeMat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEnd2_PipeTube2Mat
+    second: {fileID: 2100000, guid: 428b101959e90784e966bea5d9a822a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEnd3_PipeTube3Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEnd4_PipeTube4Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEnd4_PipeTube5Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape2_CokeFuelPipe2_PipeInsideHoleBlack2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscape4_CokeFuelPipe4_Planta_de_Coque_PipeInsideHoleBlack2Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscapeTube1_PiipeEscape3_CokeFuelPipe3Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeEscapeTube1_PipeEscape2_CokeFuelPipe2Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeTop1_CokeFuelPipeMat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeTube1_Hole1Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeTube5_Hole4Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeTube5_Hole5Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeTube5_Hole6Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeTube5_Hole7Mat
+    second: {fileID: 2100000, guid: 4d686166d40f27d468e25a685e98e6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planks_Planta_de_Coque_Plank2Mat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planks_Planta_de_Coque_Plank3Mat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planks_Planta_de_Coque_Plank4Mat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planta_de_Coque_PipeEscapeTube1_PipeEscape4_CokeFuelPipe4Mat
+    second: {fileID: 2100000, guid: f7e517ea707449140bb1b4d91e651d95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planta_de_Coque_Plank1_PlanksMat
+    second: {fileID: 2100000, guid: fc9f49de986743340a881f0198142018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sides2_MainBuilding2Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TubeEnd1_PipeTube1Mat
+    second: {fileID: 2100000, guid: 1c237bb3f1c6b3840bc39c23152baa7e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,7 +350,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -90,7 +405,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
