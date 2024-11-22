@@ -9,6 +9,7 @@ public class GameModel
     public int money;
     public int evento;
     public int empleados;
+    public int descuentoEmpleados;
 
     public int coque;
     public int coquePrice;
@@ -37,11 +38,12 @@ public class GameModel
         money = 10000;
         evento = -1;
         empleados = 0;
+        descuentoEmpleados = 100;
         coque = 0;
         coquePrice = 40;
         iron = 0;
         ironMoneyPrice = 60;
-        ironPrice = 10;
+        ironPrice = 100;
         steel = 0;
         steelBar = 0;
         steelRail = 0;

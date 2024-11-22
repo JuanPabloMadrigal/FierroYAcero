@@ -13,8 +13,6 @@ public class PathManager : MonoBehaviour
     public static PathManager Instance;
     public bool isLocal;
     public string saveFileToUse;
-    //private int firstRun;
-    public TMP_Text debug;
 
     private void Awake()
     {
@@ -60,8 +58,6 @@ public class PathManager : MonoBehaviour
 
             }
         }*/
-
-        debug.text = isLocal.ToString();
 
     }
 

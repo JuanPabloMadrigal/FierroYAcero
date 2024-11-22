@@ -240,6 +240,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 42369}
+  volumeSlider: {fileID: 0}
+  Slider: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  resume: {fileID: 0}
+  options: {fileID: 0}
+  Exit: {fileID: 0}
+  leaveOptions: {fileID: 0}
+  showDialogue: {fileID: 0}
+  cameraMovement: {fileID: 0}
 --- !u!1001 &736083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15539,10 +15548,15 @@ MonoBehaviour:
     coque: 0
     coquePrice: 0
     iron: 0
+    ironMoneyPrice: 0
     ironPrice: 0
     steel: 0
+    steelBar: 0
+    steelRail: 0
     steelIronPrice: 0
-    workerSatisfaction: 0
+    steelBarPrice: 0
+    steelRailPrice: 0
+    salaryAmount: 0
     turnsWithoutSalary: 0
     turnsWithoutEvent: 0
     buildingsList: []
@@ -31600,6 +31614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2b1376aea684b2da73b1eb6acd0350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orthoCameraMovement: {fileID: 0}
   img_izq: {fileID: 1395419730}
   img_der: {fileID: 162963042}
   edFeliz: {fileID: 21300000, guid: 62c804a30c742524b94838cb942bef50, type: 3}
@@ -31618,6 +31633,7 @@ MonoBehaviour:
   Bton: {fileID: 1128657649}
   VideoFilter: {fileID: 0}
   MainCamera: {fileID: 0}
+  onPause: 0
 --- !u!114 &917737902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31631,6 +31647,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentEvent: 0
+  indicator: {fileID: 0}
+  dialogueScreen: {fileID: 0}
 --- !u!1001 &918074062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33071,6 +33089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraFocusPlayer: {fileID: 1043676398}
+  onPause: 0
   mouseSensitivity_X: 0.4
   mouseSensitivity_Y: 0.4
   mouseSensitivity_Zoom: 20
@@ -33116,6 +33135,7 @@ MonoBehaviour:
   rotationSmoothTime: 0.15
   cameraAngle: {x: 45, y: 45, z: 0}
   heightOffset: 10
+  onPause: 0
 --- !u!1001 &964472716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52224,10 +52244,15 @@ MonoBehaviour:
     coque: 0
     coquePrice: 0
     iron: 0
+    ironMoneyPrice: 0
     ironPrice: 0
     steel: 0
+    steelBar: 0
+    steelRail: 0
     steelIronPrice: 0
-    workerSatisfaction: 0
+    steelBarPrice: 0
+    steelRailPrice: 0
+    salaryAmount: 0
     turnsWithoutSalary: 0
     turnsWithoutEvent: 0
     buildingsList: []

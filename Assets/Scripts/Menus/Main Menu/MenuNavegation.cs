@@ -24,8 +24,6 @@ public class MenuNavegation : MonoBehaviour
     private RawImage loadScreenImage;
     public Animator sceneAnimator;
 
-    public TMP_Text debug;
-
 
     void Start()
     {
@@ -89,8 +87,6 @@ public class MenuNavegation : MonoBehaviour
 
         bool fileValidation;
         fileValidation = (File.Exists(fullPath1) || File.Exists(fullPath2) || File.Exists(fullPath3)) ? true : false;
-        debug.text = PathManager.Instance.isLocal.ToString();
-        //Debug.Log($"File validation for continue: {fileValidation}");
 
         if (fileValidation){
             ContinueText.color = new Color(0, 0, 0, 0.7f);

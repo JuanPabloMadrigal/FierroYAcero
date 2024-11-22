@@ -16,7 +16,6 @@ public class ComenzarNuevaPartida : MonoBehaviour
     [SerializeField] private GameObject videoPlayer;
 
     [SerializeField] private string filePath = "/Scripts/Story Mode/JSONs/";
-    //[SerializeField] private string JSONFile;
     [SerializeField] AudioClip robotSFX;
 
 
@@ -94,23 +93,21 @@ public class ComenzarNuevaPartida : MonoBehaviour
                     eleccionFinal, // Personaje
                     new List<BuildingProperties> // Edificios proceso de acero
                     {
-                        new BuildingProperties(100, 0, 10f, 0f, 0, true, "Horno 1", -19, -0.1f, -7, -90),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, true, "Aceracion", -17, -0.05f, -15, 0),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, 0),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, -90),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, -90),
-                        new BuildingProperties(100, 0, 20f, 0f, 0, false, "Aceracion", -17, -0.05f, -21, -90),
-                        new BuildingProperties(100, 0, 30f, 0f, 0, true, "Molino Comercial", 19, -0.075f, 26, -90)
+                        new BuildingProperties(100, 0, 10f, 1f, 1000, true, "Horno 1", -19, -0.1f, -7, -90),
+                        new BuildingProperties(100, 0, 3f, 1f, 1000, true, "Aceracion", -17, -0.05f, -15, 0),
+                        new BuildingProperties(100, 0, 3f, 1f, 1000, false, "Aceracion", -17, -0.05f, -21, 0),
+                        new BuildingProperties(100, 0, 3f, 1f, 1000, false, "Aceracion", -17, -0.05f, -21, 0),
+                        new BuildingProperties(100, 0, 3f, 1f, 1000, false, "Aceracion", -17, -0.05f, -21, 0),
+                        new BuildingProperties(100, 0, 3f, 1f, 1000, false, "Aceracion", -17, -0.05f, -21, 0),
+                        new BuildingProperties(100, 0, 3f, 1f, 1000, false, "Aceracion", -17, -0.05f, -21, -90),
+                        new BuildingProperties(100, 0, 3f, 1f, 1000, false, "Aceracion", -17, -0.05f, -21, -90),
+                        new BuildingProperties(100, 0, 3f, 1f, 1000, false, "Aceracion", -17, -0.05f, -21, -90),
+                        new BuildingProperties(100, 0, 15f, 1f, 1000, true, "Molino Comercial", 19, -0.075f, 26, -90)
                     },
                     new IronStorehouse(100, 0, false, -16, 0.025f, 0, 180), // Almacen de MP
                     new CokePlant(100, 0, false, -22f, -0.025f, 0, 0), // Planta de coque
                     new SteelYard(100, 0, true, 19, -0.075f, 18, -90) // Patio de acero
                     );
-
-        Debug.Log(gameData.evento);
 
         string targetSaveFile = PathManager.Instance.saveFileToUse;
         string fullPath = string.Empty;

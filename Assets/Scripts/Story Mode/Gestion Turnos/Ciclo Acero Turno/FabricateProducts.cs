@@ -2,110 +2,197 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class FabricateProducts : MonoBehaviour
 {
+
+    [SerializeField] public TMP_Text titleProductType;
     [SerializeField] public TMP_InputField quantityInputFieldAcero;
-    [SerializeField] public TMP_Text steelCostUI;
-    [SerializeField] public TMP_Text steelBarCostUI;
-    [SerializeField] public TMP_Text railCostUI;
-    [SerializeField] public TMP_Text debugUI;
+    [SerializeField] public TMP_Text costUI;
+    [SerializeField] public GameObject produceBtn;
+    [SerializeField] public TMP_Text note;
+
     private List<ProductCostValues> productCostValues;
+    private ProductCostValues currentProductShown;
+    private int currentProductShownIndex;
+    bool canProduce;
 
     public int productToBuy = 0;
 
     private void Start()
     {
-        productCostValues = new List<ProductCostValues>() { new ProductCostValues("Alambrado de acero", FileHandler.Instance.gameData.ironPrice) };
+        canProduce = true;
+        productCostValues = new List<ProductCostValues>() { new ProductCostValues("Alambrado de acero", FileHandlerStory.Instance.gameData.ironPrice), new ProductCostValues("Barra de acero", FileHandlerStory.Instance.gameData.ironPrice * 1.5f)};
+        if (FileHandlerStory.Instance.gameData.evento >= 5)
+        {
+            productCostValues.Add(new ProductCostValues("Riel", FileHandlerStory.Instance.gameData.ironPrice * 2f));
+        }
+        currentProductShownIndex = 0;
+        UpdateViewByProductType(currentProductShownIndex);
+        disableBtn();
+        quantityInputFieldAcero.onValueChanged.AddListener(delegate { checkCanProduce(); } );
+
+        if (TurnManager.Instance.steelToAdd > 0 || TurnManager.Instance.steelBarToAdd > 0 || TurnManager.Instance.railToAdd > 0) 
+        {
+            note.text = "Existe una orden pendiente.";
+        }
+
     }
 
-    public void fabricateProduct(string product)
+    public void fabricateProduct()
     {
-        switch (product)
+        Debug.Log(currentProductShown.title);
+        if (canProduce)
         {
-            case "acero":
-                FileHandlerStory.Instance.gameData.AddSteel(int.Parse(quantityInputFieldAcero.text));
-                FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice*productToBuy);
-                FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));
-                debugUI.text = $"Acero generado: {FileHandlerStory.Instance.gameData.steel}";
-                EconomyTracker.Instance.AddSteelCounter(int.Parse(quantityInputFieldAcero.text));
-                break;
-            case "barra":
-                FileHandlerStory.Instance.gameData.AddSteelBar(int.Parse(quantityInputFieldAcero.text));
-                FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice * productToBuy);
-                FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));
-                //debugUI.text = $"Acero generado: {FileHandlerStory.Instance.gameData.steel}";
-                break;
-            case "riel":
-                FileHandlerStory.Instance.gameData.AddRail(int.Parse(quantityInputFieldAcero.text));
-                FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice * productToBuy);
-                FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));
-                //debugUI.text = $"Acero generado: {FileHandlerStory.Instance.gameData.steel}";
-                break;
-        }
-    }
-    
-    public void updateCostUI(string product)
-    {
-        switch (product)
-        {
-            case "acero":
-                var ironCost = FileHandlerStory.Instance.gameData.ironPrice * int.Parse(quantityInputFieldAcero.text);
-                var coqueCost = ironCost / 2;
-                steelCostUI.text = $"Hierro: {ironCost} \n Coque: {coqueCost}";
-                break;
-            case "barra":
-                var barCost = Mathf.RoundToInt(FileHandlerStory.Instance.gameData.steelIronPrice * 1.5f * int.Parse(quantityInputFieldAcero.text));
-                var coqueBarCost = barCost / 2;
-                steelBarCostUI.text = $"Hierro: {barCost} \n Coque: {coqueBarCost}";
-                break;
-            case "riel":
-                var railCost = Mathf.RoundToInt(FileHandlerStory.Instance.gameData.steelIronPrice * 2f * int.Parse(quantityInputFieldAcero.text));
-                var coqueRailCost = railCost / 2;
-                railCostUI.text = $"Hierro: {railCost} \n Coque: {coqueRailCost}";
-                break;
+            switch (currentProductShown.title)
+            {
+                case "Alambrado de acero":
+                    /*
+                    FileHandlerStory.Instance.gameData.AddSteel(int.Parse(quantityInputFieldAcero.text));
+                    FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice * productToBuy);
+                    FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));
+                    EconomyTracker.Instance.AddSteelCounter(int.Parse(quantityInputFieldAcero.text));
+                    break;*/
+                    TurnManager.Instance.steelToAdd = int.Parse(quantityInputFieldAcero.text);
+                    TurnManager.Instance.steelBarToAdd = 0;
+                    TurnManager.Instance.railToAdd = 0;
+                    TurnManager.Instance.ironToSubtract = (getNeededIronQuantity(currentProductShown.costIron));
+                    TurnManager.Instance.coqueToSubtract = TurnManager.Instance.ironToSubtract / 2;
+                    note.text = "Se ha establecido una nueva orden de producción.";
+                    Debug.Log(TurnManager.Instance.steelToAdd);
+                    break;
+                case "Barra de acero":
+                    /*FileHandlerStory.Instance.gameData.AddSteelBar(int.Parse(quantityInputFieldAcero.text));
+                    FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice * productToBuy);
+                    FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));*/
+                    //debugUI.text = $"Acero generado: {FileHandlerStory.Instance.gameData.steel}";
+                    TurnManager.Instance.steelToAdd = 0;
+                    TurnManager.Instance.steelBarToAdd = int.Parse(quantityInputFieldAcero.text);
+                    TurnManager.Instance.railToAdd = 0;
+                    TurnManager.Instance.ironToSubtract = (getNeededIronQuantity(currentProductShown.costIron));
+                    TurnManager.Instance.coqueToSubtract = TurnManager.Instance.ironToSubtract / 2;
+                    note.text = "Se ha establecido una nueva orden de producción.";
+                    Debug.Log(TurnManager.Instance.steelBarToAdd);
+                    break;
+                case "Riel":
+                    /*FileHandlerStory.Instance.gameData.AddRail(int.Parse(quantityInputFieldAcero.text));
+                    FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice * productToBuy);
+                    FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));*/
+                    //debugUI.text = $"Acero generado: {FileHandlerStory.Instance.gameData.steel}";
+                    TurnManager.Instance.steelToAdd = 0;
+                    TurnManager.Instance.steelBarToAdd = 0;
+                    TurnManager.Instance.railToAdd = int.Parse(quantityInputFieldAcero.text);
+                    TurnManager.Instance.ironToSubtract = (getNeededIronQuantity(currentProductShown.costIron));
+                    TurnManager.Instance.coqueToSubtract = TurnManager.Instance.ironToSubtract / 2;
+                    note.text = "Se ha establecido una nueva orden de producción.";
+                    Debug.Log(TurnManager.Instance.railToAdd);
+                    break;
+            }
         }
     }
 
-    public void addProduct(string product)
+    public int getNeededIronQuantity(int baseCost)
     {
-        switch (product)
-        {
-            case "acero":
-                productToBuy = int.Parse(quantityInputFieldAcero.text);
-                productToBuy++;
-                quantityInputFieldAcero.text = productToBuy.ToString();
-                break;
-            case "barra":
-                productToBuy = int.Parse(quantityInputFieldAcero.text);
-                productToBuy++;
-                quantityInputFieldAcero.text = productToBuy.ToString();
-                break;
-            case "riel":
-                productToBuy = int.Parse(quantityInputFieldAcero.text);
-                productToBuy++;
-                quantityInputFieldAcero.text = productToBuy.ToString();
-                break;
-        }
-        
-    }
 
-    public void subProduct(string product)
-    {
-        switch (product)
+        int resultQuantity = 0;
+
+        foreach (BuildingProperties building in FileHandlerStory.Instance.gameData.buildingsList)
         {
-            case "acero":
-                if (productToBuy == 0)
+            if (building.unlocked)
+            {
+                float buildingWorkersCalculations = Mathf.FloorToInt(building.workersNum / FileHandlerStory.Instance.gameData.descuentoEmpleados);
+                //Debug.Log($"calculo workers: {buildingWorkersCalculations}, tipo: {building.type}");
+                if (buildingWorkersCalculations == 0)
                 {
-                    return;
+                    disableBtn();
+                    note.text = $"Algún edificio tiene menos de {FileHandlerStory.Instance.gameData.descuentoEmpleados} trabajadores.";
+                    return 0;
                 }
-                productToBuy = int.Parse(quantityInputFieldAcero.text);
-                productToBuy--;
-                quantityInputFieldAcero.text = productToBuy.ToString();
-                break;
+                int ironQuantity = Mathf.RoundToInt(((int.Parse(quantityInputFieldAcero.text)) * baseCost) / (building.addingValue * building.valueModifier * Mathf.FloorToInt(building.workersNum / FileHandlerStory.Instance.gameData.descuentoEmpleados)));
+                resultQuantity += ironQuantity;
+            }
         }
-        
+
+        note.text = "";
+        return resultQuantity;
     }
+
+    public void UpdateViewByProductType(int num)
+    {
+        currentProductShownIndex += num;
+
+        if (currentProductShownIndex >= productCostValues.Count)
+        {
+            currentProductShownIndex = 0;
+        }
+        else if (currentProductShownIndex < 0)
+        {
+            currentProductShownIndex = productCostValues.Count - 1;
+        }
+
+        currentProductShown = productCostValues[currentProductShownIndex];
+
+        titleProductType.text = currentProductShown.title;
+
+        updateCostUI();
+
+
+    }
+
+    public void updateCostUI()
+    {
+
+        int ironCost = getNeededIronQuantity(currentProductShown.costIron);
+        //int ironCost = currentProductShown.costIron * int.Parse(quantityInputFieldAcero.text);
+        int coqueCost = ironCost / 2;
+        costUI.text = $"Hierro: {ironCost} \n Coque: {coqueCost}";
+
+    }
+
+    public void addProduct()
+    {
+        productToBuy = int.Parse(quantityInputFieldAcero.text);
+        productToBuy++;
+        quantityInputFieldAcero.text = productToBuy.ToString();
+        updateCostUI();
+    }
+
+    public void subProduct()
+    {
+        if (productToBuy == 0)
+        {
+            return;
+        }
+        productToBuy = int.Parse(quantityInputFieldAcero.text);
+        productToBuy--;
+        quantityInputFieldAcero.text = productToBuy.ToString();
+        updateCostUI();
+    }
+
+    public void checkCanProduce()
+    {
+        if (FileHandlerStory.Instance.gameData.iron - getNeededIronQuantity(currentProductShown.costIron) >= 0 && int.Parse(quantityInputFieldAcero.text) != 0)
+        {
+            canProduce = true;
+            Color btnColor = produceBtn.GetComponent<Image>().color;
+            btnColor.a = 1f;
+            produceBtn.GetComponent<Image>().color = btnColor;
+        }
+        else
+        {
+            disableBtn();
+        }
+    }
+
+    private void disableBtn()
+    {
+        canProduce = false;
+        Color btnColor = produceBtn.GetComponent<Image>().color;
+        btnColor.a = 0.5f;
+        produceBtn.GetComponent<Image>().color = btnColor;
+    }
+
 }
 
 [System.Serializable]
@@ -114,10 +201,10 @@ public class ProductCostValues
     public string title;
     public int costIron;
 
-    public ProductCostValues(string title, int costIron)
+    public ProductCostValues(string title, float costIron)
     {
         this.title = title;
-        this.costIron = costIron;
+        this.costIron = Mathf.RoundToInt(costIron);
     }
 
 }

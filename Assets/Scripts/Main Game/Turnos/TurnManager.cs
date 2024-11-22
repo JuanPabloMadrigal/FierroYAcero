@@ -17,18 +17,44 @@ public class TurnManager : MonoBehaviour
     [SerializeField]
     public float turnProfit = 0;
 
+    public int moneyToSubtract;
+    public int moneyToAdd;
+
+    public int coqueToAdd = 0;
+    public int ironToAdd = 0;
+    public int coqueToSubtract = 0;
+    public int ironToSubtract = 0;
+    public int steelToAdd = 0;
+    public int steelBarToAdd = 0;
+    public int railToAdd = 0;
+
+    public static TurnManager Instance;
+
+    public void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     private void CalculateBuildingDeficit()
     {
         turnDeficit = 0;
-        turnProfit = 0;
 
         foreach (BuildingProperties building in FileHandlerStory.Instance.gameData.buildingsList)
         {
             turnDeficit += building.costPerTurn;
-            turnProfit = turnProfit + (building.addingValue * building.valueModifier);
         }
 
     }
+
+
+    // int finalProduct = Mathf.RoundToInt(((ironQuantity * building.addingValue * building.valueModifier * building.workersNum / 100)) / productCost);
 
     public void FinishTurn()
     {
@@ -39,5 +65,6 @@ public class TurnManager : MonoBehaviour
 
         // Incrementar el turno en EconomyTracker
         EconomyTracker.Instance.IncrementTurn();
+
     }
 }

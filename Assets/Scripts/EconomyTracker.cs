@@ -16,8 +16,6 @@ public class EconomyTracker : MonoBehaviour
     private GameModel gameData;
     [SerializeField]
     private TurnManager turnManager;
-    [SerializeField]
-    private BuyCoque buycoque;
 
     // Variables para trackear datos por turno
     private int turnSpentMoney = 0;
@@ -84,7 +82,7 @@ public class EconomyTracker : MonoBehaviour
     // Desplegar estadisticas de cada turno
     public void DisplayEconomyStats()
     {
-       // turnSpentMoney = turnManager.turnDeficit;
+        //turnSpentMoney = turnManager.turnDeficit;
         //turnGainedMoney = turnManager.turnProfit;
         currentMoney = FileHandlerStory.Instance.gameData.money;
         turnCoquePurchased = totalCoquePurchased;
