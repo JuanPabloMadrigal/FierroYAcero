@@ -121,6 +121,7 @@ public class SceneInitialization : MonoBehaviour
         if (!ReferenceEquals(gameData.steelYard, null))
         {
             GameObject newGO = Instantiate(patioAce, new Vector3(gameData.steelYard.x, gameData.steelYard.y, gameData.steelYard.z), Quaternion.Euler(0, gameData.steelYard.rot, 0), padreEdificios.transform);
+            newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("patio"); });
         }
         else
         {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2442,7 +2442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 64701621}
-  - component: {fileID: 64701620}
+  - component: {fileID: 64701622}
   m_Layer: 0
   m_Name: TechManager
   m_TagString: Untagged
@@ -2450,40 +2450,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &64701620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64701619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f710faea947c6e4aa5584fa1668be46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  technologies:
-  - name: "Taller de aceraci\xF3n 1"
-    description: Edificio para limpiar la impureza encontrada en el acero fundido
-      (arrabio) saliente de los hornos altos.
-    cost: 20
-    isUnlocked: 0
-    prerequisites: []
-  - name: Almacen de materia prima
-    description: Edificio donde se almacena la materia prima. Se utiliza para comprar
-      el mineral de hierro
-    cost: 10
-    isUnlocked: 0
-    prerequisites:
-    - "Taller de aceraci\xF3n 1"
-  - name: Planta de coque
-    description: Edificio donde se elabora el combustible para tu fundidora. Usado
-      para comprar coque.
-    cost: 10
-    isUnlocked: 0
-    prerequisites:
-    - "Taller de aceraci\xF3n 1"
-  currentResearchPoints: 0
 --- !u!4 &64701621
 Transform:
   m_ObjectHideFlags: 0
@@ -2499,6 +2465,210 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1454619986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &64701622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64701619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f710faea947c6e4aa5584fa1668be46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  technologies:
+  - name: "Almac\xE9n de materia prima"
+    description: "Permite comprar hierro y carb\xF3n"
+    cost: 0
+    isUnlocked: 0
+    prerequisites: []
+  - name: Planta de coque
+    description: Edificio donde se fabrica el coque
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Almac\xE9n de materia prima"
+  - name: Horno 2
+    description: "Mejora en fabricaci\xF3n de productos finales"
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Almac\xE9n de materia prima"
+    - Planta de coque
+  - name: Horno 3
+    description: "Mejora en fabricaci\xF3n de productos finales"
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Almac\xE9n de materia prima"
+    - Planta de coque
+    - Horno 2
+  - name: "Taller de aceraci\xF3n 1"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites: []
+  - name: "Taller de aceraci\xF3n 2"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+  - name: "Taller de aceraci\xF3n 3"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+  - name: "Taller de aceraci\xF3n 4"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+    - "Taller de aceraci\xF3n 3"
+  - name: "Taller de aceraci\xF3n 5"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+    - "Taller de aceraci\xF3n 3"
+    - "Taller de aceraci\xF3n 4"
+  - name: "Taller de aceraci\xF3n 6"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+    - "Taller de aceraci\xF3n 3"
+    - "Taller de aceraci\xF3n 4"
+    - "Taller de aceraci\xF3n 5"
+  - name: "Taller de aceraci\xF3n 7"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+    - "Taller de aceraci\xF3n 3"
+    - "Taller de aceraci\xF3n 4"
+    - "Taller de aceraci\xF3n 5"
+    - "Taller de aceraci\xF3n 6"
+  - name: "Taller de aceraci\xF3n 8"
+    description: Mejora en eficiencia de hornos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Taller de aceraci\xF3n 1"
+    - "Taller de aceraci\xF3n 2"
+    - "Taller de aceraci\xF3n 3"
+    - "Taller de aceraci\xF3n 4"
+    - "Taller de aceraci\xF3n 5"
+    - "Taller de aceraci\xF3n 6"
+    - "Taller de aceraci\xF3n 7"
+  - name: Trabajadores 1
+    description: Menor costo por salarios
+    cost: 0
+    isUnlocked: 0
+    prerequisites: []
+  - name: Trabajadores 2
+    description: Menor costo por salarios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Trabajadores 1
+  - name: Trabajadores 3
+    description: Menor costo por salarios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Trabajadores 1
+    - Trabajadores 2
+  - name: Trabajadores 4
+    description: Menor costo por salarios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Trabajadores 1
+    - Trabajadores 2
+    - Trabajadores 3
+  - name: "Negociaci\xF3n 1"
+    description: Mayor precio de venta para productos
+    cost: 0
+    isUnlocked: 0
+    prerequisites: []
+  - name: "Negociaci\xF3n 2"
+    description: Mayor precio de venta para productos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Negociaci\xF3n 1"
+  - name: "Negociaci\xF3n 3"
+    description: Mayor precio de venta para productos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Negociaci\xF3n 1"
+    - "Negociaci\xF3n 2"
+  - name: "Negociaci\xF3n 4"
+    description: Mayor precio de venta para productos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Negociaci\xF3n 1"
+    - "Negociaci\xF3n 2"
+    - "Negociaci\xF3n 3"
+  - name: "Negociaci\xF3n 5"
+    description: Mayor precio de venta para productos
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - "Negociaci\xF3n 1"
+    - "Negociaci\xF3n 2"
+    - "Negociaci\xF3n 3"
+    - "Negociaci\xF3n 4"
+  - name: Infraestructura 1
+    description: Menor precio de mantenimiento de edificios
+    cost: 0
+    isUnlocked: 0
+    prerequisites: []
+  - name: Infraestructura 2
+    description: Menor precio de mantenimiento de edificios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Infraestructura 1
+  - name: Infraestructura 3
+    description: Menor precio de mantenimiento de edificios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Infraestructura 1
+    - Infraestructura 2
+  - name: Infraestructura 4
+    description: Menor precio de mantenimiento de edificios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Infraestructura 1
+    - Infraestructura 2
+    - Infraestructura 3
+  - name: Infraestructura 5
+    description: Menor precio de mantenimiento de edificios
+    cost: 0
+    isUnlocked: 0
+    prerequisites:
+    - Infraestructura 1
+    - Infraestructura 2
+    - Infraestructura 3
+    - Infraestructura 4
+  currentResearchPoints: 50
 --- !u!1001 &66302536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43159,7 +43329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915aba20cd16d204b8ee85ce4bc2a535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  techTree: {fileID: 64701620}
+  techTree: {fileID: 64701622}
   techNodePrefab: {fileID: 6588125327127248300, guid: f7e3ccf9223791a44b66d966f3f804d1, type: 3}
   contentParent: {fileID: 1912295323}
   TechCanvas: {fileID: 1912295322}
@@ -47593,6 +47763,7 @@ MonoBehaviour:
   UIPrefabAlmacenHierro: {fileID: 371306318950322425, guid: 23dc84b6245ece94cad06a38019b6b91, type: 3}
   UIPrefabAceracion: {fileID: 371306318950322425, guid: 35e0042554e7bb94f88381e0a941bb99, type: 3}
   UIPrefabTrabajadores: {fileID: 371306318950322425, guid: 1b6bf8f9d4752b64f9814c2fbb5794c7, type: 3}
+  UIPrefabPatio: {fileID: 8392643782373568638, guid: 75a2f0899be7d0146a932414f2c76566, type: 3}
   buttonGameObject: {fileID: 0}
   sidebarAnimator: {fileID: 1321571176}
   secondSidebarAnimator: {fileID: 1776984568}
@@ -65837,6 +66008,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844025988}
   m_CullTransparentMesh: 1
+--- !u!1 &1844027049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844027050}
+  - component: {fileID: 1844027053}
+  - component: {fileID: 1844027052}
+  - component: {fileID: 1844027051}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1844027050
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844027049}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.95809186, y: 0.95809186, z: 0.95809186}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1912295323}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 859, y: 491}
+  m_SizeDelta: {x: 62.993, y: 61.7044}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1844027051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844027049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1844027052}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1191250287}
+        m_TargetAssemblyTypeName: TechTreeUI, Assembly-CSharp
+        m_MethodName: HideTechTree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1844027052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844027049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 26fa2193ff795204d9354f808d0d4e97, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1844027053
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844027049}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1844658535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68272,7 +68575,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0437412, y: 1.0437412, z: 1.0437412}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1844027050}
   m_Father: {fileID: 1191250286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -76513,7 +76817,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5651215649939506379, guid: 8db8b9b1d2659b74f9cdce901bff37d5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828852933627926901, guid: 8db8b9b1d2659b74f9cdce901bff37d5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828852933627926901, guid: 8db8b9b1d2659b74f9cdce901bff37d5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828852933627926901, guid: 8db8b9b1d2659b74f9cdce901bff37d5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1321571177}
+    - target: {fileID: 7828852933627926901, guid: 8db8b9b1d2659b74f9cdce901bff37d5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828852933627926901, guid: 8db8b9b1d2659b74f9cdce901bff37d5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSideBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828852933627926901, guid: 8db8b9b1d2659b74f9cdce901bff37d5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SidebarControl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828852933627926901, guid: 8db8b9b1d2659b74f9cdce901bff37d5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: patio
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828852933627926901, guid: 8db8b9b1d2659b74f9cdce901bff37d5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

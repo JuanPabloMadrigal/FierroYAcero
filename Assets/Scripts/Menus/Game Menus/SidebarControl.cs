@@ -11,6 +11,7 @@ public class SidebarControl : MonoBehaviour
     [SerializeField] private GameObject UIPrefabAlmacenHierro;
     [SerializeField] private GameObject UIPrefabAceracion;
     [SerializeField] private GameObject UIPrefabTrabajadores;
+    [SerializeField] private GameObject UIPrefabPatio;
     public GameObject buttonGameObject;
 
     private GameObject currentUI;
@@ -89,6 +90,14 @@ public class SidebarControl : MonoBehaviour
                     Destroy(currentUI);
                 }
                 currentUI = Instantiate(UIPrefabAceracion);
+                currentUI.transform.SetParent(gameObject.transform, false);
+                break;
+            case "patio":
+                if (currentUI != null)
+                {
+                    Destroy(currentUI);
+                }
+                currentUI = Instantiate(UIPrefabPatio);
                 currentUI.transform.SetParent(gameObject.transform, false);
                 break;
         }
