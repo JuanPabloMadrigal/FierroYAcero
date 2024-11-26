@@ -23,13 +23,27 @@ public class PauseMenu : MonoBehaviour
         
         volumeSlider.onValueChanged.AddListener(HandleVolumeChange);
         Slider.SetActive(false);
+        Debug.Log("Empieza script");
     }
     public ShowDialogue showDialogue;
     public CameraMovement cameraMovement;
 
-    public void OnEscKey(InputAction.CallbackContext ctx)
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P) && !pauseMenu.activeInHierarchy) 
+        {
+
+            pauseMenu.SetActive(true);
+            showDialogue.onPause = true;
+            Time.timeScale = 0; //if we add animators to buttons or want an animated menu, set animator controller update mode to unscaled
+
+        }
+    }
+    /*public void OnEscKey(InputAction.CallbackContext ctx)
     {
         bool escKeyPressed = ctx.started;
+
+        Debug.Log("Detecta ESC");
 
         if (escKeyPressed)
         {
@@ -37,7 +51,7 @@ public class PauseMenu : MonoBehaviour
             showDialogue.onPause = true;
             Time.timeScale = 0; //if we add animators to buttons or want an animated menu, set animator controller update mode to unscaled
         } 
-    }
+    }*/
 
     public void OnContinueButton()
     {

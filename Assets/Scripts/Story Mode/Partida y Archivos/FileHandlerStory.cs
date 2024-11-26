@@ -72,13 +72,17 @@ public class FileHandlerStory : MonoBehaviour
     private void Start()
     {
 
+        Debug.Log(gameData.money);
+
         // Se genera el mapa y se inicializa el script de la historia
         GameObject.FindGameObjectWithTag("GameMechanics").GetComponent<SceneInitialization>().BuildingsGeneration(gameData);
         GameObject.FindGameObjectWithTag("StoryManager").GetComponent<StorylineHandler>().StartStorylineHandler();
-
+            
         // Se actualiza el UI en base a datos del modelo de juego
+
         UIManager.Instance.UpdateMoneyUI(gameData.money);
         UIManager.Instance.UpdateCoqueUI(gameData.coque);
+        UIManager.Instance.UpdateIronUI(gameData.iron);
     }
 
 
@@ -114,7 +118,6 @@ public class FileHandlerStory : MonoBehaviour
             string decode = CryptoHandler.DecryptStringAlt(streamContent, encKey, initVector);
             gameData =  JsonUtility.FromJson<GameModel>(decode);
             Debug.Log(decode);
-            textPartNorm.text = "JSON Partida Normal: " + decode;
         }
 
         fileValidationDialogues = File.Exists(dialoguePath);
@@ -156,7 +159,6 @@ public class FileHandlerStory : MonoBehaviour
 
         if (!fileValidation)
         {
-            textPartEnc.text = "Configuración en 'local''";
             Debug.Log(PathManager.Instance.saveFileToUse);
             File.WriteAllBytes(fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
@@ -166,7 +168,6 @@ public class FileHandlerStory : MonoBehaviour
             File.WriteAllBytes(fullPath, System.Text.Encoding.UTF8.GetBytes(json));
         }
         Debug.Log(json);
-        textPartEnc.text = "JSON Partida Enc: " + json;
 
         RefreshEditorProjectWindow();
 

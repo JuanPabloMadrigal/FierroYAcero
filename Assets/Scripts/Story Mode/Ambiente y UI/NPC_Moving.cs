@@ -18,7 +18,7 @@ public class NPC_Moving : MonoBehaviour
     void Start()
     {
         navmeshAgent = this.GetComponent<NavMeshAgent>();
-        navmeshAgent.speed = UnityEngine.Random.Range(3.0f, 4.0f);
+        navmeshAgent.speed = 1f;
         
         if (destinations != null && destinations.Length > 0)
         {

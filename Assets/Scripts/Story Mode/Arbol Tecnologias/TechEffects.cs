@@ -35,28 +35,25 @@ public class TechEffects : MonoBehaviour
 
             // Steel Workshop Improvements
             case "Taller de aceración 1":
-                ImproveProductionEfficiency();
+                UnlockSteelingPlant(1);
                 break;
             case "Taller de aceración 2":
-                ImproveProductionEfficiency();
+                UnlockSteelingPlant(2);
                 break;
             case "Taller de aceración 3":
-                ImproveProductionEfficiency();
+                UnlockSteelingPlant(3);
                 break;
             case "Taller de aceración 4":
-                ImproveProductionEfficiency();
+                UnlockSteelingPlant(4);
                 break;
             case "Taller de aceración 5":
-                ImproveProductionEfficiency();
+                UnlockSteelingPlant(5);
                 break;
             case "Taller de aceración 6":
-                ImproveProductionEfficiency();
+                UnlockSteelingPlant(6);
                 break;
             case "Taller de aceración 7":
-                ImproveProductionEfficiency();
-                break;
-            case "Taller de aceración 8":
-                ImproveProductionEfficiency();
+                UnlockSteelingPlant(7);
                 break;
 
             // Worker Management
@@ -145,10 +142,13 @@ public class TechEffects : MonoBehaviour
        
     }
 
-    private void ImproveProductionEfficiency()
+    private void UnlockSteelingPlant(int num)
     {
-        // Improve overall production efficiency
-        
+        // Desbloquear taller de aceración indicado
+
+        FileHandlerStory.Instance.gameData.buildingsList[num + 3].unlocked = true;
+        Debug.Log($"Effect done! The steeling workshop in position {num + 3} is {FileHandlerStory.Instance.gameData.buildingsList[num + 3].unlocked}.");
+
     }
 
     private void ReduceWorkerCosts()

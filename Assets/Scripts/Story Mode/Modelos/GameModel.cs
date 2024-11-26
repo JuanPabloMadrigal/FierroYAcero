@@ -39,12 +39,12 @@ public class GameModel
         evento = -1;
         empleados = 3000;
         descuentoEmpleados = 100;
-        coque = 0;
+        coque = 10;
         coquePrice = 40;
-        iron = 0;
+        iron = 20;
         ironMoneyPrice = 60;
         ironPrice = 100;
-        steel = 0;
+        steel = 1;
         steelBar = 0;
         steelRail = 0;
         steelIronPrice = 2200;

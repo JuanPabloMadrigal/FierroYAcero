@@ -14,6 +14,9 @@ public class SceneInitialization : MonoBehaviour
     [SerializeField] private GameObject aceracion;
     [SerializeField] private GameObject molinoCom;
     [SerializeField] private GameObject patioAce;
+
+    [SerializeField] private GameObject padreEdificios;
+
     [SerializeField] private SidebarControl sidebarControl;
     public Animator sceneAnimator;
     [SerializeField]private GameObject loadScreen;
@@ -76,7 +79,7 @@ public class SceneInitialization : MonoBehaviour
                     break;
                 }
 
-                GameObject newGO = Instantiate(newBuilding, new Vector3(edificio.x, edificio.y, edificio.z), Quaternion.Euler(0, edificio.rot, 0));
+                GameObject newGO = Instantiate(newBuilding, new Vector3(edificio.x, edificio.y, edificio.z), Quaternion.Euler(0, edificio.rot, 0), padreEdificios.transform);
                 if (edificio.type == "Horno 1")
                 {
                     newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("horno1"); } );
@@ -84,7 +87,7 @@ public class SceneInitialization : MonoBehaviour
 
                 if (edificio.type == "Aceracion")
                 {
-                    newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("horno1"); });
+                    newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("aceracion"); });
                 }
             }
         }
@@ -93,31 +96,31 @@ public class SceneInitialization : MonoBehaviour
 
         if (!ReferenceEquals(gameData.ironStorehouse, null))
         {
-            GameObject newGO = Instantiate(almacenMP, new Vector3(gameData.ironStorehouse.x, gameData.ironStorehouse.y, gameData.ironStorehouse.z), Quaternion.Euler(0, gameData.ironStorehouse.rot, 0));
+            GameObject newGO = Instantiate(almacenMP, new Vector3(gameData.ironStorehouse.x, gameData.ironStorehouse.y, gameData.ironStorehouse.z), Quaternion.Euler(0, gameData.ironStorehouse.rot, 0), padreEdificios.transform);
             newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("hierro"); });
         }
         else
         {
-            Debug.Log("Error al generar el almac�n de MP");
+            Debug.Log("El jugador no tiene el almacén de MP desbloqueado o no se puede cargar");
         }
 
         // Generaci�n de plante de coque
 
         if (!ReferenceEquals(gameData.cokePlant, null))
         {
-            GameObject newGO = Instantiate(plantaCoque, new Vector3(gameData.cokePlant.x, gameData.cokePlant.y, gameData.cokePlant.z), Quaternion.Euler(0, gameData.cokePlant.rot, 0));
+            GameObject newGO = Instantiate(plantaCoque, new Vector3(gameData.cokePlant.x, gameData.cokePlant.y, gameData.cokePlant.z), Quaternion.Euler(0, gameData.cokePlant.rot, 0), padreEdificios.transform);
             newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("plantadecoque"); });
         }
         else
         {
-            Debug.Log("Error al generar la planta de coque");
+            Debug.Log("El jugador no tiene la planta de coque desbloqueada o no se puede cargar");
         }
 
         // Generaci�n de patio de acero
 
         if (!ReferenceEquals(gameData.steelYard, null))
         {
-            GameObject newGO = Instantiate(patioAce, new Vector3(gameData.steelYard.x, gameData.steelYard.y, gameData.steelYard.z), Quaternion.Euler(0, gameData.steelYard.rot, 0));
+            GameObject newGO = Instantiate(patioAce, new Vector3(gameData.steelYard.x, gameData.steelYard.y, gameData.steelYard.z), Quaternion.Euler(0, gameData.steelYard.rot, 0), padreEdificios.transform);
         }
         else
         {
@@ -125,4 +128,15 @@ public class SceneInitialization : MonoBehaviour
         }
 
     }
+
+    public IEnumerator RestartChildBuildings()
+    {
+        while (padreEdificios.transform.childCount > 0)
+        {
+            Destroy(padreEdificios.transform.GetChild(0).gameObject);
+            yield return null;
+        }
+        BuildingsGeneration(FileHandlerStory.Instance.gameData);
+    }
+
 }

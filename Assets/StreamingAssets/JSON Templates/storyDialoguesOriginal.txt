@@ -37,7 +37,7 @@
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Estresado",
                     "nombre": "{nombreJugador}",
-                    "dialogoTexto": "Me elogia jefe, pero... ¡No tengo ni idea sobre como dirigir una compañía! ¡Y mucho menos una con gran importancia!"
+                    "dialogoTexto": "Me elogia jefe, pero... ¡No tengo ni idea sobre cómo dirigir una compañía! ¡Y mucho menos una con gran importancia!"
                 },
                 {
                     "img_der": "Vicente_Feliz",
@@ -95,7 +95,7 @@
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Estos edificios se encargan de limpiar las impuresas del material salido de los hornos altos, llamado arrabio. Este después se convierte en acero puro."
+                    "dialogoTexto": "Estos edificios se encargan de limpiar las impurezas del material salido de los hornos altos, llamado arrabio. Este después se convierte en acero puro."
                 },
                 {
                     "img_der": "Vicente_Normal",
@@ -103,11 +103,27 @@
                     "nombre": "Vicente",
                     "dialogoTexto": "Además, también tenemos los Molinos Comerciales, los cuales moldean el acero resultante para obtener productos finales como el alambrado de acero, la barra de acero, e incluso rieles."
                 },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Dicho esto, todavía tenemos un problema... Como agregaste un nuevo edificio en la planta, ahora es necesario asignar empleados en ella, por lo menos cien para su funcionamiento."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Para esto, haz clic en el menú de la izquierda y distribuye los empleados entre ambos Talleres de Aceración de modo que ambos tengan por lo menos cien empleados asignados."
+                }
+            ]
+        },
+	{
+            "Dialogos": [
                 {
                     "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Ahora que conoces el proceso de construcción de edificios, desarrollar la infraestructura de la planta será pan comido."
+                    "dialogoTexto": "Excelente, ahora que conoces el proceso de construcción de edificios, desarrollar la infraestructura de la planta será pan comido."
                 },
                 {
                     "img_der": "Vicente_Triste",
@@ -135,7 +151,7 @@
                     "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "El Almacén de Materia Prima y la Planta de Coque te permitirán adquirir material, es cuestión de dar clic sobre ellos e indicar la cantidad de materia que deseas comprar. ¡Intentalo! Compra cinco de hierro y cinco de coque."
+                    "dialogoTexto": "El Almacén de Materia Prima y la Planta de Coque te permitirán adquirir material, es cuestión de dar clic sobre ellos e indicar la cantidad de materia que deseas comprar. ¡Inténtalo! Compra treinta de hierro y quince de coque."
                 }
 	    ]
 	},
@@ -191,29 +207,29 @@
                     "nombre": "Vicente",
                     "dialogoTexto": "Esto es todo lo que tienes que saber sobre como manejar tu día a día en este lugar, al menos por el momento. Ahora bien, para terminar, hablemos sobre las cosas que podrás hacer cada día."
                 },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Primero, solo podrás realizar una acción por edificio una vez por día, ¡recuerda que los materiales tardan tiempo en ser recibidos, procesados y exportados!"
+                },
                 {
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Primero, solo se te dará un presupuesto fijo que podrás utilizar para gastar en un día, dinero que podrás gastar comprando nuevas tecnologías, mineral, etc."
+                    "dialogoTexto": "No obstante, estas acciones son reversibles y solo se confirmaran cuando decidas terminar el día."
                 },
 		{
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Después, solo podrás realizar una acción por edificio una vez por día, ¡recuerda que los materiales tardan tiempo en ser recibidos, procesados y exportados!"
+                    "dialogoTexto": "Y segundo, después de cada día ocurrirán dos cosas: primero, se te cobrará por el mantenimiento de cada edificio que posees, así que aprovecha su uso cada día."
                 },
 		{
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Por último, después de cada día ocurrirán dos cosas: primero, se te cobrará por el mantenimiento de cada edificio que posees, así que aprovecha su uso cada día."
-                },
-		{
-                    "img_der": "Vicente_Normal",
-                    "img_izq": "Jugador_Normal",
-                    "nombre": "Vicente",
-                    "dialogoTexto": "Y segundo, en caso de que algo suceda en el país o en la compañía, recibirás un periódico que te informará sobre como estos eventos pueden o no afectar en tu manejo de la planta."
+                    "dialogoTexto": "Y después, en caso de que algo suceda en el país o en la compañía, recibirás un periódico que te informará sobre como estos eventos pueden o no afectar en tu manejo de la planta."
                 },
 		{
                     "img_der": "Vicente_Feliz",
@@ -222,10 +238,16 @@
                     "dialogoTexto": "Esto es todo por ahora. Tengo que retirarme pero no te preocupes, volveré para ver como siguen las cosas y darte apoyo. Mientras tanto, enfócate en completar los objetivos que te he indicado que se muestran abajo a la izquierda." 
                 },
 		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¡Ah, casi lo olvido! Toma en cuenta que si te quedas sin dinero, tendrás que empezar desde tu último punto de guardado, saliendo de la partida sin guardar e ingresando de nuevo. ¡No dejes que eso ocurra!" 
+                },
+		{
                     "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "¡Hasta pronto!" 
+                    "dialogoTexto": "Eso es todo. ¡Hasta pronto!" 
                 }
             ]
         },
@@ -313,13 +335,13 @@
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Es por esto que a partir de ahora produciremos rieles de ferrocarril para su venta, eso sería suficiente para seguir produciendo ganancias."
+                    "dialogoTexto": "Es por esto que a partir de ahora produciremos rieles de ferrocarril para su venta, eso debería ser suficiente para seguir produciendo ganancias."
                 },
 		{
                     "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Eso sería todo por el momento, recuerda que estaré aquí para seguirte informando sobre todo lo que ocurre al rededor de la empresa, ¡confío en ti!"
+                    "dialogoTexto": "Eso sería todo por el momento, recuerda que estaré aquí para seguirte informando sobre todo lo que ocurre alrededor de la empresa, ¡confío en ti!"
                 },
 		{
                     "img_der": "Vicente_Feliz",

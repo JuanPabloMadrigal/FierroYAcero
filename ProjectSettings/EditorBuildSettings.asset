@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pruebas/JP.unity
     guid: d30a49be048d6d2478e48a190f7b6187
+  - enabled: 0
+    path: Assets/Scenes/Pruebas/StoryGameB.unity
+    guid: b23be9586d4c01c42b2379a8dc9f9d86
   m_configObjects: {}

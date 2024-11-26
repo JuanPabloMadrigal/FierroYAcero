@@ -36,7 +36,7 @@ public class TechTreeUI : MonoBehaviour
             TechCanvas.SetActive(true);
         }
 
-        techTree.SetResearchPoints(50);  // Test with 50 points
+        techTree.SetResearchPoints(150);  // Test with 150 points
         InitializeTechTree();
         TechCanvas.SetActive(true);
     }
