@@ -49,3 +49,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BlackScreen
+    uniqueID: 3599300125
+    locked: 0
+  - name: Scene
+    uniqueID: 2302503737
+    locked: 0
