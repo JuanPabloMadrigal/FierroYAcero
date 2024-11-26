@@ -8,21 +8,8 @@ public class AssignWorkers : MonoBehaviour
 {
     [SerializeField] private TMP_InputField workersInputField;
     [SerializeField] private Button applyButton;
-    private GameObject targetBuilding;
+    public GameObject targetBuilding;
     private BuildingProperties building;
-
-    private void Start()
-    {
-        if (workersInputField != null)
-        {
-            workersInputField.onValueChanged.AddListener(ValidateInput);
-        }
-        
-        if (applyButton != null)
-        {
-            applyButton.onClick.AddListener(ApplyWorkers);
-        }
-    }
 
     public void SetTargetBuilding()
     {
@@ -31,10 +18,9 @@ public class AssignWorkers : MonoBehaviour
             // Find the current workers number for this building
             foreach (BuildingProperties buildingData in FileHandlerStory.Instance.gameData.buildingsList)
             {
-                if (buildingData.x == targetBuilding.transform.position.x && 
+                if (buildingData.x == targetBuilding.transform.position.x &&
                     buildingData.z == targetBuilding.transform.position.z)
                 {
-                    workersInputField.text = buildingData.workersNum.ToString();
                     building = buildingData;
                     break;
                 }
@@ -42,7 +28,7 @@ public class AssignWorkers : MonoBehaviour
         }
     }
 
-    private void ValidateInput(string value)
+    public void ValidateInput(string value)
     {
         // Only allow positive numbers
         if (string.IsNullOrEmpty(value))
@@ -61,11 +47,16 @@ public class AssignWorkers : MonoBehaviour
         }
     }
 
-    private void ApplyWorkers()
+    public void ApplyWorkers()
     {
+        SetTargetBuilding();
         if (building != null && int.TryParse(workersInputField.text, out int workers))
         {
             building.workersNum = workers;
+        }
+        foreach (BuildingProperties buildingData in FileHandlerStory.Instance.gameData.buildingsList)
+        {
+            Debug.Log(buildingData.workersNum + "" + buildingData.type); 
         }
     }
 }
