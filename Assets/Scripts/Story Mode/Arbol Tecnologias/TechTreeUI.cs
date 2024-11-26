@@ -16,11 +16,6 @@ public class TechTreeUI : MonoBehaviour
 
     private Dictionary<string, TechNodeUI> nodeUIs = new Dictionary<string, TechNodeUI>();
 
-    private void Start()
-    {
-
-    }
-
     public void ShowTechTree()
     {
         if (techTree == null)
@@ -33,12 +28,31 @@ public class TechTreeUI : MonoBehaviour
         {
             techTree.InitializeDictionary();
             InitializeTechTree();
-            TechCanvas.SetActive(true);
         }
 
-        techTree.SetResearchPoints(50);  // Test with 50 points
+        techTree.SetResearchPoints(150);  // Test with 150 points
         InitializeTechTree();
         TechCanvas.SetActive(true);
+    }
+
+    public void HideTechTree()
+    {
+        if (TechCanvas != null)
+        {
+            foreach (Transform child in contentParent)
+            {
+                if (child.gameObject.GetComponent<TechNodeUI>() != null)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+            nodeUIs.Clear();
+            TechCanvas.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("TechCanvas reference is null in TechTreeUI");
+        }
     }
 
     private void InitializeTechTree()
@@ -46,7 +60,10 @@ public class TechTreeUI : MonoBehaviour
         // Clear any existing nodes
         foreach (Transform child in contentParent)
         {
-            Destroy(child.gameObject);
+            if (child.gameObject.GetType() == typeof(TechNodeUI))
+            {
+                Destroy(child.gameObject);
+            } 
         }
         nodeUIs.Clear();
 

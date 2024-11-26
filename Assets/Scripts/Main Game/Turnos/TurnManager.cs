@@ -10,12 +10,7 @@ public class TurnManager : MonoBehaviour
 {
 
     public int turnCount;
-
-    [SerializeField]
-    public float turnDeficit = 0;
-
-    [SerializeField]
-    public float turnProfit = 0;
+    public int buildingsMaintainanceCost;
 
     public int moneyToSubtract;
     public int moneyToAdd;
@@ -27,6 +22,11 @@ public class TurnManager : MonoBehaviour
     public int steelToAdd = 0;
     public int steelBarToAdd = 0;
     public int railToAdd = 0;
+    public int steelToSubtract = 0;
+    public int steelBarToSubtract = 0;
+    public int railToSubtract = 0;
+
+    [SerializeField] SceneInitialization sceneInitialization;
 
     public static TurnManager Instance;
 
@@ -44,11 +44,10 @@ public class TurnManager : MonoBehaviour
 
     private void CalculateBuildingDeficit()
     {
-        turnDeficit = 0;
 
         foreach (BuildingProperties building in FileHandlerStory.Instance.gameData.buildingsList)
         {
-            turnDeficit += building.costPerTurn;
+            buildingsMaintainanceCost += building.costPerTurn;
         }
 
     }
@@ -59,13 +58,38 @@ public class TurnManager : MonoBehaviour
     public void FinishTurn()
     {
         CalculateBuildingDeficit();
+        moneyToSubtract += buildingsMaintainanceCost;
+        if (FileHandlerStory.Instance.gameData.turnsWithoutSalary > 2) { 
+            moneyToSubtract += FileHandlerStory.Instance.gameData.salaryAmount;
+            FileHandlerStory.Instance.gameData.turnsWithoutSalary = 0;
+        }
+
+
         SpawnNPCsForAllBuildings();
-        Debug.Log(turnDeficit);
-        FileHandlerStory.Instance.gameData.AddMoney((int)turnProfit);
-        FileHandlerStory.Instance.gameData.SubtractMoney((int)turnDeficit);
+
+        // Se agregan los cambios al modelo del juego según las acciones en el turno
+
+
+        FileHandlerStory.Instance.gameData.AddMoney((int)moneyToAdd);
+        FileHandlerStory.Instance.gameData.SubtractMoney((int)moneyToSubtract);
+
+        FileHandlerStory.Instance.gameData.AddCoque(coqueToAdd);
+        FileHandlerStory.Instance.gameData.AddIron(ironToAdd);
+        FileHandlerStory.Instance.gameData.SubtractCoque(coqueToSubtract);
+        FileHandlerStory.Instance.gameData.SubtractIron(ironToSubtract);
+
+        FileHandlerStory.Instance.gameData.AddSteel(steelToAdd);
+        FileHandlerStory.Instance.gameData.AddSteelBar(steelBarToAdd);
+        FileHandlerStory.Instance.gameData.AddRail(railToAdd);
+        FileHandlerStory.Instance.gameData.SubtractSteel(steelToSubtract);
+        FileHandlerStory.Instance.gameData.SubtractSteelBar(steelBarToSubtract);
+        FileHandlerStory.Instance.gameData.SubtractRail(railToSubtract);
+
 
         // Incrementar el turno en EconomyTracker
         EconomyTracker.Instance.IncrementTurn();
+
+        sceneInitialization.RestartChildBuildings();
 
     }
 

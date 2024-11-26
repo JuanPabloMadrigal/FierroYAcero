@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -8,11 +7,21 @@ public class BuyCoque : MonoBehaviour
 {
     [SerializeField] private TMP_InputField quantityInputField;
     [SerializeField] private GameObject buyBtn;
+    [SerializeField] private TMP_Text note;
     public int coqueToBuy = 0;
     private bool canBuy;
 
     private void Start()
     {
+        quantityInputField.onValueChanged.AddListener(delegate { checkCanBuy(); });
+        if (TurnManager.Instance.coqueToAdd > 0)
+        {
+            note.text = $"Se estableció una orden de {TurnManager.Instance.coqueToAdd} unidades de coque.";
+        }
+        else
+        {
+            note.text = "";
+        }
         quantityInputField.onValueChanged.AddListener(delegate { checkCanBuy(); });
         canBuy = true;
         checkCanBuy();
@@ -24,10 +33,16 @@ public class BuyCoque : MonoBehaviour
         {
             TurnManager.Instance.coqueToAdd = (int.Parse(quantityInputField.text));
             TurnManager.Instance.moneyToSubtract = (FileHandlerStory.Instance.gameData.coquePrice * int.Parse(quantityInputField.text));
-            Debug.Log($"Coque vendido a {FileHandlerStory.Instance.gameData.coquePrice}");
-            EconomyTracker.Instance.AddCoqueCounter(int.Parse(quantityInputField.text));
+            if (TurnManager.Instance.coqueToAdd > 0)
+            {
+                note.text = $"Se estableció una orden de {TurnManager.Instance.coqueToAdd} unidades de coque.";
+            }
+            else
+            {
+                note.text = "";
+            }
+            //EconomyTracker.Instance.AddCoqueCounter(int.Parse(quantityInputField.text));
             //EconomyTracker.Instance.AddCoqueCounter(quantityInputField.text);
-            Debug.Log(FileHandlerStory.Instance.gameData.coquePrice);
         }
     }
 
@@ -51,7 +66,7 @@ public class BuyCoque : MonoBehaviour
 
     public void checkCanBuy()
     {
-        if (FileHandlerStory.Instance.gameData.money - (FileHandlerStory.Instance.gameData.ironMoneyPrice * int.Parse(quantityInputField.text)) - TurnManager.Instance.moneyToSubtract >= 0 && int.Parse(quantityInputField.text) != 0)
+        if (FileHandlerStory.Instance.gameData.money - (FileHandlerStory.Instance.gameData.ironMoneyPrice * int.Parse(quantityInputField.text)) - TurnManager.Instance.moneyToSubtract >= 0)
         {
             canBuy = true;
             Color btnColor = buyBtn.GetComponent<Image>().color;
@@ -65,6 +80,5 @@ public class BuyCoque : MonoBehaviour
             btnColor.a = 0.5f;
             buyBtn.GetComponent<Image>().color = btnColor;
         }
-    }
-
+    }      
 }

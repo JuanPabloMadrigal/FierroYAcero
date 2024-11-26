@@ -8,17 +8,24 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     public TMP_Text moneyUI;
-    public TMP_Text happinessUI;
     public TMP_Text coqueUI;
     public TMP_Text ironUI;
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
     public void UpdateMoneyUI(int money)
     {
+        Debug.Log("UpdateMoney");
         moneyUI.text = money.ToString();
     }
 
@@ -30,11 +37,6 @@ public class UIManager : MonoBehaviour
     public void UpdateIronUI(int iron)
     {
         ironUI.text = iron.ToString();
-    }
-
-    public void UpdateHappinessUI(int happiness)
-    {
-        happinessUI.text = happiness.ToString();
     }
 
 }

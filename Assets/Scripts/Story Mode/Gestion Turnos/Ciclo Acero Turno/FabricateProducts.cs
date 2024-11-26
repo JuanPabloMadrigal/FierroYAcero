@@ -24,7 +24,7 @@ public class FabricateProducts : MonoBehaviour
     {
         canProduce = true;
         productCostValues = new List<ProductCostValues>() { new ProductCostValues("Alambrado de acero", FileHandlerStory.Instance.gameData.ironPrice), new ProductCostValues("Barra de acero", FileHandlerStory.Instance.gameData.ironPrice * 1.5f)};
-        if (FileHandlerStory.Instance.gameData.evento >= 5)
+        if (FileHandlerStory.Instance.gameData.evento >= 7)
         {
             productCostValues.Add(new ProductCostValues("Riel", FileHandlerStory.Instance.gameData.ironPrice * 2f));
         }
@@ -48,12 +48,6 @@ public class FabricateProducts : MonoBehaviour
             switch (currentProductShown.title)
             {
                 case "Alambrado de acero":
-                    /*
-                    FileHandlerStory.Instance.gameData.AddSteel(int.Parse(quantityInputFieldAcero.text));
-                    FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice * productToBuy);
-                    FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));
-                    EconomyTracker.Instance.AddSteelCounter(int.Parse(quantityInputFieldAcero.text));
-                    break;*/
                     TurnManager.Instance.steelToAdd = int.Parse(quantityInputFieldAcero.text);
                     TurnManager.Instance.steelBarToAdd = 0;
                     TurnManager.Instance.railToAdd = 0;
@@ -63,10 +57,6 @@ public class FabricateProducts : MonoBehaviour
                     Debug.Log(TurnManager.Instance.steelToAdd);
                     break;
                 case "Barra de acero":
-                    /*FileHandlerStory.Instance.gameData.AddSteelBar(int.Parse(quantityInputFieldAcero.text));
-                    FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice * productToBuy);
-                    FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));*/
-                    //debugUI.text = $"Acero generado: {FileHandlerStory.Instance.gameData.steel}";
                     TurnManager.Instance.steelToAdd = 0;
                     TurnManager.Instance.steelBarToAdd = int.Parse(quantityInputFieldAcero.text);
                     TurnManager.Instance.railToAdd = 0;
@@ -76,10 +66,6 @@ public class FabricateProducts : MonoBehaviour
                     Debug.Log(TurnManager.Instance.steelBarToAdd);
                     break;
                 case "Riel":
-                    /*FileHandlerStory.Instance.gameData.AddRail(int.Parse(quantityInputFieldAcero.text));
-                    FileHandlerStory.Instance.gameData.SubtractIron(FileHandlerStory.Instance.gameData.steelIronPrice * productToBuy);
-                    FileHandlerStory.Instance.gameData.SubtractCoque(2 * int.Parse(quantityInputFieldAcero.text));*/
-                    //debugUI.text = $"Acero generado: {FileHandlerStory.Instance.gameData.steel}";
                     TurnManager.Instance.steelToAdd = 0;
                     TurnManager.Instance.steelBarToAdd = 0;
                     TurnManager.Instance.railToAdd = int.Parse(quantityInputFieldAcero.text);
