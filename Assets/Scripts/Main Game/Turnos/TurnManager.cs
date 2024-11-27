@@ -57,6 +57,7 @@ public class TurnManager : MonoBehaviour
 
     public void FinishTurn()
     {
+
         CalculateBuildingDeficit();
         moneyToSubtract += buildingsMaintainanceCost;
         if (FileHandlerStory.Instance.gameData.turnsWithoutSalary > 2) { 
@@ -64,6 +65,7 @@ public class TurnManager : MonoBehaviour
             FileHandlerStory.Instance.gameData.turnsWithoutSalary = 0;
         }
 
+        Debug.Log($"Costo de mant.: {moneyToSubtract}");
 
         SpawnNPCsForAllBuildings();
 
@@ -89,9 +91,27 @@ public class TurnManager : MonoBehaviour
         // Incrementar el turno en EconomyTracker
         EconomyTracker.Instance.IncrementTurn();
 
-        sceneInitialization.RestartChildBuildings();
+        Debug.Log("Termina el turno");
 
-    }
+        StartCoroutine(sceneInitialization.RestartChildBuildings());
+
+        if (FileHandlerStory.Instance.gameData.evento == 1)
+        {
+            FileHandlerStory.Instance.gameData.evento++;
+        }
+
+        coqueToAdd = 0;
+        ironToAdd = 0;
+        coqueToSubtract = 0;
+        ironToSubtract = 0;
+        steelToAdd = 0;
+        steelBarToAdd = 0;
+        railToAdd = 0;
+        steelToSubtract = 0;
+        steelBarToSubtract = 0;
+        railToSubtract = 0;
+
+}
 
     private void SpawnNPCsForAllBuildings()
     {

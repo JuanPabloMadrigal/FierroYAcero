@@ -20,27 +20,27 @@ public class StorylineHandler : MonoBehaviour
                 FileHandlerStory.Instance.gameData.evento++;
             }
 
-            if (FileHandlerStory.Instance.gameData.evento == 1 && FileHandlerStory.Instance.gameData.buildingsList[3].workersNum >= 100 && FileHandlerStory.Instance.gameData.buildingsList[4].workersNum >= 100)
+            if (FileHandlerStory.Instance.gameData.evento == 2 && FileHandlerStory.Instance.gameData.buildingsList[3].workersNum >= 100 && FileHandlerStory.Instance.gameData.buildingsList[4].workersNum >= 100)
             {
                 FileHandlerStory.Instance.gameData.evento++;
             }
 
-            if (currentEvent == 2 && FileHandlerStory.Instance.gameData.ironStorehouse.unlocked && FileHandlerStory.Instance.gameData.cokePlant.unlocked)
+            if (currentEvent == 3 && FileHandlerStory.Instance.gameData.ironStorehouse.unlocked && FileHandlerStory.Instance.gameData.cokePlant.unlocked)
             {
                 FileHandlerStory.Instance.gameData.evento++;
             }
 
-            if (currentEvent == 3 && TurnManager.Instance.ironToAdd >= 30 && TurnManager.Instance.coqueToAdd >= 15)
+            if (currentEvent == 4 && TurnManager.Instance.ironToAdd >= 30 && TurnManager.Instance.coqueToAdd >= 15)
             {
                 FileHandlerStory.Instance.gameData.evento++;
             }
 
-            if (currentEvent == 4 && TurnManager.Instance.steelToAdd >= 1)
+            if (currentEvent == 5 && TurnManager.Instance.steelToAdd >= 1)
             {
                 FileHandlerStory.Instance.gameData.evento++;
             }
 
-            if (currentEvent == 5 && TurnManager.Instance.steelToSubtract >= 1)
+            if (currentEvent == 6 && TurnManager.Instance.steelToSubtract >= 1)
             {
                 FileHandlerStory.Instance.gameData.evento++;
             }

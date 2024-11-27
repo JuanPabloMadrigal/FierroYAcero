@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 using UnityEngine.UI;
 
 public class SceneInitialization : MonoBehaviour
@@ -94,7 +95,7 @@ public class SceneInitialization : MonoBehaviour
 
         // Generaci�n de almac�n de materia prima
 
-        if (!ReferenceEquals(gameData.ironStorehouse, null))
+        if (!ReferenceEquals(gameData.ironStorehouse, null) && gameData.ironStorehouse.unlocked)
         {
             GameObject newGO = Instantiate(almacenMP, new Vector3(gameData.ironStorehouse.x, gameData.ironStorehouse.y, gameData.ironStorehouse.z), Quaternion.Euler(0, gameData.ironStorehouse.rot, 0), padreEdificios.transform);
             newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("hierro"); });
@@ -106,7 +107,7 @@ public class SceneInitialization : MonoBehaviour
 
         // Generaci�n de plante de coque
 
-        if (!ReferenceEquals(gameData.cokePlant, null))
+        if (!ReferenceEquals(gameData.cokePlant, null) && gameData.cokePlant.unlocked)
         {
             GameObject newGO = Instantiate(plantaCoque, new Vector3(gameData.cokePlant.x, gameData.cokePlant.y, gameData.cokePlant.z), Quaternion.Euler(0, gameData.cokePlant.rot, 0), padreEdificios.transform);
             newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("plantadecoque"); });
@@ -118,7 +119,7 @@ public class SceneInitialization : MonoBehaviour
 
         // Generaci�n de patio de acero
 
-        if (!ReferenceEquals(gameData.steelYard, null))
+        if (!ReferenceEquals(gameData.steelYard, null) && gameData.steelYard.unlocked)
         {
             GameObject newGO = Instantiate(patioAce, new Vector3(gameData.steelYard.x, gameData.steelYard.y, gameData.steelYard.z), Quaternion.Euler(0, gameData.steelYard.rot, 0), padreEdificios.transform);
             newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("patio"); });
@@ -132,12 +133,21 @@ public class SceneInitialization : MonoBehaviour
 
     public IEnumerator RestartChildBuildings()
     {
+        Debug.Log($"Empieza reinicio");
         while (padreEdificios.transform.childCount > 0)
         {
             Destroy(padreEdificios.transform.GetChild(0).gameObject);
+            Debug.Log($"Destruye uno");
             yield return null;
         }
         BuildingsGeneration(FileHandlerStory.Instance.gameData);
+        foreach(BuildingProperties ace in FileHandlerStory.Instance.gameData.buildingsList)
+        {
+            if (ace.type == "Aceracion")
+            {
+                Debug.Log($"Taller de aceracion nuevo esta en: {ace.unlocked}");
+            }
+        }
     }
 
 }

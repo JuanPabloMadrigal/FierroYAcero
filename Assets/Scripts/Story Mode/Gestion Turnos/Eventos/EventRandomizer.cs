@@ -9,7 +9,6 @@ public class EventRandomizer : MonoBehaviour
     [SerializeField] private EventView evtView;
 
     public EventModel[] events;
-    public int turnsWithoutEvent;
 
     void Start()
     {
@@ -97,20 +96,25 @@ public class EventRandomizer : MonoBehaviour
     public void GetRandomEvent()
     {
 
-        Debug.Log($"Número de turnos sin obtener eventos: {turnsWithoutEvent}");
+        if (FileHandlerStory.Instance.gameData.evento < 6)
+        {
+            return;
+        }
+
+        Debug.Log($"Número de turnos sin obtener eventos: {FileHandlerStory.Instance.gameData.turnsWithoutEvent}");
 
         // Se establece la probabilidad de que aparezca un evento
         float evtProb;
 
-        if (turnsWithoutEvent == 0)
+        if (FileHandlerStory.Instance.gameData.turnsWithoutEvent == 0)
         {
             evtProb = 0.2f;
         }
-        else if (turnsWithoutEvent == 1)
+        else if (FileHandlerStory.Instance.gameData.turnsWithoutEvent == 1)
         { 
             evtProb = 0.3f;
         }
-        else if (turnsWithoutEvent == 2)
+        else if (FileHandlerStory.Instance.gameData.turnsWithoutEvent == 2)
         {
             evtProb = 0.4f;
         }
@@ -160,7 +164,7 @@ public class EventRandomizer : MonoBehaviour
                 Debug.Log($"Modifier: {randomEvent.resultModifier}");
                 Debug.Log("===========================");
 
-                turnsWithoutEvent = 0;
+                FileHandlerStory.Instance.gameData.turnsWithoutEvent = 0;
 
             }
             else
@@ -171,7 +175,7 @@ public class EventRandomizer : MonoBehaviour
         else
         {
             Debug.Log("No event was generated!");
-            turnsWithoutEvent++;
+            FileHandlerStory.Instance.gameData.turnsWithoutEvent++;
         }
     }
 

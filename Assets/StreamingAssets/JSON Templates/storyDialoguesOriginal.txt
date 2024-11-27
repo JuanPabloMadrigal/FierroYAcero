@@ -75,11 +75,27 @@
                     "nombre": "Vicente",
                     "dialogoTexto": "Observa el edificio que se indica en el mapa. Este es el Taller de Fundición y Maquinaria, es como un laboratorio para desarrollar nuevas tecnologías en la planta."
                 },
-		{
+		        {
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
                     "dialogoTexto": "Aquí podrás construir nuevos edificios, mejorarlos y desbloquear todo tipo de ventajas. Intenta haciendo clic en el edificio y agregando un nuevo Taller de Aceración."
+                }
+            ]
+        },
+        {
+            "Dialogos": [
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Excelente trabajo. Pero como notarás, ningún edificio nuevo se puede apreciar en el mapa. Esto es debido a que no has acabado tu jornada. Naturalmente, los edificios toman tiempo en construir."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Es por esto que los cambios de infraestructura que hagas en el Taller de Fundición y Maquinaria se veran reflejados una vez termines tu jornada, inténtalo y observa como el edificio que acabas de desbloquear aparece."
                 }
             ]
         },
