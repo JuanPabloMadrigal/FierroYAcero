@@ -43,11 +43,13 @@ public class GameModel
         coquePrice = 40;
         iron = 20;
         ironMoneyPrice = 60;
-        ironPrice = 100;
+        ironPrice = 150;
         steel = 1;
         steelBar = 0;
         steelRail = 0;
-        steelIronPrice = 2200;
+        steelIronPrice = 4000;
+        steelBarPrice = 6000;
+        steelRailPrice = 10000;
         salaryAmount = 10;
         turnsWithoutSalary = 0;
         turnsWithoutEvent = 0;

@@ -30,28 +30,14 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) && !pauseMenu.activeInHierarchy) 
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-
-            pauseMenu.SetActive(true);
-            showDialogue.onPause = true;
-            Time.timeScale = 0; //if we add animators to buttons or want an animated menu, set animator controller update mode to unscaled
-
+            Debug.Log("Detecta ESC");
+            pauseMenu.SetActive(!pauseMenu.activeSelf);
+            showDialogue.onPause = pauseMenu.activeSelf;
+            Time.timeScale = pauseMenu.activeSelf ? 0 : 1;
         }
     }
-    /*public void OnEscKey(InputAction.CallbackContext ctx)
-    {
-        bool escKeyPressed = ctx.started;
-
-        Debug.Log("Detecta ESC");
-
-        if (escKeyPressed)
-        {
-            pauseMenu.SetActive(true);
-            showDialogue.onPause = true;
-            Time.timeScale = 0; //if we add animators to buttons or want an animated menu, set animator controller update mode to unscaled
-        } 
-    }*/
 
     public void OnContinueButton()
     {

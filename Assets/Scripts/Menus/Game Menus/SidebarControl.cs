@@ -107,7 +107,7 @@ public class SidebarControl : MonoBehaviour
     {
         switch (building)
         {
-            case "plantadecoque":
+            /*case "plantadecoque":
                 if (currentWorkerUI != null)
                 {
                     Destroy(currentWorkerUI);
@@ -115,7 +115,7 @@ public class SidebarControl : MonoBehaviour
                 currentWorkerUI = Instantiate(UIPrefabTrabajadores);
                 currentWorkerUI.transform.SetParent(secondPanel.transform, false);
                 //currentWorkerUI.GetComponent<AssignWorkers>().targetBuilding = buttonGameObject;
-                break;
+                break;*/
             case "horno1":
                 if (currentWorkerUI != null)
                 {
@@ -125,7 +125,7 @@ public class SidebarControl : MonoBehaviour
                 currentWorkerUI.transform.SetParent(secondPanel.transform, false);
                 //currentWorkerUI.GetComponent<AssignWorkers>().targetBuilding = buttonGameObject;
                 break;
-            case "hierro":
+            /*case "hierro":
                 if (currentWorkerUI != null)
                 {
                     Destroy(currentWorkerUI);
@@ -133,7 +133,7 @@ public class SidebarControl : MonoBehaviour
                 currentWorkerUI = Instantiate(UIPrefabTrabajadores);
                 currentWorkerUI.transform.SetParent(secondPanel.transform, false);
                 //currentWorkerUI.GetComponent<AssignWorkers>().targetBuilding = buttonGameObject;
-                break;
+                break;*/
             case "aceracion":
                 if (currentWorkerUI != null)
                 {

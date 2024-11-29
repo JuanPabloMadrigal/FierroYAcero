@@ -12,7 +12,7 @@ public class StorylineHandler : MonoBehaviour
     void Update()
     {
 
-        if (currentEvent < 6)
+        if (currentEvent < 7)
         {
 
             if (FileHandlerStory.Instance.gameData.evento == 0 && FileHandlerStory.Instance.gameData.buildingsList[4].unlocked == true)
@@ -47,8 +47,9 @@ public class StorylineHandler : MonoBehaviour
 
             // Revisa cuando enseñar nuevo diálogo
 
-            if (currentEvent == FileHandlerStory.Instance.gameData.evento - 1 && !dialogueScreen.activeInHierarchy)
+            if (currentEvent < FileHandlerStory.Instance.gameData.evento && !dialogueScreen.activeInHierarchy)
             {
+                Debug.Log("Entra a imprimir diálogo");
                 currentEvent++;
                 StartCoroutine(gameObject.GetComponent<ShowDialogue>().ImprimirDialogo(FileHandlerStory.Instance.gameDialogues.Eventos[currentEvent].Dialogos));
             }

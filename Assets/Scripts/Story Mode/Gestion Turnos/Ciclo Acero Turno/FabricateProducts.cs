@@ -83,7 +83,7 @@ public class FabricateProducts : MonoBehaviour
 
         int resultQuantity = 0;
 
-        foreach (BuildingProperties building in FileHandlerStory.Instance.gameData.buildingsList)
+        /*foreach (BuildingProperties building in FileHandlerStory.Instance.gameData.buildingsList)
         {
             if (building.unlocked)
             {
@@ -100,7 +100,31 @@ public class FabricateProducts : MonoBehaviour
             }
         }
 
-        note.text = "";
+        note.text = "";*/
+
+        float totalWorkersFactor = 0f;
+
+        foreach (BuildingProperties building in FileHandlerStory.Instance.gameData.buildingsList)
+        {
+            if (building.unlocked)
+            {
+
+                float buildingWorkersFactor = Mathf.FloorToInt(building.workersNum / FileHandlerStory.Instance.gameData.descuentoEmpleados);
+                if (buildingWorkersFactor == 0)
+                {
+                    disableBtn();
+                    note.text = $"Algún edificio tiene menos de {FileHandlerStory.Instance.gameData.descuentoEmpleados} trabajadores.";
+                    return 0;
+                }
+                totalWorkersFactor += buildingWorkersFactor * (building.addingValue * building.valueModifier);
+            }
+        }
+
+        int baseQuantity = int.Parse(quantityInputFieldAcero.text);
+        int ironQuantity = Mathf.RoundToInt((20 * baseQuantity * baseCost) / totalWorkersFactor);
+
+        resultQuantity += ironQuantity;
+
         return resultQuantity;
     }
 

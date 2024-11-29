@@ -54,6 +54,7 @@ public class SellProducts : MonoBehaviour
                     TurnManager.Instance.railToSubtract = 0;
                     TurnManager.Instance.moneyToAdd = (currentProductShown.sellPrice * int.Parse(quantityInputField.text));
                     note.text = "Se ha establecido una nueva orden de venta.";
+                    Debug.Log($"Acero a vender: {TurnManager.Instance.steelToSubtract} en evento: {FileHandlerStory.Instance.gameData.evento}.");
                     break;
                 case "Barra de acero":
                     TurnManager.Instance.steelToSubtract = 0;

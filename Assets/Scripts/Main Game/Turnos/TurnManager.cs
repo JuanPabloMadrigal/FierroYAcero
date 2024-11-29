@@ -98,7 +98,12 @@ public class TurnManager : MonoBehaviour
         if (FileHandlerStory.Instance.gameData.evento == 1)
         {
             FileHandlerStory.Instance.gameData.evento++;
+            Debug.Log($"Evento nuevo: {FileHandlerStory.Instance.gameData.evento}.");
         }
+
+        buildingsMaintainanceCost = 0;
+        moneyToSubtract = 0;
+        moneyToAdd = 0;
 
         coqueToAdd = 0;
         ironToAdd = 0;

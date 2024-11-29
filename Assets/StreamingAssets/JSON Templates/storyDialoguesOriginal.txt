@@ -167,7 +167,7 @@
                     "img_der": "Vicente_Feliz",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "El Almacén de Materia Prima y la Planta de Coque te permitirán adquirir material, es cuestión de dar clic sobre ellos e indicar la cantidad de materia que deseas comprar. ¡Inténtalo! Compra treinta de hierro y quince de coque."
+                    "dialogoTexto": "El Almacén de Materia Prima y la Planta de Coque te permitirán adquirir material, es cuestión de dar clic sobre ellos una vez estén en el mapa, e indicar la cantidad de materia que deseas comprar. ¡Inténtalo! Compra treinta de hierro y quince de coque."
                 }
 	    ]
 	},
@@ -177,7 +177,7 @@
                     "img_der": "Vicente_Normal",
                     "img_izq": "Jugador_Normal",
                     "nombre": "Vicente",
-                    "dialogoTexto": "Excelente, estás a solo un paso de empezar a procesar acero."
+                    "dialogoTexto": "Excelente, estás a solo un paso de empezar a procesar acero. Estos materiales también tardarán una jornada en llegar a la planta, para que también lo consideres."
                 },
 		{
                     "img_der": "Vicente_Normal",
