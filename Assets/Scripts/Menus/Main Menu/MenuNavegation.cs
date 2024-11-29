@@ -64,6 +64,10 @@ public class MenuNavegation : MonoBehaviour
         StartCoroutine("ChangeToGame");
     }
 
+    public void GoToMultiplayer()
+    {
+        SceneManager.LoadScene("Multijugador");
+    }
 
     public void ContinueGameExists()
     {

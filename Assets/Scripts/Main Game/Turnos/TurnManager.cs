@@ -93,7 +93,7 @@ public class TurnManager : MonoBehaviour
 
         Debug.Log("Termina el turno");
 
-        StartCoroutine(sceneInitialization.RestartChildBuildings());
+        StartCoroutine(sceneInitialization.RestartChildBuildings(FileHandlerStory.Instance.gameData));
 
         if (FileHandlerStory.Instance.gameData.evento == 1)
         {

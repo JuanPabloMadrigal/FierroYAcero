@@ -24,8 +24,15 @@ public class ShareCodeUI : MonoBehaviour
     
     private void Start()
     {
-        generateButton.onClick.AddListener(GenerateShareCode);
-        loadButton.onClick.AddListener(LoadShareCode);
+        try {
+            generateButton.onClick.AddListener(GenerateShareCode);
+        } 
+        catch { }
+        try
+        {
+            loadButton.onClick.AddListener(LoadShareCode);
+        }
+        catch { }
     }
     
     private void GenerateShareCode()
@@ -44,6 +51,6 @@ public class ShareCodeUI : MonoBehaviour
 
     public void DisplayShareCode(string code)
     {
-        shareCodeText.text = $"Share Code: {code}";
+        shareCodeText.text = $"Código de partida: {code}";
     }
 } 

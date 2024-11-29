@@ -14,7 +14,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject resume;
     public GameObject options;
     public GameObject Exit;
+    public GameObject multButton;
     public GameObject leaveOptions;
+    public GameObject multiplayerCode;
     private AudioSource[] audioSources;
 
     void Start()
@@ -34,7 +36,11 @@ public class PauseMenu : MonoBehaviour
         {
             Debug.Log("Detecta ESC");
             pauseMenu.SetActive(!pauseMenu.activeSelf);
-            showDialogue.onPause = pauseMenu.activeSelf;
+            try
+            {
+                showDialogue.onPause = pauseMenu.activeSelf;
+            }
+            catch { }
             Time.timeScale = pauseMenu.activeSelf ? 0 : 1;
         }
     }
@@ -43,7 +49,11 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
-        showDialogue.onPause = false;
+        try
+        {
+            showDialogue.onPause = false;
+        }
+        catch { }
     }
 
     public void OnExitButton()
@@ -55,16 +65,60 @@ public class PauseMenu : MonoBehaviour
     public void OnConfigurationButton()
     {
         resume.SetActive(false);
-        Exit.SetActive(false);
+        try
+        {
+            Exit.SetActive(false);
+        }
+        catch { }
         options.SetActive(false);
         Slider.SetActive(true);
+        multButton.SetActive(false);
+        multiplayerCode.SetActive(false);
+    }
+
+    public void OnMultiplayerButton()
+    {
+        resume.SetActive(false);
+        try
+        {
+            Exit.SetActive(false);
+        }
+        catch { }
+        options.SetActive(false);
+        Slider.SetActive(false);
+        multButton.SetActive(false);
+        multiplayerCode.SetActive(true);
+    }
+    public void OnMultiplayerExit()
+    {
+        resume.SetActive(true);
+        try
+        {
+            Exit.SetActive(true);
+        }
+        catch { }
+        options.SetActive(true);
+        Slider.SetActive(false);
+        multButton.SetActive(true);
+        multiplayerCode.SetActive(false);
     }
     public void OnLeaveConfigurations()
     {
         resume.SetActive(true);
-        Exit.SetActive(true);
+        try
+        {
+            Exit.SetActive(true);
+        }
+        catch { }
         options.SetActive(true);
+        multButton.SetActive(true);
         Slider.SetActive(false);
+        multiplayerCode.SetActive(false);
+    }
+
+    public void LeaveNotSaving()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void HandleVolumeChange(float volume)

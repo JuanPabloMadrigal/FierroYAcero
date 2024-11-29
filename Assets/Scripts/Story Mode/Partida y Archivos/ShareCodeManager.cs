@@ -16,6 +16,7 @@ public class ShareCodeData
 
 public class ShareCodeManager : MonoBehaviour 
 {
+    [SerializeField] private PauseMenu pauseMenu;
     public static ShareCodeManager Instance;
     private HttpRequestHandler httpHandler;
     private string apiBaseUrl = "http://127.0.0.1:5000/api";
@@ -75,15 +76,19 @@ public class ShareCodeManager : MonoBehaviour
             ApiResponse<GameModel> response = JsonUtility.FromJson<ApiResponse<GameModel>>(httpHandler.result);
             if (response != null && response.data != null)
             {
-                FileHandlerStory.Instance.gameData = response.data;
+                FileHandlerMultiplayer.Instance.gameData = response.data;
                 
                 yield return StartCoroutine(GameObject.FindGameObjectWithTag("GameMechanics")
                     .GetComponent<SceneInitialization>()
-                    .RestartChildBuildings());
+                    .RestartChildBuildings(FileHandlerMultiplayer.Instance.gameData));
                     
                 UIManager.Instance.UpdateMoneyUI(response.data.money);
                 UIManager.Instance.UpdateCoqueUI(response.data.coque);
                 UIManager.Instance.UpdateIronUI(response.data.iron);
+
+                pauseMenu.OnMultiplayerExit();
+                pauseMenu.OnContinueButton();
+
             }
             else
             {

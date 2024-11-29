@@ -1,0 +1,372 @@
+{
+    "Eventos": [
+        {
+            "Dialogos": [
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "???",
+                    "dialogoTexto": "¡Buenos días {nombreJugador}! Esperaba con ansias que respondieras mi llamada, tengo algo muy importante que comentarte..."
+                },
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Feliz",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "¡Siempre feliz de ayudar jefe!"
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Como tal vez sabras, mi nombre es Vicente Ferrara, uno de los muchos directores propietarios de esta compañía: La Fundidora de Fierro y Acero de Monterrey."
+                
+                },
+                {
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Sin embargo, estoy pensando en darme un descanso... ¡Este trabajo puede ser bastante agotador sabes! Además, siento que ya no tengo la misma capacidad que antes para echarle ojo al lugar."
+                },
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",    
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¡Es por esto que te he elegido a ti como mi sustituto! Estoy convencido de que cuentas con todas las habilidades necesarias para mantener la empresa bajo control."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "Me elogia jefe, pero... ¡No tengo ni idea sobre cómo dirigir una compañía! ¡Y mucho menos una con gran importancia!"
+                },
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Tu por eso no te preocupes, estaré guiándote a través de todo este emocionante viaje. ¡Te ayudaré con lo básico y el resto saldrá naturalmente!"
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Primero, observa a tu alrededor. Aquí tienes la planta de la Fundidora de Fierro y Acero, un lugar donde el trabajo duro y la innovación se unen para crear acero de calidad."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Podrás moverte a través del mapa usando el clic derecho, y podrás alejarte o acercarte utilizando la rueda del ratón."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Observa también que en la parte superior de la pantalla puedes ver tus recursos: hierro, coque y el dinero que poseemos."
+                },
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Estos recursos serán importantes para producir acero y mantener la planta a flote. Además, una vez que hayas aprendido a gestionar tus recursos, podrás invertir en mejoras."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Observa el edificio que se indica en el mapa. Este es el Taller de Fundición y Maquinaria, es como un laboratorio para desarrollar nuevas tecnologías en la planta."
+                },
+		        {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Aquí podrás construir nuevos edificios, mejorarlos y desbloquear todo tipo de ventajas. Intenta haciendo clic en el edificio y agregando un nuevo Taller de Aceración."
+                }
+            ]
+        },
+        {
+            "Dialogos": [
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Excelente trabajo. Pero como notarás, ningún edificio nuevo se puede apreciar en el mapa. Esto es debido a que no has acabado tu jornada. Naturalmente, los edificios toman tiempo en construir."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Es por esto que los cambios de infraestructura que hagas en el Taller de Fundición y Maquinaria se veran reflejados una vez termines tu jornada, inténtalo y observa como el edificio que acabas de desbloquear aparece."
+                }
+            ]
+        },
+        {
+            "Dialogos": [
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Como puedes observar, el edificio ha aparecido en el mapa y está listo para utilizarse. Los Talleres de Aceración te ayudaran a procesar más acero, recuerda que los podrás mejorar en un futuro si lo deseas."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Estos edificios se encargan de limpiar las impurezas del material salido de los hornos altos, llamado arrabio. Este después se convierte en acero puro."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Además, también tenemos los Molinos Comerciales, los cuales moldean el acero resultante para obtener productos finales como el alambrado de acero, la barra de acero, e incluso rieles."
+                },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Dicho esto, todavía tenemos un problema... Como agregaste un nuevo edificio en la planta, ahora es necesario asignar empleados en ella, por lo menos cien para su funcionamiento."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Para esto, haz clic en el menú de la izquierda y distribuye los empleados entre ambos Talleres de Aceración de modo que ambos tengan por lo menos cien empleados asignados."
+                }
+            ]
+        },
+	{
+            "Dialogos": [
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Excelente, ahora que conoces el proceso de construcción de edificios, desarrollar la infraestructura de la planta será pan comido."
+                },
+                {
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Pensándolo bien, necesitamos un lugar para guardar nuestros suministros de hierro y de coque... Últimamente estamos recibiendo cargas más grandes del material necesario para crear acero."
+                },
+                {
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "¿Cómo? ¿No tenían donde almacenar los recursos más importantes para el funcionamiento de nuestra planta?"
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "No te preocupes {nombreJugador}, solíamos almacenar todo el material en el Horno Alto Uno, aunque empiezo a sospechar que tal vez sea peligroso dejar todo expuesto. Ayúdame añadiendo el Almacén de Materia Prima y la Planta de Coque."
+                }
+            ]
+        },
+        {
+            "Dialogos": [
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "El Almacén de Materia Prima y la Planta de Coque te permitirán adquirir material, es cuestión de dar clic sobre ellos una vez estén en el mapa, e indicar la cantidad de materia que deseas comprar. ¡Inténtalo! Compra treinta de hierro y quince de coque."
+                }
+	    ]
+	},
+	{
+	    "Dialogos": [
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Excelente, estás a solo un paso de empezar a procesar acero. Estos materiales también tardarán una jornada en llegar a la planta, para que también lo consideres."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "En el Horno Alto Uno, podrás elegir la cantidad de producto final que quieras, y dependiendo del producto final que quieras producir, se te dará el costo en materia que tendrás que cubrir para completar la acción."
+                },
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Prueba procesando un alambrado de acero."
+                }
+            ]
+        },
+	{
+	    "Dialogos": [
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¡Muy bien! Ahora solo tienes que saber una cosa más, una vez conseguido el producto procesado, tendrás la oportunidad de venderlo. El precio de venta de cada producto varia con el tiempo."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Además, ciertas condiciones en el país podrían alterar de gran manera estos precios, toma esto en cuenta antes de vender producto."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Tenemos algunos alambrados ya almacenados que necesitamos vender, haz clic sobre el Patio de Acero y vende por lo menos un alambrado de acero."
+                }
+            ]
+        },
+	{
+	    "Dialogos": [
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Esto es todo lo que tienes que saber sobre como manejar tu día a día en este lugar, al menos por el momento. Ahora bien, para terminar, hablemos sobre las cosas que podrás hacer cada día."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Primero, solo podrás realizar una acción por edificio una vez por día, ¡recuerda que los materiales tardan tiempo en ser recibidos, procesados y exportados!"
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "No obstante, estas acciones son reversibles y solo se confirmaran cuando decidas terminar el día."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Y segundo, después de cada día ocurrirán dos cosas: primero, se te cobrará por el mantenimiento de cada edificio que posees, así que aprovecha su uso cada día."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Y después, en caso de que algo suceda en el país o en la compañía, recibirás un periódico que te informará sobre como estos eventos pueden o no afectar en tu manejo de la planta."
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Esto es todo por ahora. Tengo que retirarme pero no te preocupes, volveré para ver como siguen las cosas y darte apoyo. Mientras tanto, enfócate en completar los objetivos que te he indicado que se muestran abajo a la izquierda." 
+                },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¡Ah, casi lo olvido! Toma en cuenta que si te quedas sin dinero, tendrás que empezar desde tu último punto de guardado, saliendo de la partida sin guardar e ingresando de nuevo. ¡No dejes que eso ocurra!" 
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Eso es todo. ¡Hasta pronto!" 
+                }
+            ]
+        },
+	{
+	    "Dialogos": [
+                {
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¡Pero si es {nombreJugador}! Me alegra volver a verte."
+                },
+                {
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Me da gusto ver que has logrado mantener todo bajo control y que el desarrollo de la planta sigue avanzando."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Feliz",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "¡Me alegra poder ayudar jefe!"
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Pues bueno, vengo a darte buenas y malas noticias. Las buenas noticias son que hemos logrado hacer tratos con empresas en el extranjero, entonces espera demandas más altas de producto final en algún futuro."
+                },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Y las malas noticias... Bueno no sé si te has enterado, pero las cosas en el país no pintan bien."
+                },
+		{
+                    "img_der": "Vicente_Enojado",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Desde que el pueblo mexicano derrocó el gobierno de Porfirio Díaz, la batalla por la presidencia ha destacado un caos."
+                },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Madero, quien promovió este evento, fue traicionado por Victoriano Huerta, y este se había proclamado presidente."
+                },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "No obstante, este último ha huido del país hace poco, probablemente debido a que las fuerzas de Estados Unidos lograron plantarse en Veracruz."
+                },
+		{
+                    "img_der": "Vicente_Triste",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Y bueno, como te imaginaras, esta serie de sucesos parará nuestras oportunidades para la venta de productos a base de acero."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "¿Entonces que haremos?"
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "No te preocupes, existe una solución que nos ayudará a seguir funcionando de aquí a que todo se calma."
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "Logramos formar un contrato con Ferrocarriles Nacionales de México, y por el momento, su funcionamiento es clave para la movilización de tropas."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Estresado",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Además, parece ser que necesitan repuestos constantemente debido a algunos sabotajes que están ocurriendo en estaciones poseídos por fuerzas gubernamentales."
+                },
+		{
+                    "img_der": "Vicente_Normal",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Es por esto que a partir de ahora produciremos rieles de ferrocarril para su venta, eso debería ser suficiente para seguir produciendo ganancias."
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Normal",
+                    "nombre": "Vicente",
+                    "dialogoTexto": "Eso sería todo por el momento, recuerda que estaré aquí para seguirte informando sobre todo lo que ocurre alrededor de la empresa, ¡confío en ti!"
+                },
+		{
+                    "img_der": "Vicente_Feliz",
+                    "img_izq": "Jugador_Feliz",
+                    "nombre": "{nombreJugador}",
+                    "dialogoTexto": "¡No lo decepcionaré jefe!"
+                }
+            ]
+        }
+
+    ]
+}

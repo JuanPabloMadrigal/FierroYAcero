@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ProBuilder;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SceneInitialization : MonoBehaviour
@@ -83,12 +84,20 @@ public class SceneInitialization : MonoBehaviour
                 GameObject newGO = Instantiate(newBuilding, new Vector3(edificio.x, edificio.y, edificio.z), Quaternion.Euler(0, edificio.rot, 0), padreEdificios.transform);
                 if (edificio.type == "Horno 1")
                 {
-                    newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("horno1"); } );
+                    try
+                    {
+                        newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("horno1"); });
+                    }
+                    catch { }
                 }
 
                 if (edificio.type == "Aceracion")
                 {
-                    newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("aceracion"); });
+                    try
+                    {
+                        newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("aceracion"); });
+                    }
+                    catch { }
                 }
             }
         }
@@ -98,7 +107,11 @@ public class SceneInitialization : MonoBehaviour
         if (!ReferenceEquals(gameData.ironStorehouse, null) && gameData.ironStorehouse.unlocked)
         {
             GameObject newGO = Instantiate(almacenMP, new Vector3(gameData.ironStorehouse.x, gameData.ironStorehouse.y, gameData.ironStorehouse.z), Quaternion.Euler(0, gameData.ironStorehouse.rot, 0), padreEdificios.transform);
-            newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("hierro"); });
+            try
+            {
+                newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("hierro"); });
+            }
+            catch { }
         }
         else
         {
@@ -110,7 +123,11 @@ public class SceneInitialization : MonoBehaviour
         if (!ReferenceEquals(gameData.cokePlant, null) && gameData.cokePlant.unlocked)
         {
             GameObject newGO = Instantiate(plantaCoque, new Vector3(gameData.cokePlant.x, gameData.cokePlant.y, gameData.cokePlant.z), Quaternion.Euler(0, gameData.cokePlant.rot, 0), padreEdificios.transform);
-            newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("plantadecoque"); });
+            try
+            {
+                newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("plantadecoque"); });
+            }
+            catch { }
         }
         else
         {
@@ -122,7 +139,11 @@ public class SceneInitialization : MonoBehaviour
         if (!ReferenceEquals(gameData.steelYard, null) && gameData.steelYard.unlocked)
         {
             GameObject newGO = Instantiate(patioAce, new Vector3(gameData.steelYard.x, gameData.steelYard.y, gameData.steelYard.z), Quaternion.Euler(0, gameData.steelYard.rot, 0), padreEdificios.transform);
-            newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("patio"); });
+            try
+            {
+                newGO.GetComponent<Button>().onClick.AddListener(delegate { sidebarControl.OpenSideBar("patio"); });
+            }
+            catch { }
         }
         else
         {
@@ -131,7 +152,7 @@ public class SceneInitialization : MonoBehaviour
 
     }
 
-    public IEnumerator RestartChildBuildings()
+    public IEnumerator RestartChildBuildings(GameModel gameModel)
     {
         Debug.Log($"Empieza reinicio");
         while (padreEdificios.transform.childCount > 0)
@@ -140,8 +161,8 @@ public class SceneInitialization : MonoBehaviour
             Debug.Log($"Destruye uno");
             yield return null;
         }
-        BuildingsGeneration(FileHandlerStory.Instance.gameData);
-        foreach(BuildingProperties ace in FileHandlerStory.Instance.gameData.buildingsList)
+        BuildingsGeneration(gameModel);
+        foreach(BuildingProperties ace in gameModel.buildingsList)
         {
             if (ace.type == "Aceracion")
             {
